@@ -25,3 +25,15 @@ The `example-codebases` directory contains example projects connected to your Di
 To quickly experience how Diez works, simply run `yarn demo` or `npm run demo` from `design-language`. This command will use Diez to compile a JavaScript SDK for your design language and link it to the example web project located in `codebases/web`, then start the example web project in your browser.
 
 Check out our [Getting Started guide](https://diez.org/getting-started/) to learn more.
+
+## ♻️ Updating
+
+From the `design-language` folder, run `yarn update`. You’ll need to authenticate with Figma.
+
+⚠️ **Note**: when updating, be mindful of missing assets. Often times, Figma will simply time-out, and fail to download. Assume that most missing assets are from rate-limiting, not that they were removed from the Figma file (esp. icons).
+
+## 🚀 Deploying
+
+Currently, deploying happens manually. From the `design-language` folder, run `yarn publish`. You’ll need to be signed into npm.
+
+⚠️ **Note**: deploying won’t update the tokens! You’ll need to run `yarn update` to pull the latest values.

@@ -5,29 +5,29 @@
 import { Color, File, Font, GradientStop, Image, LinearGradient, Point2D, Typograph } from "@diez/prefabs";
 
 const stylesColors = {
-    grayscaleWhite: Color.rgba(255, 255, 255, 1),
-    colorGreen: Color.rgba(49, 186, 162, 1),
+    white: Color.rgba(255, 255, 255, 1),
+    green: Color.rgba(49, 186, 162, 1),
     mutedGreen: Color.rgba(164, 234, 207, 1),
-    colorRed: Color.rgba(213, 32, 73, 1),
+    red: Color.rgba(213, 32, 73, 1),
     mutedRed: Color.rgba(255, 196, 210, 1),
-    colorBlue: Color.rgba(30, 80, 218, 1),
+    blue: Color.rgba(30, 80, 218, 1),
     mutedBlue: Color.rgba(221, 233, 254, 1),
-    colorYellow: Color.rgba(255, 222, 82, 1),
+    yellow: Color.rgba(255, 222, 82, 1),
     mutedYellow: Color.rgba(255, 242, 185, 1),
-    colorOrange: Color.rgba(245, 139, 35, 1),
+    orange: Color.rgba(245, 139, 35, 1),
     mutedOrange: Color.rgba(255, 202, 165, 1),
-    colorPurple: Color.rgba(119, 72, 210, 1),
+    purple: Color.rgba(119, 72, 210, 1),
     mutedPurple: Color.rgba(221, 207, 247, 1),
-    colorTeal: Color.rgba(16, 181, 208, 1),
+    teal: Color.rgba(16, 181, 208, 1),
     mutedTeal: Color.rgba(192, 238, 246, 1),
-    grayscaleGrayLightest: Color.rgba(247, 247, 248, 1),
-    grayscaleGrayLighter: Color.rgba(236, 236, 237, 1),
-    grayscaleGrayLight: Color.rgba(221, 221, 222, 1),
-    grayscaleGray: Color.rgba(143, 143, 149, 1),
-    grayscaleGrayDark: Color.rgba(87, 91, 95, 1),
-    grayscaleGrayDarker: Color.rgba(50, 57, 64, 1),
-    grayscaleBlack: Color.rgba(0, 0, 0, 1),
-    colorYellow1: Color.rgba(255, 222, 82, 1)
+    grayLightest: Color.rgba(247, 247, 248, 1),
+    grayLighter: Color.rgba(236, 236, 237, 1),
+    grayLight: Color.rgba(221, 221, 222, 1),
+    gray: Color.rgba(143, 143, 149, 1),
+    grayDark: Color.rgba(87, 91, 95, 1),
+    grayDarker: Color.rgba(50, 57, 64, 1),
+    black: Color.rgba(0, 0, 0, 1),
+    colorYellow: Color.rgba(255, 222, 82, 1)
 };
 
 const stylesGradients = {
