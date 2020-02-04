@@ -1,0 +1,6 @@
+.diez
+.DS_Store
+build/
+lib/*
+node_modules/
+tsconfig.tsbuildinfo
