@@ -24,7 +24,7 @@
     "@diez/compiler-core": "^10.2.0",
     "@diez/extractors": "^10.2.0",
     "@diez/start": "^10.2.0",
-    "@diez/stdlib": "^10.2.0",
+    "@diez/stdlib": "^10.2.1",
     "@types/eslint-visitor-keys": "^1.0.0",
     "@types/json-schema": "^7.0.4",
     "diez": "^10.2.0",
