@@ -27,7 +27,7 @@
     "@diez/stdlib": "^10.2.0",
     "@types/eslint-visitor-keys": "^1.0.0",
     "@types/json-schema": "^7.0.4",
-    "diez": "^10.2.0",
+    "diez": "^10.2.1",
     "prettier": "^1.19.1",
     "semver": "^7.1.2",
     "typescript": "^3.7.5"
