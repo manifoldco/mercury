@@ -13,7 +13,7 @@ npm install @manifoldco/mercury
 You’ll find some starter classes and CSS variables within `/static/styles.css`. Import it like so:
 
 ```js
-import '@manifoldco/mercury/static/styles.css';
+import '@manifoldco/mercury/static/styles.min.css';
 ```
 
 Inside you’ll find something like the following (please note this is just an example; the actual CSS
@@ -132,7 +132,6 @@ file may have changed a little):
   font-weight: 400;
   font-style: normal;
   font-size: 12px;
-  color: hsla(0, 0%, 0%, 1);
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
@@ -143,7 +142,6 @@ file may have changed a little):
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
-  color: hsla(0, 0%, 0%, 1);
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
@@ -154,7 +152,6 @@ file may have changed a little):
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
-  color: hsla(0, 0%, 0%, 1);
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
@@ -165,7 +162,6 @@ file may have changed a little):
   font-weight: 500;
   font-style: normal;
   font-size: 11px;
-  color: hsla(0, 0%, 0%, 1);
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
@@ -176,7 +172,6 @@ file may have changed a little):
   font-weight: 600;
   font-style: normal;
   font-size: 13px;
-  color: hsla(0, 0%, 0%, 1);
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
@@ -187,7 +182,6 @@ file may have changed a little):
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
-  color: hsla(0, 0%, 0%, 1);
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
@@ -198,7 +192,6 @@ file may have changed a little):
   font-weight: 400;
   font-style: normal;
   font-size: 25px;
-  color: hsla(0, 0%, 0%, 1);
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
@@ -209,7 +202,6 @@ file may have changed a little):
   font-weight: 500;
   font-style: normal;
   font-size: 32px;
-  color: hsla(0, 0%, 0%, 1);
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
@@ -220,7 +212,6 @@ file may have changed a little):
   font-weight: 400;
   font-style: normal;
   font-size: 13px;
-  color: hsla(0, 0%, 0%, 1);
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
@@ -231,7 +222,6 @@ file may have changed a little):
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
-  color: hsla(0, 0%, 0%, 1);
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
@@ -242,7 +232,6 @@ file may have changed a little):
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
-  color: hsla(0, 0%, 0%, 1);
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
@@ -253,7 +242,6 @@ file may have changed a little):
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
-  color: hsla(0, 0%, 0%, 1);
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
@@ -264,7 +252,6 @@ file may have changed a little):
   font-weight: 400;
   font-style: normal;
   font-size: 22px;
-  color: hsla(0, 0%, 0%, 1);
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
@@ -275,7 +262,6 @@ file may have changed a little):
   font-weight: 500;
   font-style: normal;
   font-size: 26px;
-  color: hsla(0, 0%, 0%, 1);
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;

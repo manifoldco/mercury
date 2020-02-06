@@ -35,6 +35,9 @@ css = css.replace(/--styles-gradients-gradient-/g, '--g-'); // gradients
 css = css.replace(/\n\.styles-colors-[^}]+}\n/gi, '');
 css = css.replace(/\n\.styles-gradients-[^}]+}\n/gi, '');
 
+// replace colors on typography utils
+css = css.replace(/\n\.styles-typography-[^}]+}/gi, style => style.replace(/\n  color:[^;]+;/, ''));
+
 // rename other classes
 css = css.replace(/\n\.styles-typography-/gi, '\n.diez-typography--');
 
