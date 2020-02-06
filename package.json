@@ -15,7 +15,7 @@
     "start": "diez start"
   },
   "dependencies": {
-    "@diez/engine": "^10.2.0",
+    "@diez/engine": "^10.2.1",
     "@diez/prefabs": "^10.2.0",
     "cssnano": "^4.1.10",
     "postcss-cli": "^7.1.0"
