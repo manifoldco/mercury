@@ -1,0 +1,24 @@
+{
+  "name": "@manifoldco/mercury",
+  "version": "0.0.2",
+  "license": "MIT",
+  "main": "./main.js",
+  "exports": {
+    "require": "./index.js",
+    "import": "./wrapper.mjs"
+  },
+  "dependencies": {
+    "@diez/web-sdk-common": "^10.2.1"
+  },
+  "private": false,
+  "description": "Manifold Design tokens, powered by Diez",
+  "homepage": "https://github.com/manifoldco/ui",
+  "bugs": {
+    "url": "https://github.com/manifoldco/ui/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manifoldco/mercury.git"
+  },
+  "types": "./index.d.ts"
+}
