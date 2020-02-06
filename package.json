@@ -21,7 +21,7 @@
     "postcss-cli": "^7.1.0"
   },
   "devDependencies": {
-    "@diez/compiler-core": "^10.2.0",
+    "@diez/compiler-core": "^10.2.1",
     "@diez/extractors": "^10.2.0",
     "@diez/start": "^10.2.0",
     "@diez/stdlib": "^10.2.0",
