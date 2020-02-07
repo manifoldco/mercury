@@ -152,6 +152,7 @@ Object.defineProperties(Color.prototype, {
 
 class StylesColors {
   constructor({
+    black = {h: 0, s: 0, l: 0, a: 1},
     white = {h: 0, s: 0, l: 1, a: 1},
     green = {h: 0.47080291970802923, s: 0.5829787234042554, l: 0.46078431372549017, a: 1},
     mutedGreen = {h: 0.4357142857142857, s: 0.6249999999999997, l: 0.7803921568627451, a: 1},
@@ -173,9 +174,10 @@ class StylesColors {
     gray = {h: 0.6666666666666666, s: 0.02752293577981655, l: 0.5725490196078431, a: 1},
     grayDark = {h: 0.5833333333333334, s: 0.04395604395604395, l: 0.3568627450980392, a: 1},
     grayDarker = {h: 0.5833333333333334, s: 0.12280701754385966, l: 0.22352941176470587, a: 1},
-    black = {h: 0, s: 0, l: 0, a: 1},
+    black1 = {h: 0, s: 0, l: 0, a: 1},
     colorYellow = {h: 0.1348747591522158, s: 1, l: 0.6607843137254902, a: 1}
   } = {}) {
+    this.black = new Color(black);
     this.white = new Color(white);
     this.green = new Color(green);
     this.mutedGreen = new Color(mutedGreen);
@@ -197,7 +199,7 @@ class StylesColors {
     this.gray = new Color(gray);
     this.grayDark = new Color(grayDark);
     this.grayDarker = new Color(grayDarker);
-    this.black = new Color(black);
+    this.black1 = new Color(black1);
     this.colorYellow = new Color(colorYellow);
   }
 }
@@ -539,13 +541,18 @@ diezHTMLExtensions.push(() => {
 class StylesTypography {
   constructor({
     caption = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 12, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
+    monoCaption = {font: {file: {src: "assets/Styles.figma.contents/fonts/IBMPlexMono.otf", type: "font"}, name: "IBMPlexMono", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 10, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
     label = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 14, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
+    monoLabel = {font: {file: {src: "assets/Styles.figma.contents/fonts/IBMPlexMono.otf", type: "font"}, name: "IBMPlexMono", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 12, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
     body = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 16, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
+    monoBody = {font: {file: {src: "assets/Styles.figma.contents/fonts/IBMPlexMono.otf", type: "font"}, name: "IBMPlexMono", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 14, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
     subheadingSmall = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Medium.otf", type: "font"}, name: "SFProText-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 11, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
     subheading = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Semibold.otf", type: "font"}, name: "SFProText-Semibold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 13, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
     heading = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 20, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
     headingLarge = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 25, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
     headingExtraLarge = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Medium.otf", type: "font"}, name: "SFProText-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 32, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
+    sidebarBigTitle = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Semibold.otf", type: "font"}, name: "SFProText-Semibold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 16, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
+    sidebarSmallTitle = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Bold.otf", type: "font"}, name: "SFProText-Bold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 14, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
     smallScreenCaption = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 13, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
     smallScreenLabel = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 14, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
     smallScreenBody = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 16, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
@@ -554,13 +561,18 @@ class StylesTypography {
     smallScreenHeadingExtraLarge = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Medium.otf", type: "font"}, name: "SFProText-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 26, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []}
   } = {}) {
     this.caption = new Typograph(caption);
+    this.monoCaption = new Typograph(monoCaption);
     this.label = new Typograph(label);
+    this.monoLabel = new Typograph(monoLabel);
     this.body = new Typograph(body);
+    this.monoBody = new Typograph(monoBody);
     this.subheadingSmall = new Typograph(subheadingSmall);
     this.subheading = new Typograph(subheading);
     this.heading = new Typograph(heading);
     this.headingLarge = new Typograph(headingLarge);
     this.headingExtraLarge = new Typograph(headingExtraLarge);
+    this.sidebarBigTitle = new Typograph(sidebarBigTitle);
+    this.sidebarSmallTitle = new Typograph(sidebarSmallTitle);
     this.smallScreenCaption = new Typograph(smallScreenCaption);
     this.smallScreenLabel = new Typograph(smallScreenLabel);
     this.smallScreenBody = new Typograph(smallScreenBody);

@@ -5,6 +5,12 @@
   src: local("SFProText-Regular"), url("/diez/assets/Styles.figma.contents/fonts/SFProText-Regular.otf");
 }
 @font-face {
+  font-family: "IBMPlexMono";
+  font-weight: 400;
+  font-style: normal;
+  src: local("IBMPlexMono"), url("/diez/assets/Styles.figma.contents/fonts/IBMPlexMono.otf");
+}
+@font-face {
   font-family: "SFProText-Medium";
   font-weight: 400;
   font-style: normal;
@@ -16,7 +22,14 @@
   font-style: normal;
   src: local("SFProText-Semibold"), url("/diez/assets/Styles.figma.contents/fonts/SFProText-Semibold.otf");
 }
+@font-face {
+  font-family: "SFProText-Bold";
+  font-weight: 400;
+  font-style: normal;
+  src: local("SFProText-Bold"), url("/diez/assets/Styles.figma.contents/fonts/SFProText-Bold.otf");
+}
 
+$styles-colors-black: hsla(0, 0%, 0%, 1);
 $styles-colors-white: hsla(0, 0%, 100%, 1);
 $styles-colors-green: hsla(169.48905109489053, 58.29787234042554%, 46.07843137254902%, 1);
 $styles-colors-muted-green: hsla(156.85714285714286, 62.499999999999964%, 78.03921568627452%, 1);
@@ -38,7 +51,7 @@ $styles-colors-gray-light: hsla(240, 1.4925373134328308%, 86.86274509803921%, 1)
 $styles-colors-gray: hsla(240, 2.752293577981655%, 57.25490196078431%, 1);
 $styles-colors-gray-dark: hsla(210, 4.395604395604395%, 35.68627450980392%, 1);
 $styles-colors-gray-darker: hsla(210, 12.280701754385966%, 22.352941176470587%, 1);
-$styles-colors-black: hsla(0, 0%, 0%, 1);
+$styles-colors-black1: hsla(0, 0%, 0%, 1);
 $styles-colors-color-yellow: hsla(48.55491329479769, 100%, 66.07843137254902%, 1);
 $styles-gradients-gradient-green: linear-gradient(237deg, hsla(152.14285714285714, 45.528455284552855%, 51.76470588235295%, 1) 7%, hsla(199.62264150943395, 63.34661354581673%, 50.78431372549019%, 1) 111%);
 $styles-gradients-gradient-brand: linear-gradient(240deg, hsla(340.3404255319149, 99.15611814345992%, 53.529411764705884%, 1) -12%, hsla(271.875, 38.095238095238095%, 49.411764705882355%, 1) 24%, hsla(199.62264150943395, 63.85542168674698%, 48.82352941176471%, 1) 70%, hsla(21.52173913043478, 97.87234042553192%, 63.13725490196078%, 1) 86%, hsla(44.39999999999999, 98.03921568627452%, 60%, 1) 123%);
@@ -55,6 +68,14 @@ $styles-gradients-gradient-purple: linear-gradient(225deg, hsla(261.702127659574
 $styles-gradients-gradient-purple-muted: linear-gradient(225deg, hsla(261.8181818181818, 100%, 93.52941176470588%, 1) 0%, hsla(247.99999999999997, 100%, 88.23529411764706%, 1) 100%);
 $styles-gradients-gradient-red: linear-gradient(45deg, hsla(353.7037037037037, 86.17021276595743%, 36.86274509803922%, 1) 0%, hsla(342.4752475247525, 100%, 60.3921568627451%, 1) 100%);
 $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.09803921568627%, 1) 0%, hsla(336.8852459016394, 96.82539682539684%, 75.29411764705883%, 1) 100%);
+
+@mixin styles-colors-black-background-color {
+  background-color: hsla(0, 0%, 0%, 1);
+}
+
+@mixin styles-colors-black-color {
+  color: hsla(0, 0%, 0%, 1);
+}
 
 @mixin styles-colors-white-background-color {
   background-color: hsla(0, 0%, 100%, 1);
@@ -224,11 +245,11 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   color: hsla(210, 12.280701754385966%, 22.352941176470587%, 1);
 }
 
-@mixin styles-colors-black-background-color {
+@mixin styles-colors-black1-background-color {
   background-color: hsla(0, 0%, 0%, 1);
 }
 
-@mixin styles-colors-black-color {
+@mixin styles-colors-black1-color {
   color: hsla(0, 0%, 0%, 1);
 }
 
@@ -371,6 +392,17 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   text-decoration: none;
 }
 
+@mixin styles-typography-mono-caption {
+  font-family: "IBMPlexMono",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+  color: hsla(0, 0%, 0%, 1);
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
+}
+
 @mixin styles-typography-label {
   font-family: "SFProText-Regular",sans-serif;
   font-weight: 400;
@@ -382,11 +414,33 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   text-decoration: none;
 }
 
+@mixin styles-typography-mono-label {
+  font-family: "IBMPlexMono",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  color: hsla(0, 0%, 0%, 1);
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
+}
+
 @mixin styles-typography-body {
   font-family: "SFProText-Regular",sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
+  color: hsla(0, 0%, 0%, 1);
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
+}
+
+@mixin styles-typography-mono-body {
+  font-family: "IBMPlexMono",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
   color: hsla(0, 0%, 0%, 1);
   letter-spacing: 0px;
   text-align: start;
@@ -442,6 +496,28 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   font-weight: 400;
   font-style: normal;
   font-size: 32px;
+  color: hsla(0, 0%, 0%, 1);
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
+}
+
+@mixin styles-typography-sidebar-big-title {
+  font-family: "SFProText-Semibold",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: hsla(0, 0%, 0%, 1);
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
+}
+
+@mixin styles-typography-sidebar-small-title {
+  font-family: "SFProText-Bold",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
   color: hsla(0, 0%, 0%, 1);
   letter-spacing: 0px;
   text-align: start;

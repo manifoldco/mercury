@@ -34,6 +34,7 @@ export declare class Color {
 }
 
 export declare class StylesColors {
+  black: Color;
   white: Color;
   green: Color;
   mutedGreen: Color;
@@ -55,7 +56,7 @@ export declare class StylesColors {
   gray: Color;
   grayDark: Color;
   grayDarker: Color;
-  black: Color;
+  black1: Color;
   colorYellow: Color;
 }
 
@@ -153,13 +154,18 @@ declare global {
 
 export declare class StylesTypography {
   caption: Typograph;
+  monoCaption: Typograph;
   label: Typograph;
+  monoLabel: Typograph;
   body: Typograph;
+  monoBody: Typograph;
   subheadingSmall: Typograph;
   subheading: Typograph;
   heading: Typograph;
   headingLarge: Typograph;
   headingExtraLarge: Typograph;
+  sidebarBigTitle: Typograph;
+  sidebarSmallTitle: Typograph;
   smallScreenCaption: Typograph;
   smallScreenLabel: Typograph;
   smallScreenBody: Typograph;

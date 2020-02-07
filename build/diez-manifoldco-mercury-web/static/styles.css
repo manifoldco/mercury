@@ -1,5 +1,6 @@
 
 :root {
+  --c-black: 0, 0%, 0%;
   --c-white: 0, 0%, 100%;
   --c-green: 169.48905109489053, 58.29787234042554%, 46.07843137254902%;
   --c-muted-green: 156.85714285714286, 62.499999999999964%, 78.03921568627452%;
@@ -21,7 +22,7 @@
   --c-gray: 240, 2.752293577981655%, 57.25490196078431%;
   --c-gray-dark: 210, 4.395604395604395%, 35.68627450980392%;
   --c-gray-darker: 210, 12.280701754385966%, 22.352941176470587%;
-  --c-black: 0, 0%, 0%;
+  --c-black1: 0, 0%, 0%;
   --c-color-yellow: 48.55491329479769, 100%, 66.07843137254902%;
   --g-green: linear-gradient(237deg, hsla(152.14285714285714, 45.528455284552855%, 51.76470588235295%, 1) 7%, hsla(199.62264150943395, 63.34661354581673%, 50.78431372549019%, 1) 111%);
   --g-brand: linear-gradient(240deg, hsla(340.3404255319149, 99.15611814345992%, 53.529411764705884%, 1) -12%, hsla(271.875, 38.095238095238095%, 49.411764705882355%, 1) 24%, hsla(199.62264150943395, 63.85542168674698%, 48.82352941176471%, 1) 70%, hsla(21.52173913043478, 97.87234042553192%, 63.13725490196078%, 1) 86%, hsla(44.39999999999999, 98.03921568627452%, 60%, 1) 123%);
@@ -52,6 +53,16 @@
   text-decoration: none;
 }
 
+.diez-typography--mono-caption {
+  font-family: "IBMPlexMono",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
+}
+
 .diez-typography--label {
   font-family: var(--f-body);
   font-weight: 400;
@@ -62,11 +73,31 @@
   text-decoration: none;
 }
 
+.diez-typography--mono-label {
+  font-family: "IBMPlexMono",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
+}
+
 .diez-typography--body {
   font-family: var(--f-body);
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
+}
+
+.diez-typography--mono-body {
+  font-family: "IBMPlexMono",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
@@ -117,6 +148,26 @@
   font-weight: 500;
   font-style: normal;
   font-size: 32px;
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
+}
+
+.diez-typography--sidebar-big-title {
+  font-family: var(--f-body);
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
+}
+
+.diez-typography--sidebar-small-title {
+  font-family: var(--f-body);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
