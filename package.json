@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@diez/compiler-core": "^10.3.0",
-    "@diez/extractors": "^10.2.3",
+    "@diez/extractors": "^10.3.0",
     "@diez/stdlib": "^10.3.0",
     "cssnano": "^4.1.10",
     "diez": "^10.3.0",
