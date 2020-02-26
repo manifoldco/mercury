@@ -19,6 +19,7 @@
   --c-gray-lightest: 240, 6.666666666666654%, 97.05882352941177%;
   --c-gray-lighter: 240, 2.7027027027026946%, 92.74509803921569%;
   --c-gray-light: 240, 1.4925373134328308%, 86.86274509803921%;
+  --c-border-gray: 210, 5.357142857142836%, 78.03921568627452%;
   --c-gray: 240, 2.752293577981655%, 57.25490196078431%;
   --c-gray-dark: 210, 4.395604395604395%, 35.68627450980392%;
   --c-gray-darker: 210, 12.280701754385966%, 22.352941176470587%;
@@ -39,6 +40,10 @@
   --g-purple-muted: linear-gradient(225deg, hsla(261.8181818181818, 100%, 93.52941176470588%, 1) 0%, hsla(247.99999999999997, 100%, 88.23529411764706%, 1) 100%);
   --g-red: linear-gradient(45deg, hsla(353.7037037037037, 86.17021276595743%, 36.86274509803922%, 1) 0%, hsla(342.4752475247525, 100%, 60.3921568627451%, 1) 100%);
   --g-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.09803921568627%, 1) 0%, hsla(336.8852459016394, 96.82539682539684%, 75.29411764705883%, 1) 100%);
+  --s-near: 0px 2px 8px hsla(0, 0%, 0%, 0.07999999821186066);
+  --s-near-filter: drop-shadow(0px 2px 4px hsla(0, 0%, 0%, 0.07999999821186066));
+  --s-far: 0px 6px 10px hsla(0, 0%, 0%, 0.15000000596046448);
+  --s-far-filter: drop-shadow(0px 6px 5px hsla(0, 0%, 0%, 0.15000000596046448));
   --f-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --f-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
@@ -49,6 +54,7 @@
   font-style: normal;
   font-size: 12px;
   letter-spacing: 0px;
+  line-height: 14.0625px;
 }
 
 .diez-typography--mono-caption {
@@ -56,7 +62,8 @@
   font-weight: 400;
   font-style: normal;
   font-size: 10px;
-  letter-spacing: 0px;
+  letter-spacing: -0.1px;
+  line-height: 11.71875px;
 }
 
 .diez-typography--label {
@@ -65,6 +72,7 @@
   font-style: normal;
   font-size: 14px;
   letter-spacing: 0px;
+  line-height: 16.40625px;
 }
 
 .diez-typography--mono-label {
@@ -72,7 +80,8 @@
   font-weight: 400;
   font-style: normal;
   font-size: 12px;
-  letter-spacing: 0px;
+  letter-spacing: -0.12px;
+  line-height: 14.0625px;
 }
 
 .diez-typography--body {
@@ -81,6 +90,7 @@
   font-style: normal;
   font-size: 16px;
   letter-spacing: 0px;
+  line-height: 18.75px;
 }
 
 .diez-typography--mono-body {
@@ -88,7 +98,8 @@
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
-  letter-spacing: 0px;
+  letter-spacing: -0.14px;
+  line-height: 16.40625px;
 }
 
 .diez-typography--subheading-small {
@@ -96,7 +107,8 @@
   font-weight: 500;
   font-style: normal;
   font-size: 11px;
-  letter-spacing: 0px;
+  letter-spacing: 0.44px;
+  line-height: 12.890625px;
 }
 
 .diez-typography--subheading {
@@ -104,7 +116,8 @@
   font-weight: 600;
   font-style: normal;
   font-size: 13px;
-  letter-spacing: 0px;
+  letter-spacing: 0.39px;
+  line-height: 15.234375px;
 }
 
 .diez-typography--heading {
@@ -112,7 +125,8 @@
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
-  letter-spacing: 0px;
+  letter-spacing: -0.2px;
+  line-height: 26px;
 }
 
 .diez-typography--heading-large {
@@ -120,7 +134,8 @@
   font-weight: 400;
   font-style: normal;
   font-size: 25px;
-  letter-spacing: 0px;
+  letter-spacing: -0.3125px;
+  line-height: 29.296875px;
 }
 
 .diez-typography--heading-extra-large {
@@ -128,7 +143,8 @@
   font-weight: 500;
   font-style: normal;
   font-size: 32px;
-  letter-spacing: 0px;
+  letter-spacing: -0.4px;
+  line-height: 36px;
 }
 
 .diez-typography--sidebar-big-title {
@@ -137,6 +153,7 @@
   font-style: normal;
   font-size: 16px;
   letter-spacing: 0px;
+  line-height: 18.75px;
 }
 
 .diez-typography--sidebar-small-title {
@@ -145,6 +162,7 @@
   font-style: normal;
   font-size: 14px;
   letter-spacing: 0px;
+  line-height: 16.40625px;
 }
 
 .diez-typography--small-screen-caption {
@@ -153,6 +171,7 @@
   font-style: normal;
   font-size: 13px;
   letter-spacing: 0px;
+  line-height: 15.234375px;
 }
 
 .diez-typography--small-screen-label {
@@ -161,6 +180,7 @@
   font-style: normal;
   font-size: 14px;
   letter-spacing: 0px;
+  line-height: 16.40625px;
 }
 
 .diez-typography--small-screen-body {
@@ -169,6 +189,7 @@
   font-style: normal;
   font-size: 16px;
   letter-spacing: 0px;
+  line-height: 18.75px;
 }
 
 .diez-typography--small-screen-heading {
@@ -176,7 +197,8 @@
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
-  letter-spacing: 0px;
+  letter-spacing: -0.18px;
+  line-height: 21.09375px;
 }
 
 .diez-typography--small-screen-heading-large {
@@ -184,7 +206,8 @@
   font-weight: 400;
   font-style: normal;
   font-size: 22px;
-  letter-spacing: 0px;
+  letter-spacing: -0.275px;
+  line-height: 25.78125px;
 }
 
 .diez-typography--small-screen-heading-extra-large {
@@ -192,6 +215,7 @@
   font-weight: 500;
   font-style: normal;
   font-size: 26px;
-  letter-spacing: 0px;
+  letter-spacing: -0.325px;
+  line-height: 36px;
 }
 

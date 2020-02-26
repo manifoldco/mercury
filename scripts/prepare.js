@@ -29,11 +29,13 @@ css = css.replace(
 
 // shorten variable & class names
 css = css.replace(/--styles-colors-/g, '--c-'); // colors
+css = css.replace(/--styles-shadows-shadow-/g, '--s-'); // shadows
 css = css.replace(/--styles-gradients-gradient-/g, '--g-'); // gradients
 
 // remove unused classes
 css = css.replace(/\n\.styles-colors-[^}]+}\n/gi, '');
 css = css.replace(/\n\.styles-gradients-[^}]+}\n/gi, '');
+css = css.replace(/\n\.styles-shadows-[^}]+}\n/gi, '');
 
 // replace color, text-align, and text-decoration on typography utils
 css = css.replace(/\n\.styles-typography-[^}]+}/gi, style =>

@@ -78,11 +78,12 @@ class Diez {
 module.exports.Diez = Diez;
 
 /**
-A component encapsulating color, including alpha transparency.
-
-You can use the provided static constructors [[Color.rgb]], [[Color.rgba]], [[Color.hsl]], [[Color.hsla]], and
-[[Color.hex]] to conveniently create color primitives using familiar patterns for color specification.
-*/
+ * A component encapsulating color, including alpha transparency.
+ * 
+ * You can use the provided static constructors [[Color.rgb]], [[Color.rgba]], [[Color.hsl]], [[Color.hsla]], and
+ * [[Color.hex]] to conveniently create color primitives using familiar patterns for color specification.
+ *
+ */
 class Color {
   constructor({
     h,
@@ -90,21 +91,29 @@ class Color {
     l,
     a
   }) {
-  /**
-  Provides simple hue-saturation-lightness-alpha color data.
-  */
+    /**
+     * Provides simple hue-saturation-lightness-alpha color data.
+     *
+     * 0
+     */
     this.h = h;
-  /**
-  Provides simple hue-saturation-lightness-alpha color data.
-  */
+    /**
+     * Provides simple hue-saturation-lightness-alpha color data.
+     *
+     * 0
+     */
     this.s = s;
-  /**
-  Provides simple hue-saturation-lightness-alpha color data.
-  */
+    /**
+     * Provides simple hue-saturation-lightness-alpha color data.
+     *
+     * 0
+     */
     this.l = l;
-  /**
-  Provides simple hue-saturation-lightness-alpha color data.
-  */
+    /**
+     * Provides simple hue-saturation-lightness-alpha color data.
+     *
+     * 1
+     */
     this.a = a;
   }
 }
@@ -171,35 +180,112 @@ class StylesColors {
     grayLightest = {h: 0.6666666666666666, s: 0.06666666666666654, l: 0.9705882352941176, a: 1},
     grayLighter = {h: 0.6666666666666666, s: 0.027027027027026945, l: 0.9274509803921569, a: 1},
     grayLight = {h: 0.6666666666666666, s: 0.014925373134328308, l: 0.8686274509803922, a: 1},
+    borderGray = {h: 0.5833333333333334, s: 0.05357142857142837, l: 0.7803921568627451, a: 1},
     gray = {h: 0.6666666666666666, s: 0.02752293577981655, l: 0.5725490196078431, a: 1},
     grayDark = {h: 0.5833333333333334, s: 0.04395604395604395, l: 0.3568627450980392, a: 1},
     grayDarker = {h: 0.5833333333333334, s: 0.12280701754385966, l: 0.22352941176470587, a: 1},
     black1 = {h: 0, s: 0, l: 0, a: 1},
     colorYellow = {h: 0.1348747591522158, s: 1, l: 0.6607843137254902, a: 1}
   } = {}) {
+    /**
+     * hsla(0, 0, 0, 1)
+     */
     this.black = new Color(black);
+    /**
+     * hsla(0, 0, 1, 1)
+     */
     this.white = new Color(white);
+    /**
+     * hsla(0.47, 0.58, 0.46, 1)
+     */
     this.green = new Color(green);
+    /**
+     * hsla(0.44, 0.62, 0.78, 1)
+     */
     this.mutedGreen = new Color(mutedGreen);
+    /**
+     * hsla(0.96, 0.74, 0.48, 1)
+     */
     this.red = new Color(red);
+    /**
+     * hsla(0.96, 1, 0.88, 1)
+     */
     this.mutedRed = new Color(mutedRed);
+    /**
+     * hsla(0.62, 0.76, 0.49, 1)
+     */
     this.blue = new Color(blue);
+    /**
+     * hsla(0.61, 0.94, 0.93, 1)
+     */
     this.mutedBlue = new Color(mutedBlue);
+    /**
+     * hsla(0.13, 1, 0.66, 1)
+     */
     this.yellow = new Color(yellow);
+    /**
+     * hsla(0.14, 1, 0.86, 1)
+     */
     this.mutedYellow = new Color(mutedYellow);
+    /**
+     * hsla(0.08, 0.91, 0.55, 1)
+     */
     this.orange = new Color(orange);
+    /**
+     * hsla(0.07, 1, 0.82, 1)
+     */
     this.mutedOrange = new Color(mutedOrange);
+    /**
+     * hsla(0.72, 0.61, 0.55, 1)
+     */
     this.purple = new Color(purple);
+    /**
+     * hsla(0.73, 0.71, 0.89, 1)
+     */
     this.mutedPurple = new Color(mutedPurple);
+    /**
+     * hsla(0.52, 0.86, 0.44, 1)
+     */
     this.teal = new Color(teal);
+    /**
+     * hsla(0.52, 0.75, 0.86, 1)
+     */
     this.mutedTeal = new Color(mutedTeal);
+    /**
+     * hsla(0.67, 0.07, 0.97, 1)
+     */
     this.grayLightest = new Color(grayLightest);
+    /**
+     * hsla(0.67, 0.03, 0.93, 1)
+     */
     this.grayLighter = new Color(grayLighter);
+    /**
+     * hsla(0.67, 0.01, 0.87, 1)
+     */
     this.grayLight = new Color(grayLight);
+    /**
+     * hsla(0.58, 0.05, 0.78, 1)
+     */
+    this.borderGray = new Color(borderGray);
+    /**
+     * hsla(0.67, 0.03, 0.57, 1)
+     */
     this.gray = new Color(gray);
+    /**
+     * hsla(0.58, 0.04, 0.36, 1)
+     */
     this.grayDark = new Color(grayDark);
+    /**
+     * hsla(0.58, 0.12, 0.22, 1)
+     */
     this.grayDarker = new Color(grayDarker);
+    /**
+     * hsla(0, 0, 0, 1)
+     */
     this.black1 = new Color(black1);
+    /**
+     * hsla(0.13, 1, 0.66, 1)
+     */
     this.colorYellow = new Color(colorYellow);
   }
 }
@@ -208,20 +294,25 @@ class StylesColors {
 module.exports.StylesColors = StylesColors;
 
 /**
-Provides a gradient stop.
-*/
+ * Provides a gradient stop.
+ *
+ */
 class GradientStop {
   constructor({
     position,
     color
   }) {
-  /**
-  GradientStop data.
-  */
+    /**
+     * GradientStop data.
+     *
+     * 1
+     */
     this.position = position;
     /**
-    GradientStop data.
-    **/
+     * GradientStop data.
+     *
+     * hsla(0.55, 0.63, 0.51, 1)
+     */
     this.color = new Color(color);
   }
 }
@@ -230,26 +321,31 @@ class GradientStop {
 module.exports.GradientStop = GradientStop;
 
 /**
-Provides a two dimensional point.
-
-Taken alone, points are designated in an abstract space with no inherit dimensions or directionality. In the
-context of other prefabs like [[LinearGradient]], points typically should use the standard two dimensional graphics
-space, often normalized in the unit square, where x increases from left to right and y increases from top to bottom.
-
-Usage: `point = Point2D.make(0.5, 0.5);`.
-*/
+ * Provides a two dimensional point.
+ * 
+ * Taken alone, points are designated in an abstract space with no inherit dimensions or directionality. In the
+ * context of other prefabs like [[LinearGradient]], points typically should use the standard two dimensional graphics
+ * space, often normalized in the unit square, where x increases from left to right and y increases from top to bottom.
+ * 
+ * Usage: `point = Point2D.make(0.5, 0.5);`.
+ *
+ */
 class Point2D {
   constructor({
     x,
     y
   }) {
-  /**
-  Point data.
-  */
+    /**
+     * Point data.
+     *
+     * 0.821016851389819
+     */
     this.x = x;
-  /**
-  Point data.
-  */
+    /**
+     * Point data.
+     *
+     * -0.105676656843359
+     */
     this.y = y;
   }
 }
@@ -258,8 +354,9 @@ class Point2D {
 module.exports.Point2D = Point2D;
 
 /**
-Provides a linear gradient.
-*/
+ * Provides a linear gradient.
+ *
+ */
 class LinearGradient {
   constructor({
     stops,
@@ -268,12 +365,16 @@ class LinearGradient {
   }) {
     this.stops = stops.map((value1) => new GradientStop(value1));
     /**
-    LinearGradient data.
-    **/
+     * LinearGradient data.
+     *
+     * [0.821016851389819, -0.105676656843359]
+     */
     this.start = new Point2D(start);
     /**
-    LinearGradient data.
-    **/
+     * LinearGradient data.
+     *
+     * [-0.390336415164722, 0.674996301605858]
+     */
     this.end = new Point2D(end);
   }
 }
@@ -323,20 +424,65 @@ class StylesGradients {
     gradientRed = {stops: [{position: 0, color: {h: 0.9825102880658436, s: 0.8617021276595743, l: 0.3686274509803922, a: 1}}, {position: 1, color: {h: 0.9513201320132013, s: 1, l: 0.6039215686274509, a: 1}}], start: {x: 0.5, y: 1.5}, end: {x: 1.5, y: 0.5}},
     gradientRedMuted = {stops: [{position: 0, color: {h: 0, s: 1, l: 0.8509803921568627, a: 1}}, {position: 1, color: {h: 0.935792349726776, s: 0.9682539682539684, l: 0.7529411764705882, a: 1}}], start: {x: 0.5, y: -0.5}, end: {x: -0.5, y: 0.5}}
   } = {}) {
+    /**
+     * start [0.821016851389819, -0.105676656843359], end [-0.390336415164722, 0.674996301605858], stops: [hsla(0.42, 0.46, 0.52, 1) at 0,hsla(0.55, 0.63, 0.51, 1) at 1]
+     */
     this.gradientGreen = new LinearGradient(gradientGreen);
+    /**
+     * start [1.181249980120726, -8.693732e-9], end [-0.409674694679825, 0.914285662290109], stops: [hsla(0.95, 0.99, 0.54, 1) at 0,hsla(0.76, 0.38, 0.49, 1) at 0.26458865404129,hsla(0.55, 0.64, 0.49, 1) at 0.609017670154572,hsla(0.06, 0.98, 0.63, 1) at 0.728924870491028,hsla(0.12, 0.98, 0.6, 1) at 1]
+     */
     this.gradientBrand = new LinearGradient(gradientBrand);
+    /**
+     * start [0.821016851389819, -0.105676656843359], end [-0.390336415164722, 0.674996301605858], stops: [hsla(0.42, 0.64, 0.89, 1) at 0,hsla(0.56, 1, 0.92, 1) at 1]
+     */
     this.gradientGreenMuted = new LinearGradient(gradientGreenMuted);
+    /**
+     * start [4.377216e-9, 1.000000004377216], end [1.000000004377216, 4.377216e-9], stops: [hsla(0.97, 0.64, 0.6, 1) at 0,hsla(0.82, 0.35, 0.43, 1) at 1]
+     */
     this.gradientBrand1 = new LinearGradient(gradientBrand1);
+    /**
+     * start [4.377216e-9, 1.000000004377216], end [1.000000004377216, 4.377216e-9], stops: [hsla(0.97, 0.54, 0.85, 1) at 0,hsla(0.82, 0.3, 0.85, 1) at 1]
+     */
     this.gradientBrandMuted = new LinearGradient(gradientBrandMuted);
+    /**
+     * start [0.5, -0.5], end [-0.5, 0.5], stops: [hsla(0.55, 0.63, 0.51, 1) at 0,hsla(0.66, 0.35, 0.48, 1) at 1]
+     */
     this.gradientBlue = new LinearGradient(gradientBlue);
+    /**
+     * start [0.5, -0.5], end [-0.5, 0.5], stops: [hsla(0.56, 1, 0.85, 1) at 0,hsla(0.66, 1, 0.89, 1) at 1]
+     */
     this.gradientBlueMuted = new LinearGradient(gradientBlueMuted);
+    /**
+     * start [0.527897182467498, 1.55579430626508], end [1.527897158999531, 0.499999988266017], stops: [hsla(0.11, 1, 0.61, 1) at 0,hsla(0.13, 1, 0.7, 1) at 1]
+     */
     this.gradientYellow = new LinearGradient(gradientYellow);
+    /**
+     * start [0.567276093902552, 1.59738067308683], end [1.650448750489284, 0.46282849512784], stops: [hsla(0.11, 1, 0.79, 1) at 0,hsla(0.14, 1, 0.91, 1) at 1]
+     */
     this.gradientYellowMuted = new LinearGradient(gradientYellowMuted);
+    /**
+     * start [0.322843937601224, 2.070313632698886], end [1.846504348936375, 0.67485791912246], stops: [hsla(0.94, 1, 0.5, 1) at 0,hsla(0.14, 0.98, 0.59, 1) at 1]
+     */
     this.gradientOrange = new LinearGradient(gradientOrange);
+    /**
+     * start [0.53288843739154, 1.755845003537722], end [1.762725784434706, 0.527946382205596], stops: [hsla(0.05, 0.8, 0.8, 1) at 0,hsla(0.11, 1, 0.92, 1) at 1]
+     */
     this.gradientOrangeMuted = new LinearGradient(gradientOrangeMuted);
+    /**
+     * start [0.5, -0.5], end [-0.5, 0.5], stops: [hsla(0.73, 1, 0.72, 1) at 0,hsla(0.69, 0.7, 0.55, 1) at 1]
+     */
     this.gradientPurple = new LinearGradient(gradientPurple);
+    /**
+     * start [0.5, -0.5], end [-0.5, 0.5], stops: [hsla(0.73, 1, 0.94, 1) at 0,hsla(0.69, 1, 0.88, 1) at 1]
+     */
     this.gradientPurpleMuted = new LinearGradient(gradientPurpleMuted);
+    /**
+     * start [0.5, 1.5], end [1.5, 0.5], stops: [hsla(0.98, 0.86, 0.37, 1) at 0,hsla(0.95, 1, 0.6, 1) at 1]
+     */
     this.gradientRed = new LinearGradient(gradientRed);
+    /**
+     * start [0.5, -0.5], end [-0.5, 0.5], stops: [hsla(0, 1, 0.85, 1) at 0,hsla(0.94, 0.97, 0.75, 1) at 1]
+     */
     this.gradientRedMuted = new LinearGradient(gradientRedMuted);
   }
 }
@@ -345,25 +491,128 @@ class StylesGradients {
 module.exports.StylesGradients = StylesGradients;
 
 /**
-Provides a container for referencing local assets, which can be bridged by compilers to embed images, SVGs,
-and more. This component is used internally by [[Image]] and [[Font]].
+ * Provides a drop shadow.
+ *
+ */
+class DropShadow {
+  constructor({
+    offset,
+    radius,
+    color
+  }) {
+    /**
+     * DropShadow data.
+     *
+     * [0, 2]
+     */
+    this.offset = new Point2D(offset);
+    /**
+     * DropShadow data.
+     *
+     * 8
+     */
+    this.radius = radius;
+    /**
+     * DropShadow data.
+     *
+     * hsla(0, 0, 0, 0.08)
+     */
+    this.color = new Color(color);
+  }
+}
 
-The compiler may enforce certain restrictions on the `type` of a `File` instance.
 
-Usage: `file = new File({src: 'assets/images/file.jpg', type: FileType.Image});`.
-*/
+module.exports.DropShadow = DropShadow;
+
+const {dropShadowToCss, dropShadowToFilterCss} = require('@diez/web-sdk-common');
+
+Object.defineProperties(DropShadow.prototype, {
+  boxShadow: {
+    get () {
+      return dropShadowToCss(this);
+    },
+  },
+  textShadow: {
+    get () {
+      return dropShadowToCss(this);
+    },
+  },
+  filter: {
+    get () {
+      return dropShadowToFilterCss(this);
+    },
+  },
+  boxShadowStyle: {
+    get () {
+      return {
+        boxShadow: this.boxShadow,
+      };
+    },
+  },
+  textShadowStyle: {
+    get () {
+      return {
+        textShadow: this.textShadow,
+      };
+    },
+  },
+  filterStyle: {
+    get () {
+      return {
+        filter: this.filter,
+      };
+    },
+  },
+});
+
+class StylesShadows {
+  constructor({
+    shadowNear = {offset: {x: 0, y: 2}, radius: 8, color: {h: 0, s: 0, l: 0, a: 0.07999999821186066}},
+    shadowFar = {offset: {x: 0, y: 6}, radius: 10, color: {h: 0, s: 0, l: 0, a: 0.15000000596046448}}
+  } = {}) {
+    /**
+     * - offset: `[0, 2]`
+     * - radius: `8`
+     * - color: `hsla(0, 0, 0, 0.08)`
+     */
+    this.shadowNear = new DropShadow(shadowNear);
+    /**
+     * - offset: `[0, 6]`
+     * - radius: `10`
+     * - color: `hsla(0, 0, 0, 0.15)`
+     */
+    this.shadowFar = new DropShadow(shadowFar);
+  }
+}
+
+
+module.exports.StylesShadows = StylesShadows;
+
+/**
+ * Provides a container for referencing local assets, which can be bridged by compilers to embed images, SVGs,
+ * and more. This component is used internally by [[Image]] and [[Font]].
+ * 
+ * The compiler may enforce certain restrictions on the `type` of a `File` instance.
+ * 
+ * Usage: `file = new File({src: 'assets/images/file.jpg', type: FileType.Image});`.
+ *
+ */
 class File {
   constructor({
     src,
     type
   }) {
-  /**
-  File data.
-  */
+    /**
+     * File data.
+     *
+     * assets/Styles.figma.contents/fonts/SFProText-Regular.otf
+     */
     this.src = src;
-  /**
-  File data.
-  */
+    /**
+     * File data.
+     *
+     * font
+     */
     this.type = type;
   }
 }
@@ -380,8 +629,9 @@ Object.defineProperties(File.prototype, {
 });
 
 /**
-A representation of a font resource, with a reference to a [[File]] containing a TTF or OTF font file.
-*/
+ * A representation of a font resource, with a reference to a [[File]] containing a TTF or OTF font file.
+ *
+ */
 class Font {
   constructor({
     file,
@@ -391,24 +641,34 @@ class Font {
     style
   }) {
     /**
-    Font data.
-    **/
+     * Font data.
+     *
+     * assets/Styles.figma.contents/fonts/SFProText-Regular.otf
+     */
     this.file = new File(file);
-  /**
-  Font data.
-  */
+    /**
+     * Font data.
+     *
+     * SFProText-Regular
+     */
     this.name = name;
-  /**
-  Font data.
-  */
+    /**
+     * Font data.
+     *
+     * [sans-serif]
+     */
     this.fallbacks = fallbacks;
-  /**
-  Font data.
-  */
+    /**
+     * Font data.
+     *
+     * 400
+     */
     this.weight = weight;
-  /**
-  Font data.
-  */
+    /**
+     * Font data.
+     *
+     * normal
+     */
     this.style = style;
   }
 }
@@ -417,9 +677,10 @@ class Font {
 module.exports.Font = Font;
 
 /**
-Describes a typograph including specification of a font name (understood to specify both a font face and a font
-weight) as well as a font size in device-local units and a font color.
-*/
+ * Describes a typograph including specification of a font name (understood to specify both a font face and a font
+ * weight) as well as a font size in device-local units and a font color.
+ *
+ */
 class Typograph {
   constructor({
     font,
@@ -431,32 +692,46 @@ class Typograph {
     decoration
   }) {
     /**
-    Typograph data.
-    **/
+     * Typograph data.
+     *
+     * SFProText-Regular, 400, normal
+     */
     this.font = new Font(font);
-  /**
-  Typograph data.
-  */
+    /**
+     * Typograph data.
+     *
+     * 12
+     */
     this.fontSize = fontSize;
     /**
-    Typograph data.
-    **/
+     * Typograph data.
+     *
+     * hsla(0, 0, 0, 1)
+     */
     this.color = new Color(color);
-  /**
-  Typograph data.
-  */
+    /**
+     * Typograph data.
+     *
+     * 14.0625
+     */
     this.lineHeight = lineHeight;
-  /**
-  Typograph data.
-  */
+    /**
+     * Typograph data.
+     *
+     * 0
+     */
     this.letterSpacing = letterSpacing;
-  /**
-  Typograph data.
-  */
+    /**
+     * Typograph data.
+     *
+     * natural
+     */
     this.alignment = alignment;
-  /**
-  Typograph data.
-  */
+    /**
+     * Typograph data.
+     *
+     * []
+     */
     this.decoration = decoration;
   }
 }
@@ -540,44 +815,253 @@ diezHTMLExtensions.push(() => {
 
 class StylesTypography {
   constructor({
-    caption = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 12, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    monoCaption = {font: {file: {src: "assets/Styles.figma.contents/fonts/IBMPlexMono.otf", type: "font"}, name: "IBMPlexMono", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 10, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    label = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 14, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    monoLabel = {font: {file: {src: "assets/Styles.figma.contents/fonts/IBMPlexMono.otf", type: "font"}, name: "IBMPlexMono", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 12, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    body = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 16, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    monoBody = {font: {file: {src: "assets/Styles.figma.contents/fonts/IBMPlexMono.otf", type: "font"}, name: "IBMPlexMono", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 14, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    subheadingSmall = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Medium.otf", type: "font"}, name: "SFProText-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 11, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    subheading = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Semibold.otf", type: "font"}, name: "SFProText-Semibold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 13, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    heading = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 20, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    headingLarge = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 25, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    headingExtraLarge = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Medium.otf", type: "font"}, name: "SFProText-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 32, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    sidebarBigTitle = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Semibold.otf", type: "font"}, name: "SFProText-Semibold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 16, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    sidebarSmallTitle = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Bold.otf", type: "font"}, name: "SFProText-Bold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 14, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    smallScreenCaption = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 13, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    smallScreenLabel = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 14, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    smallScreenBody = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 16, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    smallScreenHeading = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 18, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    smallScreenHeadingLarge = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 22, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    smallScreenHeadingExtraLarge = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Medium.otf", type: "font"}, name: "SFProText-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 26, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []}
+    caption = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 12, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 14.0625, letterSpacing: 0, alignment: "natural", decoration: []},
+    monoCaption = {font: {file: {src: "assets/Styles.figma.contents/fonts/IBMPlexMono.otf", type: "font"}, name: "IBMPlexMono", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 10, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 11.71875, letterSpacing: -0.1, alignment: "natural", decoration: []},
+    label = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 14, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 16.40625, letterSpacing: 0, alignment: "natural", decoration: []},
+    monoLabel = {font: {file: {src: "assets/Styles.figma.contents/fonts/IBMPlexMono.otf", type: "font"}, name: "IBMPlexMono", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 12, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 14.0625, letterSpacing: -0.12, alignment: "natural", decoration: []},
+    body = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 16, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 18.75, letterSpacing: 0, alignment: "natural", decoration: []},
+    monoBody = {font: {file: {src: "assets/Styles.figma.contents/fonts/IBMPlexMono.otf", type: "font"}, name: "IBMPlexMono", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 14, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 16.40625, letterSpacing: -0.14, alignment: "natural", decoration: []},
+    subheadingSmall = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Medium.otf", type: "font"}, name: "SFProText-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 11, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 12.890625, letterSpacing: 0.44, alignment: "natural", decoration: []},
+    subheading = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Semibold.otf", type: "font"}, name: "SFProText-Semibold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 13, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 15.234375, letterSpacing: 0.39, alignment: "natural", decoration: []},
+    heading = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 20, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 26, letterSpacing: -0.2, alignment: "natural", decoration: []},
+    headingLarge = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 25, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 29.296875, letterSpacing: -0.3125, alignment: "natural", decoration: []},
+    headingExtraLarge = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Medium.otf", type: "font"}, name: "SFProText-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 32, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 36, letterSpacing: -0.4, alignment: "natural", decoration: []},
+    sidebarBigTitle = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Semibold.otf", type: "font"}, name: "SFProText-Semibold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 16, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 18.75, letterSpacing: 0, alignment: "natural", decoration: []},
+    sidebarSmallTitle = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Bold.otf", type: "font"}, name: "SFProText-Bold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 14, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 16.40625, letterSpacing: 0, alignment: "natural", decoration: []},
+    smallScreenCaption = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 13, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 15.234375, letterSpacing: 0, alignment: "natural", decoration: []},
+    smallScreenLabel = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 14, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 16.40625, letterSpacing: 0, alignment: "natural", decoration: []},
+    smallScreenBody = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 16, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 18.75, letterSpacing: 0, alignment: "natural", decoration: []},
+    smallScreenHeading = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 18, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 21.09375, letterSpacing: -0.18, alignment: "natural", decoration: []},
+    smallScreenHeadingLarge = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Regular.otf", type: "font"}, name: "SFProText-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 22, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 25.78125, letterSpacing: -0.275, alignment: "natural", decoration: []},
+    smallScreenHeadingExtraLarge = {font: {file: {src: "assets/Styles.figma.contents/fonts/SFProText-Medium.otf", type: "font"}, name: "SFProText-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 26, color: {h: 0, s: 0, l: 0, a: 1}, lineHeight: 36, letterSpacing: -0.325, alignment: "natural", decoration: []}
   } = {}) {
+    /**
+     * - font: `SFProText-Regular, 400, normal`
+     * - fontSize: `12`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `14.0625`
+     * - letterSpacing: `0`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.caption = new Typograph(caption);
+    /**
+     * - font: `IBMPlexMono, 400, normal`
+     * - fontSize: `10`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `11.71875`
+     * - letterSpacing: `-0.1`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.monoCaption = new Typograph(monoCaption);
+    /**
+     * - font: `SFProText-Regular, 400, normal`
+     * - fontSize: `14`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `16.40625`
+     * - letterSpacing: `0`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.label = new Typograph(label);
+    /**
+     * - font: `IBMPlexMono, 400, normal`
+     * - fontSize: `12`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `14.0625`
+     * - letterSpacing: `-0.12`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.monoLabel = new Typograph(monoLabel);
+    /**
+     * - font: `SFProText-Regular, 400, normal`
+     * - fontSize: `16`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `18.75`
+     * - letterSpacing: `0`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.body = new Typograph(body);
+    /**
+     * - font: `IBMPlexMono, 400, normal`
+     * - fontSize: `14`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `16.40625`
+     * - letterSpacing: `-0.14`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.monoBody = new Typograph(monoBody);
+    /**
+     * - font: `SFProText-Medium, 400, normal`
+     * - fontSize: `11`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `12.890625`
+     * - letterSpacing: `0.44`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.subheadingSmall = new Typograph(subheadingSmall);
+    /**
+     * - font: `SFProText-Semibold, 400, normal`
+     * - fontSize: `13`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `15.234375`
+     * - letterSpacing: `0.39`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.subheading = new Typograph(subheading);
+    /**
+     * - font: `SFProText-Regular, 400, normal`
+     * - fontSize: `20`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `26`
+     * - letterSpacing: `-0.2`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.heading = new Typograph(heading);
+    /**
+     * - font: `SFProText-Regular, 400, normal`
+     * - fontSize: `25`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `29.296875`
+     * - letterSpacing: `-0.3125`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.headingLarge = new Typograph(headingLarge);
+    /**
+     * - font: `SFProText-Medium, 400, normal`
+     * - fontSize: `32`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `36`
+     * - letterSpacing: `-0.4`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.headingExtraLarge = new Typograph(headingExtraLarge);
+    /**
+     * - font: `SFProText-Semibold, 400, normal`
+     * - fontSize: `16`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `18.75`
+     * - letterSpacing: `0`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.sidebarBigTitle = new Typograph(sidebarBigTitle);
+    /**
+     * - font: `SFProText-Bold, 400, normal`
+     * - fontSize: `14`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `16.40625`
+     * - letterSpacing: `0`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.sidebarSmallTitle = new Typograph(sidebarSmallTitle);
+    /**
+     * - font: `SFProText-Regular, 400, normal`
+     * - fontSize: `13`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `15.234375`
+     * - letterSpacing: `0`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.smallScreenCaption = new Typograph(smallScreenCaption);
+    /**
+     * - font: `SFProText-Regular, 400, normal`
+     * - fontSize: `14`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `16.40625`
+     * - letterSpacing: `0`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.smallScreenLabel = new Typograph(smallScreenLabel);
+    /**
+     * - font: `SFProText-Regular, 400, normal`
+     * - fontSize: `16`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `18.75`
+     * - letterSpacing: `0`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.smallScreenBody = new Typograph(smallScreenBody);
+    /**
+     * - font: `SFProText-Regular, 400, normal`
+     * - fontSize: `18`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `21.09375`
+     * - letterSpacing: `-0.18`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.smallScreenHeading = new Typograph(smallScreenHeading);
+    /**
+     * - font: `SFProText-Regular, 400, normal`
+     * - fontSize: `22`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `25.78125`
+     * - letterSpacing: `-0.275`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.smallScreenHeadingLarge = new Typograph(smallScreenHeadingLarge);
+    /**
+     * - font: `SFProText-Medium, 400, normal`
+     * - fontSize: `26`
+     * - color: `hsla(0, 0, 0, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `36`
+     * - letterSpacing: `-0.325`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.smallScreenHeadingExtraLarge = new Typograph(smallScreenHeadingExtraLarge);
   }
 }
@@ -589,10 +1073,12 @@ class DesignLanguage {
   constructor({
     colors = {},
     gradients = {},
+    shadows = {},
     typography = {}
   } = {}) {
     this.colors = new StylesColors(colors);
     this.gradients = new StylesGradients(gradients);
+    this.shadows = new StylesShadows(shadows);
     this.typography = new StylesTypography(typography);
   }
 }

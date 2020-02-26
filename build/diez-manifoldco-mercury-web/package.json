@@ -8,7 +8,7 @@
     "import": "./wrapper.mjs"
   },
   "dependencies": {
-    "@diez/web-sdk-common": "^10.2.3"
+    "@diez/web-sdk-common": "^10.3.0"
   },
   "private": false,
   "description": "Manifold Design tokens, powered by Diez",
