@@ -48,6 +48,7 @@ $styles-colors-muted-teal: hsla(188.88888888888889, 75.00000000000004%, 85.88235
 $styles-colors-gray-lightest: hsla(240, 6.666666666666654%, 97.05882352941177%, 1);
 $styles-colors-gray-lighter: hsla(240, 2.7027027027026946%, 92.74509803921569%, 1);
 $styles-colors-gray-light: hsla(240, 1.4925373134328308%, 86.86274509803921%, 1);
+$styles-colors-border-gray: hsla(210, 5.357142857142836%, 78.03921568627452%, 1);
 $styles-colors-gray: hsla(240, 2.752293577981655%, 57.25490196078431%, 1);
 $styles-colors-gray-dark: hsla(210, 4.395604395604395%, 35.68627450980392%, 1);
 $styles-colors-gray-darker: hsla(210, 12.280701754385966%, 22.352941176470587%, 1);
@@ -68,6 +69,10 @@ $styles-gradients-gradient-purple: linear-gradient(225deg, hsla(261.702127659574
 $styles-gradients-gradient-purple-muted: linear-gradient(225deg, hsla(261.8181818181818, 100%, 93.52941176470588%, 1) 0%, hsla(247.99999999999997, 100%, 88.23529411764706%, 1) 100%);
 $styles-gradients-gradient-red: linear-gradient(45deg, hsla(353.7037037037037, 86.17021276595743%, 36.86274509803922%, 1) 0%, hsla(342.4752475247525, 100%, 60.3921568627451%, 1) 100%);
 $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.09803921568627%, 1) 0%, hsla(336.8852459016394, 96.82539682539684%, 75.29411764705883%, 1) 100%);
+$styles-shadows-shadow-near: 0px 2px 8px hsla(0, 0%, 0%, 0.07999999821186066);
+$styles-shadows-shadow-near-filter: drop-shadow(0px 2px 4px hsla(0, 0%, 0%, 0.07999999821186066));
+$styles-shadows-shadow-far: 0px 6px 10px hsla(0, 0%, 0%, 0.15000000596046448);
+$styles-shadows-shadow-far-filter: drop-shadow(0px 6px 5px hsla(0, 0%, 0%, 0.15000000596046448));
 
 @mixin styles-colors-black-background-color {
   background-color: hsla(0, 0%, 0%, 1);
@@ -219,6 +224,14 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
 
 @mixin styles-colors-gray-light-color {
   color: hsla(240, 1.4925373134328308%, 86.86274509803921%, 1);
+}
+
+@mixin styles-colors-border-gray-background-color {
+  background-color: hsla(210, 5.357142857142836%, 78.03921568627452%, 1);
+}
+
+@mixin styles-colors-border-gray-color {
+  color: hsla(210, 5.357142857142836%, 78.03921568627452%, 1);
 }
 
 @mixin styles-colors-gray-background-color {
@@ -381,6 +394,30 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   background-image: linear-gradient(225deg, hsla(0, 100%, 85.09803921568627%, 1) 0%, hsla(336.8852459016394, 96.82539682539684%, 75.29411764705883%, 1) 100%);
 }
 
+@mixin styles-shadows-shadow-near-box-shadow {
+  box-shadow: 0px 2px 8px hsla(0, 0%, 0%, 0.07999999821186066);
+}
+
+@mixin styles-shadows-shadow-near-text-shadow {
+  text-shadow: 0px 2px 8px hsla(0, 0%, 0%, 0.07999999821186066);
+}
+
+@mixin styles-shadows-shadow-near-filter {
+  filter: drop-shadow(0px 2px 4px hsla(0, 0%, 0%, 0.07999999821186066));
+}
+
+@mixin styles-shadows-shadow-far-box-shadow {
+  box-shadow: 0px 6px 10px hsla(0, 0%, 0%, 0.15000000596046448);
+}
+
+@mixin styles-shadows-shadow-far-text-shadow {
+  text-shadow: 0px 6px 10px hsla(0, 0%, 0%, 0.15000000596046448);
+}
+
+@mixin styles-shadows-shadow-far-filter {
+  filter: drop-shadow(0px 6px 5px hsla(0, 0%, 0%, 0.15000000596046448));
+}
+
 @mixin styles-typography-caption {
   font-family: "SFProText-Regular",sans-serif;
   font-weight: 400;
@@ -390,6 +427,7 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
+  line-height: 14.0625px;
 }
 
 @mixin styles-typography-mono-caption {
@@ -398,9 +436,10 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   font-style: normal;
   font-size: 10px;
   color: hsla(0, 0%, 0%, 1);
-  letter-spacing: 0px;
+  letter-spacing: -0.1px;
   text-align: start;
   text-decoration: none;
+  line-height: 11.71875px;
 }
 
 @mixin styles-typography-label {
@@ -412,6 +451,7 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
+  line-height: 16.40625px;
 }
 
 @mixin styles-typography-mono-label {
@@ -420,9 +460,10 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   font-style: normal;
   font-size: 12px;
   color: hsla(0, 0%, 0%, 1);
-  letter-spacing: 0px;
+  letter-spacing: -0.12px;
   text-align: start;
   text-decoration: none;
+  line-height: 14.0625px;
 }
 
 @mixin styles-typography-body {
@@ -434,6 +475,7 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
+  line-height: 18.75px;
 }
 
 @mixin styles-typography-mono-body {
@@ -442,9 +484,10 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   font-style: normal;
   font-size: 14px;
   color: hsla(0, 0%, 0%, 1);
-  letter-spacing: 0px;
+  letter-spacing: -0.14px;
   text-align: start;
   text-decoration: none;
+  line-height: 16.40625px;
 }
 
 @mixin styles-typography-subheading-small {
@@ -453,9 +496,10 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   font-style: normal;
   font-size: 11px;
   color: hsla(0, 0%, 0%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.44px;
   text-align: start;
   text-decoration: none;
+  line-height: 12.890625px;
 }
 
 @mixin styles-typography-subheading {
@@ -464,9 +508,10 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   font-style: normal;
   font-size: 13px;
   color: hsla(0, 0%, 0%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.39px;
   text-align: start;
   text-decoration: none;
+  line-height: 15.234375px;
 }
 
 @mixin styles-typography-heading {
@@ -475,9 +520,10 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   font-style: normal;
   font-size: 20px;
   color: hsla(0, 0%, 0%, 1);
-  letter-spacing: 0px;
+  letter-spacing: -0.2px;
   text-align: start;
   text-decoration: none;
+  line-height: 26px;
 }
 
 @mixin styles-typography-heading-large {
@@ -486,9 +532,10 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   font-style: normal;
   font-size: 25px;
   color: hsla(0, 0%, 0%, 1);
-  letter-spacing: 0px;
+  letter-spacing: -0.3125px;
   text-align: start;
   text-decoration: none;
+  line-height: 29.296875px;
 }
 
 @mixin styles-typography-heading-extra-large {
@@ -497,9 +544,10 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   font-style: normal;
   font-size: 32px;
   color: hsla(0, 0%, 0%, 1);
-  letter-spacing: 0px;
+  letter-spacing: -0.4px;
   text-align: start;
   text-decoration: none;
+  line-height: 36px;
 }
 
 @mixin styles-typography-sidebar-big-title {
@@ -511,6 +559,7 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
+  line-height: 18.75px;
 }
 
 @mixin styles-typography-sidebar-small-title {
@@ -522,6 +571,7 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
+  line-height: 16.40625px;
 }
 
 @mixin styles-typography-small-screen-caption {
@@ -533,6 +583,7 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
+  line-height: 15.234375px;
 }
 
 @mixin styles-typography-small-screen-label {
@@ -544,6 +595,7 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
+  line-height: 16.40625px;
 }
 
 @mixin styles-typography-small-screen-body {
@@ -555,6 +607,7 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
+  line-height: 18.75px;
 }
 
 @mixin styles-typography-small-screen-heading {
@@ -563,9 +616,10 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   font-style: normal;
   font-size: 18px;
   color: hsla(0, 0%, 0%, 1);
-  letter-spacing: 0px;
+  letter-spacing: -0.18px;
   text-align: start;
   text-decoration: none;
+  line-height: 21.09375px;
 }
 
 @mixin styles-typography-small-screen-heading-large {
@@ -574,9 +628,10 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   font-style: normal;
   font-size: 22px;
   color: hsla(0, 0%, 0%, 1);
-  letter-spacing: 0px;
+  letter-spacing: -0.275px;
   text-align: start;
   text-decoration: none;
+  line-height: 25.78125px;
 }
 
 @mixin styles-typography-small-screen-heading-extra-large {
@@ -585,8 +640,9 @@ $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.0
   font-style: normal;
   font-size: 26px;
   color: hsla(0, 0%, 0%, 1);
-  letter-spacing: 0px;
+  letter-spacing: -0.325px;
   text-align: start;
   text-decoration: none;
+  line-height: 36px;
 }
 

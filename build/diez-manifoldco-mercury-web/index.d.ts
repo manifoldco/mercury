@@ -34,39 +34,149 @@ export declare class Color {
 }
 
 export declare class StylesColors {
+  /**
+   * hsla(0, 0, 0, 1)
+   */
   black: Color;
+  /**
+   * hsla(0, 0, 1, 1)
+   */
   white: Color;
+  /**
+   * hsla(0.47, 0.58, 0.46, 1)
+   */
   green: Color;
+  /**
+   * hsla(0.44, 0.62, 0.78, 1)
+   */
   mutedGreen: Color;
+  /**
+   * hsla(0.96, 0.74, 0.48, 1)
+   */
   red: Color;
+  /**
+   * hsla(0.96, 1, 0.88, 1)
+   */
   mutedRed: Color;
+  /**
+   * hsla(0.62, 0.76, 0.49, 1)
+   */
   blue: Color;
+  /**
+   * hsla(0.61, 0.94, 0.93, 1)
+   */
   mutedBlue: Color;
+  /**
+   * hsla(0.13, 1, 0.66, 1)
+   */
   yellow: Color;
+  /**
+   * hsla(0.14, 1, 0.86, 1)
+   */
   mutedYellow: Color;
+  /**
+   * hsla(0.08, 0.91, 0.55, 1)
+   */
   orange: Color;
+  /**
+   * hsla(0.07, 1, 0.82, 1)
+   */
   mutedOrange: Color;
+  /**
+   * hsla(0.72, 0.61, 0.55, 1)
+   */
   purple: Color;
+  /**
+   * hsla(0.73, 0.71, 0.89, 1)
+   */
   mutedPurple: Color;
+  /**
+   * hsla(0.52, 0.86, 0.44, 1)
+   */
   teal: Color;
+  /**
+   * hsla(0.52, 0.75, 0.86, 1)
+   */
   mutedTeal: Color;
+  /**
+   * hsla(0.67, 0.07, 0.97, 1)
+   */
   grayLightest: Color;
+  /**
+   * hsla(0.67, 0.03, 0.93, 1)
+   */
   grayLighter: Color;
+  /**
+   * hsla(0.67, 0.01, 0.87, 1)
+   */
   grayLight: Color;
+  /**
+   * hsla(0.58, 0.05, 0.78, 1)
+   */
+  borderGray: Color;
+  /**
+   * hsla(0.67, 0.03, 0.57, 1)
+   */
   gray: Color;
+  /**
+   * hsla(0.58, 0.04, 0.36, 1)
+   */
   grayDark: Color;
+  /**
+   * hsla(0.58, 0.12, 0.22, 1)
+   */
   grayDarker: Color;
+  /**
+   * hsla(0, 0, 0, 1)
+   */
   black1: Color;
+  /**
+   * hsla(0.13, 1, 0.66, 1)
+   */
   colorYellow: Color;
 }
 
+/**
+ * Provides a gradient stop.
+ *
+ */
 export declare class GradientStop {
+  /**
+   * GradientStop data.
+   *
+   * 1
+   */
   position: number;
+  /**
+   * GradientStop data.
+   *
+   * hsla(0.55, 0.63, 0.51, 1)
+   */
   color: Color;
 }
 
+/**
+ * Provides a two dimensional point.
+ * 
+ * Taken alone, points are designated in an abstract space with no inherit dimensions or directionality. In the
+ * context of other prefabs like [[LinearGradient]], points typically should use the standard two dimensional graphics
+ * space, often normalized in the unit square, where x increases from left to right and y increases from top to bottom.
+ * 
+ * Usage: `point = Point2D.make(0.5, 0.5);`.
+ *
+ */
 export declare class Point2D {
+  /**
+   * Point data.
+   *
+   * 0.821016851389819
+   */
   x: number;
+  /**
+   * Point data.
+   *
+   * -0.105676656843359
+   */
   y: number;
 }
 
@@ -88,21 +198,114 @@ export declare class LinearGradient {
 }
 
 export declare class StylesGradients {
+  /**
+   * start [0.821016851389819, -0.105676656843359], end [-0.390336415164722, 0.674996301605858], stops: [hsla(0.42, 0.46, 0.52, 1) at 0,hsla(0.55, 0.63, 0.51, 1) at 1]
+   */
   gradientGreen: LinearGradient;
+  /**
+   * start [1.181249980120726, -8.693732e-9], end [-0.409674694679825, 0.914285662290109], stops: [hsla(0.95, 0.99, 0.54, 1) at 0,hsla(0.76, 0.38, 0.49, 1) at 0.26458865404129,hsla(0.55, 0.64, 0.49, 1) at 0.609017670154572,hsla(0.06, 0.98, 0.63, 1) at 0.728924870491028,hsla(0.12, 0.98, 0.6, 1) at 1]
+   */
   gradientBrand: LinearGradient;
+  /**
+   * start [0.821016851389819, -0.105676656843359], end [-0.390336415164722, 0.674996301605858], stops: [hsla(0.42, 0.64, 0.89, 1) at 0,hsla(0.56, 1, 0.92, 1) at 1]
+   */
   gradientGreenMuted: LinearGradient;
+  /**
+   * start [4.377216e-9, 1.000000004377216], end [1.000000004377216, 4.377216e-9], stops: [hsla(0.97, 0.64, 0.6, 1) at 0,hsla(0.82, 0.35, 0.43, 1) at 1]
+   */
   gradientBrand1: LinearGradient;
+  /**
+   * start [4.377216e-9, 1.000000004377216], end [1.000000004377216, 4.377216e-9], stops: [hsla(0.97, 0.54, 0.85, 1) at 0,hsla(0.82, 0.3, 0.85, 1) at 1]
+   */
   gradientBrandMuted: LinearGradient;
+  /**
+   * start [0.5, -0.5], end [-0.5, 0.5], stops: [hsla(0.55, 0.63, 0.51, 1) at 0,hsla(0.66, 0.35, 0.48, 1) at 1]
+   */
   gradientBlue: LinearGradient;
+  /**
+   * start [0.5, -0.5], end [-0.5, 0.5], stops: [hsla(0.56, 1, 0.85, 1) at 0,hsla(0.66, 1, 0.89, 1) at 1]
+   */
   gradientBlueMuted: LinearGradient;
+  /**
+   * start [0.527897182467498, 1.55579430626508], end [1.527897158999531, 0.499999988266017], stops: [hsla(0.11, 1, 0.61, 1) at 0,hsla(0.13, 1, 0.7, 1) at 1]
+   */
   gradientYellow: LinearGradient;
+  /**
+   * start [0.567276093902552, 1.59738067308683], end [1.650448750489284, 0.46282849512784], stops: [hsla(0.11, 1, 0.79, 1) at 0,hsla(0.14, 1, 0.91, 1) at 1]
+   */
   gradientYellowMuted: LinearGradient;
+  /**
+   * start [0.322843937601224, 2.070313632698886], end [1.846504348936375, 0.67485791912246], stops: [hsla(0.94, 1, 0.5, 1) at 0,hsla(0.14, 0.98, 0.59, 1) at 1]
+   */
   gradientOrange: LinearGradient;
+  /**
+   * start [0.53288843739154, 1.755845003537722], end [1.762725784434706, 0.527946382205596], stops: [hsla(0.05, 0.8, 0.8, 1) at 0,hsla(0.11, 1, 0.92, 1) at 1]
+   */
   gradientOrangeMuted: LinearGradient;
+  /**
+   * start [0.5, -0.5], end [-0.5, 0.5], stops: [hsla(0.73, 1, 0.72, 1) at 0,hsla(0.69, 0.7, 0.55, 1) at 1]
+   */
   gradientPurple: LinearGradient;
+  /**
+   * start [0.5, -0.5], end [-0.5, 0.5], stops: [hsla(0.73, 1, 0.94, 1) at 0,hsla(0.69, 1, 0.88, 1) at 1]
+   */
   gradientPurpleMuted: LinearGradient;
+  /**
+   * start [0.5, 1.5], end [1.5, 0.5], stops: [hsla(0.98, 0.86, 0.37, 1) at 0,hsla(0.95, 1, 0.6, 1) at 1]
+   */
   gradientRed: LinearGradient;
+  /**
+   * start [0.5, -0.5], end [-0.5, 0.5], stops: [hsla(0, 1, 0.85, 1) at 0,hsla(0.94, 0.97, 0.75, 1) at 1]
+   */
   gradientRedMuted: LinearGradient;
+}
+
+export declare class DropShadow {
+  /**
+   * The CSS box-shadow representation of the `DropShadow`.
+   * @example
+   * 0px 1px 16px rgba(0, 0, 16, .4)
+   */
+  boxShadow: string;
+  /**
+   * The CSS text-shadow representation of the `DropShadow`.
+   * @example
+   * 0px 1px 16px rgba(0, 0, 16, .4)
+   */
+  textShadow: string;
+  /**
+   * The CSS filter representation of the `DropShadow`.
+   * @example
+   * drop-shadow(0px 1px 16px rgba(0, 0, 16, .4))
+   */
+  filter: string;
+  /**
+   * CSS declarations for the `box-shadow` CSS property.
+   */
+  boxShadowStyle: {boxShadow: string};
+  /**
+   * CSS declarations for the `text-shadow` CSS property.
+   */
+  textShadowStyle: {textShadow: string};
+  /**
+   * CSS declarations for the `filter` CSS property.
+   */
+  filterStyle: {filter: string};
+}
+
+export declare class StylesShadows {
+  /**
+   * - offset: `[0, 2]`
+   * - radius: `8`
+   * - color: `hsla(0, 0, 0, 0.08)`
+   */
+  shadowNear: DropShadow;
+  /**
+   * - offset: `[0, 6]`
+   * - radius: `10`
+   * - color: `hsla(0, 0, 0, 0.15)`
+   */
+  shadowFar: DropShadow;
 }
 
 export declare class File {
@@ -112,11 +315,40 @@ export declare class File {
   url: string;
 }
 
+/**
+ * A representation of a font resource, with a reference to a [[File]] containing a TTF or OTF font file.
+ *
+ */
 export declare class Font {
+  /**
+   * Font data.
+   *
+   * assets/Styles.figma.contents/fonts/SFProText-Regular.otf
+   */
   file: File;
+  /**
+   * Font data.
+   *
+   * SFProText-Regular
+   */
   name: string;
+  /**
+   * Font data.
+   *
+   * [sans-serif]
+   */
   fallbacks: string[];
+  /**
+   * Font data.
+   *
+   * 400
+   */
   weight: number;
+  /**
+   * Font data.
+   *
+   * normal
+   */
   style: string;
 }
 
@@ -153,30 +385,240 @@ declare global {
 }
 
 export declare class StylesTypography {
+  /**
+   * - font: `SFProText-Regular, 400, normal`
+   * - fontSize: `12`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `14.0625`
+   * - letterSpacing: `0`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   caption: Typograph;
+  /**
+   * - font: `IBMPlexMono, 400, normal`
+   * - fontSize: `10`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `11.71875`
+   * - letterSpacing: `-0.1`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   monoCaption: Typograph;
+  /**
+   * - font: `SFProText-Regular, 400, normal`
+   * - fontSize: `14`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `16.40625`
+   * - letterSpacing: `0`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   label: Typograph;
+  /**
+   * - font: `IBMPlexMono, 400, normal`
+   * - fontSize: `12`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `14.0625`
+   * - letterSpacing: `-0.12`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   monoLabel: Typograph;
+  /**
+   * - font: `SFProText-Regular, 400, normal`
+   * - fontSize: `16`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `18.75`
+   * - letterSpacing: `0`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   body: Typograph;
+  /**
+   * - font: `IBMPlexMono, 400, normal`
+   * - fontSize: `14`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `16.40625`
+   * - letterSpacing: `-0.14`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   monoBody: Typograph;
+  /**
+   * - font: `SFProText-Medium, 400, normal`
+   * - fontSize: `11`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `12.890625`
+   * - letterSpacing: `0.44`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   subheadingSmall: Typograph;
+  /**
+   * - font: `SFProText-Semibold, 400, normal`
+   * - fontSize: `13`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `15.234375`
+   * - letterSpacing: `0.39`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   subheading: Typograph;
+  /**
+   * - font: `SFProText-Regular, 400, normal`
+   * - fontSize: `20`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `26`
+   * - letterSpacing: `-0.2`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   heading: Typograph;
+  /**
+   * - font: `SFProText-Regular, 400, normal`
+   * - fontSize: `25`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `29.296875`
+   * - letterSpacing: `-0.3125`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   headingLarge: Typograph;
+  /**
+   * - font: `SFProText-Medium, 400, normal`
+   * - fontSize: `32`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `36`
+   * - letterSpacing: `-0.4`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   headingExtraLarge: Typograph;
+  /**
+   * - font: `SFProText-Semibold, 400, normal`
+   * - fontSize: `16`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `18.75`
+   * - letterSpacing: `0`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   sidebarBigTitle: Typograph;
+  /**
+   * - font: `SFProText-Bold, 400, normal`
+   * - fontSize: `14`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `16.40625`
+   * - letterSpacing: `0`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   sidebarSmallTitle: Typograph;
+  /**
+   * - font: `SFProText-Regular, 400, normal`
+   * - fontSize: `13`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `15.234375`
+   * - letterSpacing: `0`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   smallScreenCaption: Typograph;
+  /**
+   * - font: `SFProText-Regular, 400, normal`
+   * - fontSize: `14`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `16.40625`
+   * - letterSpacing: `0`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   smallScreenLabel: Typograph;
+  /**
+   * - font: `SFProText-Regular, 400, normal`
+   * - fontSize: `16`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `18.75`
+   * - letterSpacing: `0`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   smallScreenBody: Typograph;
+  /**
+   * - font: `SFProText-Regular, 400, normal`
+   * - fontSize: `18`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `21.09375`
+   * - letterSpacing: `-0.18`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   smallScreenHeading: Typograph;
+  /**
+   * - font: `SFProText-Regular, 400, normal`
+   * - fontSize: `22`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `25.78125`
+   * - letterSpacing: `-0.275`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   smallScreenHeadingLarge: Typograph;
+  /**
+   * - font: `SFProText-Medium, 400, normal`
+   * - fontSize: `26`
+   * - color: `hsla(0, 0, 0, 1)`
+   * - iosTextStyle: `body`
+   * - shouldScale: `false`
+   * - lineHeight: `36`
+   * - letterSpacing: `-0.325`
+   * - alignment: `natural`
+   * - decoration: `[]`
+   */
   smallScreenHeadingExtraLarge: Typograph;
 }
 
 export declare class DesignLanguage extends RootComponent {
   colors: StylesColors;
   gradients: StylesGradients;
+  shadows: StylesShadows;
   typography: StylesTypography;
 }
 

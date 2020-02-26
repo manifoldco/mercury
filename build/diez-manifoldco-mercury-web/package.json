@@ -1,6 +1,6 @@
 {
   "name": "@manifoldco/mercury",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "main": "./main.js",
   "exports": {
@@ -8,7 +8,7 @@
     "import": "./wrapper.mjs"
   },
   "dependencies": {
-    "@diez/web-sdk-common": "^10.2.3"
+    "@diez/web-sdk-common": "^10.3.0"
   },
   "private": false,
   "description": "Manifold Design tokens, powered by Diez",
