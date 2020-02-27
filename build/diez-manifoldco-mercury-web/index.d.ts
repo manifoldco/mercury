@@ -205,7 +205,7 @@ export declare class StylesGradients {
   /**
    * start [1.181249980120726, -8.693732e-9], end [-0.409674694679825, 0.914285662290109], stops: [hsla(0.95, 0.99, 0.54, 1) at 0,hsla(0.76, 0.38, 0.49, 1) at 0.26458865404129,hsla(0.55, 0.64, 0.49, 1) at 0.609017670154572,hsla(0.06, 0.98, 0.63, 1) at 0.728924870491028,hsla(0.12, 0.98, 0.6, 1) at 1]
    */
-  gradientBrand: LinearGradient;
+  gradientManifold: LinearGradient;
   /**
    * start [0.821016851389819, -0.105676656843359], end [-0.390336415164722, 0.674996301605858], stops: [hsla(0.42, 0.64, 0.89, 1) at 0,hsla(0.56, 1, 0.92, 1) at 1]
    */
@@ -213,7 +213,7 @@ export declare class StylesGradients {
   /**
    * start [4.377216e-9, 1.000000004377216], end [1.000000004377216, 4.377216e-9], stops: [hsla(0.97, 0.64, 0.6, 1) at 0,hsla(0.82, 0.35, 0.43, 1) at 1]
    */
-  gradientBrand1: LinearGradient;
+  gradientBrand: LinearGradient;
   /**
    * start [4.377216e-9, 1.000000004377216], end [1.000000004377216, 4.377216e-9], stops: [hsla(0.97, 0.54, 0.85, 1) at 0,hsla(0.82, 0.3, 0.85, 1) at 1]
    */
@@ -294,12 +294,6 @@ export declare class DropShadow {
 }
 
 export declare class StylesShadows {
-  /**
-   * - offset: `[0, 2]`
-   * - radius: `8`
-   * - color: `hsla(0, 0, 0, 0.08)`
-   */
-  shadowNear: DropShadow;
   /**
    * - offset: `[0, 6]`
    * - radius: `10`

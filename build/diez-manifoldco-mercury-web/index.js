@@ -409,9 +409,9 @@ Object.defineProperties(LinearGradient.prototype, {
 class StylesGradients {
   constructor({
     gradientGreen = {stops: [{position: 0, color: {h: 0.4226190476190476, s: 0.45528455284552855, l: 0.5176470588235295, a: 1}}, {position: 1, color: {h: 0.5545073375262054, s: 0.6334661354581673, l: 0.5078431372549019, a: 1}}], start: {x: 0.821016851389819, y: -0.105676656843359}, end: {x: -0.390336415164722, y: 0.674996301605858}},
-    gradientBrand = {stops: [{position: 0, color: {h: 0.9453900709219858, s: 0.9915611814345991, l: 0.5352941176470588, a: 1}}, {position: 0.26458865404129, color: {h: 0.7552083333333334, s: 0.38095238095238093, l: 0.49411764705882355, a: 1}}, {position: 0.609017670154572, color: {h: 0.5545073375262054, s: 0.6385542168674698, l: 0.4882352941176471, a: 1}}, {position: 0.728924870491028, color: {h: 0.05978260869565217, s: 0.9787234042553192, l: 0.6313725490196078, a: 1}}, {position: 1, color: {h: 0.12333333333333331, s: 0.9803921568627452, l: 0.6, a: 1}}], start: {x: 1.181249980120726, y: -8.693732e-9}, end: {x: -0.409674694679825, y: 0.914285662290109}},
+    gradientManifold = {stops: [{position: 0, color: {h: 0.9453900709219858, s: 0.9915611814345991, l: 0.5352941176470588, a: 1}}, {position: 0.26458865404129, color: {h: 0.7552083333333334, s: 0.38095238095238093, l: 0.49411764705882355, a: 1}}, {position: 0.609017670154572, color: {h: 0.5545073375262054, s: 0.6385542168674698, l: 0.4882352941176471, a: 1}}, {position: 0.728924870491028, color: {h: 0.05978260869565217, s: 0.9787234042553192, l: 0.6313725490196078, a: 1}}, {position: 1, color: {h: 0.12333333333333331, s: 0.9803921568627452, l: 0.6, a: 1}}], start: {x: 1.181249980120726, y: -8.693732e-9}, end: {x: -0.409674694679825, y: 0.914285662290109}},
     gradientGreenMuted = {stops: [{position: 0, color: {h: 0.4190476190476191, s: 0.636363636363637, l: 0.892156862745098, a: 1}}, {position: 1, color: {h: 0.5555555555555556, s: 1, l: 0.9176470588235295, a: 1}}], start: {x: 0.821016851389819, y: -0.105676656843359}, end: {x: -0.390336415164722, y: 0.674996301605858}},
-    gradientBrand1 = {stops: [{position: 0, color: {h: 0.9722222222222222, s: 0.6407766990291263, l: 0.596078431372549, a: 1}}, {position: 1, color: {h: 0.816017316017316, s: 0.35159817351598177, l: 0.4294117647058824, a: 1}}], start: {x: 4.377216e-9, y: 1.000000004377216}, end: {x: 1.000000004377216, y: 4.377216e-9}},
+    gradientBrand = {stops: [{position: 0, color: {h: 0.9722222222222222, s: 0.6407766990291263, l: 0.596078431372549, a: 1}}, {position: 1, color: {h: 0.816017316017316, s: 0.35159817351598177, l: 0.4294117647058824, a: 1}}], start: {x: 4.377216e-9, y: 1.000000004377216}, end: {x: 1.000000004377216, y: 4.377216e-9}},
     gradientBrandMuted = {stops: [{position: 0, color: {h: 0.9689922480620154, s: 0.5443037974683547, l: 0.8450980392156863, a: 1}}, {position: 1, color: {h: 0.818181818181818, s: 0.2972972972972973, l: 0.8549019607843138, a: 1}}], start: {x: 4.377216e-9, y: 1.000000004377216}, end: {x: 1.000000004377216, y: 4.377216e-9}},
     gradientBlue = {stops: [{position: 0, color: {h: 0.5545073375262054, s: 0.6334661354581673, l: 0.5078431372549019, a: 1}}, {position: 1, color: {h: 0.6647058823529411, s: 0.3497942386831276, l: 0.47647058823529415, a: 1}}], start: {x: 0.5, y: -0.5}, end: {x: -0.5, y: 0.5}},
     gradientBlueMuted = {stops: [{position: 0, color: {h: 0.5555555555555555, s: 1, l: 0.8470588235294118, a: 1}}, {position: 1, color: {h: 0.6637931034482759, s: 1, l: 0.8862745098039215, a: 1}}], start: {x: 0.5, y: -0.5}, end: {x: -0.5, y: 0.5}},
@@ -431,7 +431,7 @@ class StylesGradients {
     /**
      * start [1.181249980120726, -8.693732e-9], end [-0.409674694679825, 0.914285662290109], stops: [hsla(0.95, 0.99, 0.54, 1) at 0,hsla(0.76, 0.38, 0.49, 1) at 0.26458865404129,hsla(0.55, 0.64, 0.49, 1) at 0.609017670154572,hsla(0.06, 0.98, 0.63, 1) at 0.728924870491028,hsla(0.12, 0.98, 0.6, 1) at 1]
      */
-    this.gradientBrand = new LinearGradient(gradientBrand);
+    this.gradientManifold = new LinearGradient(gradientManifold);
     /**
      * start [0.821016851389819, -0.105676656843359], end [-0.390336415164722, 0.674996301605858], stops: [hsla(0.42, 0.64, 0.89, 1) at 0,hsla(0.56, 1, 0.92, 1) at 1]
      */
@@ -439,7 +439,7 @@ class StylesGradients {
     /**
      * start [4.377216e-9, 1.000000004377216], end [1.000000004377216, 4.377216e-9], stops: [hsla(0.97, 0.64, 0.6, 1) at 0,hsla(0.82, 0.35, 0.43, 1) at 1]
      */
-    this.gradientBrand1 = new LinearGradient(gradientBrand1);
+    this.gradientBrand = new LinearGradient(gradientBrand);
     /**
      * start [4.377216e-9, 1.000000004377216], end [1.000000004377216, 4.377216e-9], stops: [hsla(0.97, 0.54, 0.85, 1) at 0,hsla(0.82, 0.3, 0.85, 1) at 1]
      */
@@ -503,19 +503,19 @@ class DropShadow {
     /**
      * DropShadow data.
      *
-     * [0, 2]
+     * [0, 6]
      */
     this.offset = new Point2D(offset);
     /**
      * DropShadow data.
      *
-     * 8
+     * 10
      */
     this.radius = radius;
     /**
      * DropShadow data.
      *
-     * hsla(0, 0, 0, 0.08)
+     * hsla(0, 0, 0, 0.15)
      */
     this.color = new Color(color);
   }
@@ -567,15 +567,8 @@ Object.defineProperties(DropShadow.prototype, {
 
 class StylesShadows {
   constructor({
-    shadowNear = {offset: {x: 0, y: 2}, radius: 8, color: {h: 0, s: 0, l: 0, a: 0.07999999821186066}},
     shadowFar = {offset: {x: 0, y: 6}, radius: 10, color: {h: 0, s: 0, l: 0, a: 0.15000000596046448}}
   } = {}) {
-    /**
-     * - offset: `[0, 2]`
-     * - radius: `8`
-     * - color: `hsla(0, 0, 0, 0.08)`
-     */
-    this.shadowNear = new DropShadow(shadowNear);
     /**
      * - offset: `[0, 6]`
      * - radius: `10`

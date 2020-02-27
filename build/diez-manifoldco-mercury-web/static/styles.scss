@@ -55,9 +55,9 @@ $styles-colors-gray-darker: hsla(210, 12.280701754385966%, 22.352941176470587%, 
 $styles-colors-black1: hsla(0, 0%, 0%, 1);
 $styles-colors-color-yellow: hsla(48.55491329479769, 100%, 66.07843137254902%, 1);
 $styles-gradients-gradient-green: linear-gradient(237deg, hsla(152.14285714285714, 45.528455284552855%, 51.76470588235295%, 1) 7%, hsla(199.62264150943395, 63.34661354581673%, 50.78431372549019%, 1) 111%);
-$styles-gradients-gradient-brand: linear-gradient(240deg, hsla(340.3404255319149, 99.15611814345992%, 53.529411764705884%, 1) -12%, hsla(271.875, 38.095238095238095%, 49.411764705882355%, 1) 24%, hsla(199.62264150943395, 63.85542168674698%, 48.82352941176471%, 1) 70%, hsla(21.52173913043478, 97.87234042553192%, 63.13725490196078%, 1) 86%, hsla(44.39999999999999, 98.03921568627452%, 60%, 1) 123%);
+$styles-gradients-gradient-manifold: linear-gradient(240deg, hsla(340.3404255319149, 99.15611814345992%, 53.529411764705884%, 1) -12%, hsla(271.875, 38.095238095238095%, 49.411764705882355%, 1) 24%, hsla(199.62264150943395, 63.85542168674698%, 48.82352941176471%, 1) 70%, hsla(21.52173913043478, 97.87234042553192%, 63.13725490196078%, 1) 86%, hsla(44.39999999999999, 98.03921568627452%, 60%, 1) 123%);
 $styles-gradients-gradient-green-muted: linear-gradient(237deg, hsla(150.8571428571429, 63.636363636363704%, 89.21568627450979%, 1) 7%, hsla(200, 100%, 91.76470588235294%, 1) 111%);
-$styles-gradients-gradient-brand1: linear-gradient(45deg, hsla(350, 64.07766990291263%, 59.6078431372549%, 1) 0%, hsla(293.76623376623377, 35.15981735159818%, 42.94117647058824%, 1) 100%);
+$styles-gradients-gradient-brand: linear-gradient(45deg, hsla(350, 64.07766990291263%, 59.6078431372549%, 1) 0%, hsla(293.76623376623377, 35.15981735159818%, 42.94117647058824%, 1) 100%);
 $styles-gradients-gradient-brand-muted: linear-gradient(45deg, hsla(348.83720930232556, 54.43037974683547%, 84.50980392156863%, 1) 0%, hsla(294.5454545454545, 29.72972972972973%, 85.49019607843138%, 1) 100%);
 $styles-gradients-gradient-blue: linear-gradient(225deg, hsla(199.62264150943395, 63.34661354581673%, 50.78431372549019%, 1) 0%, hsla(239.2941176470588, 34.97942386831276%, 47.64705882352941%, 1) 100%);
 $styles-gradients-gradient-blue-muted: linear-gradient(225deg, hsla(199.99999999999997, 100%, 84.70588235294117%, 1) 0%, hsla(238.96551724137933, 100%, 88.62745098039215%, 1) 100%);
@@ -69,8 +69,6 @@ $styles-gradients-gradient-purple: linear-gradient(225deg, hsla(261.702127659574
 $styles-gradients-gradient-purple-muted: linear-gradient(225deg, hsla(261.8181818181818, 100%, 93.52941176470588%, 1) 0%, hsla(247.99999999999997, 100%, 88.23529411764706%, 1) 100%);
 $styles-gradients-gradient-red: linear-gradient(45deg, hsla(353.7037037037037, 86.17021276595743%, 36.86274509803922%, 1) 0%, hsla(342.4752475247525, 100%, 60.3921568627451%, 1) 100%);
 $styles-gradients-gradient-red-muted: linear-gradient(225deg, hsla(0, 100%, 85.09803921568627%, 1) 0%, hsla(336.8852459016394, 96.82539682539684%, 75.29411764705883%, 1) 100%);
-$styles-shadows-shadow-near: 0px 2px 8px hsla(0, 0%, 0%, 0.07999999821186066);
-$styles-shadows-shadow-near-filter: drop-shadow(0px 2px 4px hsla(0, 0%, 0%, 0.07999999821186066));
 $styles-shadows-shadow-far: 0px 6px 10px hsla(0, 0%, 0%, 0.15000000596046448);
 $styles-shadows-shadow-far-filter: drop-shadow(0px 6px 5px hsla(0, 0%, 0%, 0.15000000596046448));
 
@@ -282,11 +280,11 @@ $styles-shadows-shadow-far-filter: drop-shadow(0px 6px 5px hsla(0, 0%, 0%, 0.150
   background-image: linear-gradient(237deg, hsla(152.14285714285714, 45.528455284552855%, 51.76470588235295%, 1) 7%, hsla(199.62264150943395, 63.34661354581673%, 50.78431372549019%, 1) 111%);
 }
 
-@mixin styles-gradients-gradient-brand-background {
+@mixin styles-gradients-gradient-manifold-background {
   background: linear-gradient(240deg, hsla(340.3404255319149, 99.15611814345992%, 53.529411764705884%, 1) -12%, hsla(271.875, 38.095238095238095%, 49.411764705882355%, 1) 24%, hsla(199.62264150943395, 63.85542168674698%, 48.82352941176471%, 1) 70%, hsla(21.52173913043478, 97.87234042553192%, 63.13725490196078%, 1) 86%, hsla(44.39999999999999, 98.03921568627452%, 60%, 1) 123%);
 }
 
-@mixin styles-gradients-gradient-brand-background-image {
+@mixin styles-gradients-gradient-manifold-background-image {
   background-image: linear-gradient(240deg, hsla(340.3404255319149, 99.15611814345992%, 53.529411764705884%, 1) -12%, hsla(271.875, 38.095238095238095%, 49.411764705882355%, 1) 24%, hsla(199.62264150943395, 63.85542168674698%, 48.82352941176471%, 1) 70%, hsla(21.52173913043478, 97.87234042553192%, 63.13725490196078%, 1) 86%, hsla(44.39999999999999, 98.03921568627452%, 60%, 1) 123%);
 }
 
@@ -298,11 +296,11 @@ $styles-shadows-shadow-far-filter: drop-shadow(0px 6px 5px hsla(0, 0%, 0%, 0.150
   background-image: linear-gradient(237deg, hsla(150.8571428571429, 63.636363636363704%, 89.21568627450979%, 1) 7%, hsla(200, 100%, 91.76470588235294%, 1) 111%);
 }
 
-@mixin styles-gradients-gradient-brand1-background {
+@mixin styles-gradients-gradient-brand-background {
   background: linear-gradient(45deg, hsla(350, 64.07766990291263%, 59.6078431372549%, 1) 0%, hsla(293.76623376623377, 35.15981735159818%, 42.94117647058824%, 1) 100%);
 }
 
-@mixin styles-gradients-gradient-brand1-background-image {
+@mixin styles-gradients-gradient-brand-background-image {
   background-image: linear-gradient(45deg, hsla(350, 64.07766990291263%, 59.6078431372549%, 1) 0%, hsla(293.76623376623377, 35.15981735159818%, 42.94117647058824%, 1) 100%);
 }
 
@@ -392,18 +390,6 @@ $styles-shadows-shadow-far-filter: drop-shadow(0px 6px 5px hsla(0, 0%, 0%, 0.150
 
 @mixin styles-gradients-gradient-red-muted-background-image {
   background-image: linear-gradient(225deg, hsla(0, 100%, 85.09803921568627%, 1) 0%, hsla(336.8852459016394, 96.82539682539684%, 75.29411764705883%, 1) 100%);
-}
-
-@mixin styles-shadows-shadow-near-box-shadow {
-  box-shadow: 0px 2px 8px hsla(0, 0%, 0%, 0.07999999821186066);
-}
-
-@mixin styles-shadows-shadow-near-text-shadow {
-  text-shadow: 0px 2px 8px hsla(0, 0%, 0%, 0.07999999821186066);
-}
-
-@mixin styles-shadows-shadow-near-filter {
-  filter: drop-shadow(0px 2px 4px hsla(0, 0%, 0%, 0.07999999821186066));
 }
 
 @mixin styles-shadows-shadow-far-box-shadow {

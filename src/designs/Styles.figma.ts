@@ -34,9 +34,9 @@ const stylesColors = {
 
 const stylesGradients = {
     gradientGreen: new LinearGradient({ stops: [GradientStop.make(0, Color.rgba(76, 188, 136, 1)), GradientStop.make(1, Color.rgba(50, 157, 209, 1))], start: Point2D.make(0.821016851389819, -0.105676656843359), end: Point2D.make(-0.390336415164722, 0.674996301605858) }),
-    gradientBrand: new LinearGradient({ stops: [GradientStop.make(0, Color.rgba(254, 19, 96, 1)), GradientStop.make(0.26458865404129, Color.rgba(129, 78, 174, 1)), GradientStop.make(0.609017670154572, Color.rgba(45, 152, 204, 1)), GradientStop.make(0.728924870491028, Color.rgba(253, 135, 69, 1)), GradientStop.make(1, Color.rgba(253, 201, 53, 1))], start: Point2D.make(1.181249980120726, -8.693732e-9), end: Point2D.make(-0.409674694679825, 0.914285662290109) }),
+    gradientManifold: new LinearGradient({ stops: [GradientStop.make(0, Color.rgba(254, 19, 96, 1)), GradientStop.make(0.26458865404129, Color.rgba(129, 78, 174, 1)), GradientStop.make(0.609017670154572, Color.rgba(45, 152, 204, 1)), GradientStop.make(0.728924870491028, Color.rgba(253, 135, 69, 1)), GradientStop.make(1, Color.rgba(253, 201, 53, 1))], start: Point2D.make(1.181249980120726, -8.693732e-9), end: Point2D.make(-0.409674694679825, 0.914285662290109) }),
     gradientGreenMuted: new LinearGradient({ stops: [GradientStop.make(0, Color.rgba(210, 245, 228, 1)), GradientStop.make(1, Color.rgba(213, 241, 255, 1))], start: Point2D.make(0.821016851389819, -0.105676656843359), end: Point2D.make(-0.390336415164722, 0.674996301605858) }),
-    gradientBrand1: new LinearGradient({ stops: [GradientStop.make(0, Color.rgba(218, 86, 108, 1)), GradientStop.make(1, Color.rgba(140, 71, 148, 1))], start: Point2D.make(4.377216e-9, 1.000000004377216), end: Point2D.make(1.000000004377216, 4.377216e-9) }),
+    gradientBrand: new LinearGradient({ stops: [GradientStop.make(0, Color.rgba(218, 86, 108, 1)), GradientStop.make(1, Color.rgba(140, 71, 148, 1))], start: Point2D.make(4.377216e-9, 1.000000004377216), end: Point2D.make(1.000000004377216, 4.377216e-9) }),
     gradientBrandMuted: new LinearGradient({ stops: [GradientStop.make(0, Color.rgba(237, 194, 202, 1)), GradientStop.make(1, Color.rgba(227, 207, 229, 1))], start: Point2D.make(4.377216e-9, 1.000000004377216), end: Point2D.make(1.000000004377216, 4.377216e-9) }),
     gradientBlue: new LinearGradient({ stops: [GradientStop.make(0, Color.rgba(50, 157, 209, 1)), GradientStop.make(1, Color.rgba(79, 80, 164, 1))], start: Point2D.make(0.5, -0.5), end: Point2D.make(-0.5, 0.5) }),
     gradientBlueMuted: new LinearGradient({ stops: [GradientStop.make(0, Color.rgba(177, 229, 255, 1)), GradientStop.make(1, Color.rgba(197, 198, 255, 1))], start: Point2D.make(0.5, -0.5), end: Point2D.make(-0.5, 0.5) }),
@@ -51,7 +51,6 @@ const stylesGradients = {
 };
 
 const stylesShadows = {
-    shadowNear: new DropShadow({ offset: Point2D.make(0, 2), radius: 8, color: Color.rgba(0, 0, 0, 0.07999999821186066) }),
     shadowFar: new DropShadow({ offset: Point2D.make(0, 6), radius: 10, color: Color.rgba(0, 0, 0, 0.15000000596046448) })
 };
 
