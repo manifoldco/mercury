@@ -15,7 +15,7 @@
     "start": "diez start"
   },
   "dependencies": {
-    "@diez/prefabs": "^10.3.0"
+    "@diez/prefabs": "^10.3.1"
   },
   "devDependencies": {
     "@diez/compiler-core": "^10.3.0",
