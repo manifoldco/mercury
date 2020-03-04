@@ -22,7 +22,7 @@
     "@diez/extractors": "^10.3.0",
     "@diez/stdlib": "^10.3.0",
     "cssnano": "^4.1.10",
-    "diez": "^10.3.0",
+    "diez": "^10.3.1",
     "postcss-cli": "^7.1.0",
     "prettier": "^1.19.1",
     "semver": "^7.1.3",
