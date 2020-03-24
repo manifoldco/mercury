@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "incremental": true,
-    "target": "ESNext",
-    "rootDir": "src",
-    "outDir": "lib",
-    "experimentalDecorators": true,
-    "module": "commonjs",
-    "strict": true
+    "esModuleInterop": true,
+    "lib": ["ESNext"],
+    "module": "CommonJS",
+    "noImplicitAny": true,
+    "outDir": "dist",
+    "strict": true,
+    "target": "ESNext"
   },
-  "include": ["src/**/*.ts"]
+  "include": ["figma", "types"],
+  "exclude": ["node_modules"]
 }

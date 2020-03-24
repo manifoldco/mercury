@@ -1,6 +1,6 @@
 # @manifoldco/mercury
 
-Design tokens auto-generated from our Figma files. Powered by [Diez][diez].
+Design tokens auto-generated from our Figma files.
 
 ## 📚 Usage
 
@@ -8,44 +8,90 @@ Design tokens auto-generated from our Figma files. Powered by [Diez][diez].
 npm install @manifoldco/mercury
 ```
 
-### CSS (preferred)
+### Sass Modules
 
-You’ll find some starter classes and CSS variables within `/static/styles.min.css`. Import it like
-so:
+Mercury ships with some [Sass Modules][sass-modules] which can be imported and extended if you’re
+using Sass:
 
-```js
-import '@manifoldco/mercury/static/styles.min.css';
+```scss
+@use "@manifoldco/mercury";
+
+.Manifold__Button {
+  @include mercury.button; /* extend button styles */
+
+  background: mercury.$color-purple; /* provide overrides from common variables */
+  color: mercury.$color-white;
+}
 ```
 
-To view the generated CSS, see the [`static`](./build/diez-manifoldco-mercury-web/static) folder in
-this repo.
+For reference, please see the [generated `.scss` files](./dist) which are tracked in version
+control.
 
-Refer to the [Diez documentation][diez-css] for more info.
+## Variables
 
-### JavaScript
+| Group    | Sass Name               |
+| :------- | :---------------------- |
+| Color    | `$color-black`          |
+| Color    | `$color-blue`           |
+| Color    | `$color-borderGray`     |
+| Color    | `$color-gray`           |
+| Color    | `$color-grayDark`       |
+| Color    | `$color-grayDarker`     |
+| Color    | `$color-grayLight`      |
+| Color    | `$color-grayLighter`    |
+| Color    | `$color-grayLightest`   |
+| Color    | `$color-green`          |
+| Color    | `$color-mutedBlue`      |
+| Color    | `$color-mutedGreen`     |
+| Color    | `$color-mutedOrange`    |
+| Color    | `$color-mutedPurple`    |
+| Color    | `$color-mutedRed`       |
+| Color    | `$color-mutedTeal`      |
+| Color    | `$color-mutedYellow`    |
+| Color    | `$color-orange`         |
+| Color    | `$color-purple`         |
+| Color    | `$color-red`            |
+| Color    | `$color-teal`           |
+| Color    | `$color-white`          |
+| Color    | `$color-yellow`         |
+| Gradient | `$gradient-brand`       |
+| Gradient | `$gradient-brandMuted`  |
+| Gradient | `$gradient-green`       |
+| Gradient | `$gradient-greenMuted`  |
+| Gradient | `$gradient-red`         |
+| Gradient | `$gradient-redMuted`    |
+| Gradient | `$gradient-yellow`      |
+| Gradient | `$gradient-yellowMuted` |
+| Gradient | `$gradient-orange`      |
+| Gradient | `$gradient-orangeMuted` |
+| Gradient | `$gradient-purple`      |
+| Gradient | `$gradient-purpleMuted` |
+| Gradient | `$gradient-blue`        |
+| Gradient | `$gradient-blueMuted`   |
+| Gradient | `$gradient-manifold`    |
+| Shadow   | `$shadow-far`           |
+| Shadow   | `$shadow-near`          |
 
-The JavaScript client allows for color manipulation and better handling of some values, but at an
-impact on your bundlesize.
+## Components
 
-```js
-import { DesignLanguage } from '@manifoldco/mercury';
-```
-
-Refer to the [Diez documentation][diez-js] for usage.
-
-[diez-css]: https://diez.org/getting-started/css-sass.html
-[diez-js]: https://diez.org/getting-started/javascript.html
+| Component | Description                              |
+| :-------- | :--------------------------------------- |
+| `.button` | Those Manifold buttons you know and love |
 
 ## ♻️ Updating from Figma
+
+In your `.zshrc` or `.bashrc`, add your [Figma access token][figma] (needed to access Manifold
+files):
+
+```
+export FIGMA_ACCESS_TOKEN=myaccesstoken
+```
+
+Then run:
 
 ```bash
 npm run extract
 ```
-
-You’ll need to authenticate with Figma.
-
-⚠️ **Note**: when updating, be mindful of missing assets. Often times, Figma will simply time-out,
-and fail to download.
 
 ## 🚀 Deploying
 
@@ -72,4 +118,5 @@ npm run deploy
 ⚠️ **Note**: deploying won’t update the tokens! You’ll need to run `npm run extract` to pull the
 latest values.
 
-[diez]: https://diez.org
+[figma]: https://www.figma.com/developers/api#access-tokens
+[sass-modules]: https://sass-lang.com/blog/the-module-system-is-launched
