@@ -8,7 +8,7 @@ Design tokens auto-generated from our Figma files.
 npm install @manifoldco/mercury
 ```
 
-### 👓 Sass Modules
+### 👓 Sass
 
 Mercury ships with some [Sass Modules][sass-modules] which can be imported and extended if you’re
 using Sass:
@@ -29,6 +29,18 @@ using Sass:
 For reference, please see the [generated `.scss` files](./dist) which are tracked in version
 control.
 
+### 🐢 JS
+
+```js
+import { css } from 'linaria';
+import { color, typography } from '@manifoldco/mercury';
+
+const header = css`
+  font-family: ${typography.body.fontFamily};
+  color: ${color.black};
+`;
+```
+
 ## 🌀 Variables
 
 | Group                                             | Sass Prefix     |
@@ -47,7 +59,8 @@ control.
 ## 🚺 Icons
 
 Icons are all included in the [`icons/`](./src/icons) folder as `.svg` files. You should be able to
-import these however you normally import files from npm.
+import these however you normally import files from npm. If using webpack, you may need to enable
+[raw-loader][raw-loader] for SVG files.
 
 ## ♻️ Updating from Figma
 
@@ -90,4 +103,5 @@ npm run deploy
 latest values.
 
 [figma]: https://www.figma.com/developers/api#access-tokens
+[raw-loader]: https://github.com/webpack-contrib/raw-loader
 [sass-modules]: https://sass-lang.com/blog/the-module-system-is-launched

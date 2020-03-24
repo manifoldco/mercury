@@ -3,8 +3,9 @@
     "esModuleInterop": true,
     "lib": ["DOM", "ESNext"],
     "module": "CommonJS",
+    "moduleResolution": "Node",
     "noImplicitAny": true,
-    "outDir": "dist",
+    "skipLibCheck": true,
     "strict": true,
     "target": "ESNext"
   },
