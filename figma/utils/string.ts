@@ -3,6 +3,7 @@
  */
 export function camelCase(text: string): string {
   return text
+    .trim()
     .replace(/(-|_|\/|\.|\s)+\w/g, (letter): string =>
       letter.toLocaleUpperCase().replace(/[^0-9a-z]/gi, '')
     )

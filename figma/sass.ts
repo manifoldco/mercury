@@ -42,17 +42,25 @@ function buildShadow(shadow: DesignTokens['shadow']): string {
 }
 
 function buildTypography(typography: DesignTokens['typography']): string {
-  return prefix(
-    Object.entries(typography)
-      .map(
-        ([key, style]) => `.Manifold__Typography__${capitalize(key)} {
-${Object.entries(style)
+  const variables = Object.entries(typography)
+    .map(([key, styles]) =>
+      Object.entries(styles)
+        .map(([property, value]) => `$typography-${key}-${property}: ${value};`)
+        .join('\n')
+    )
+    .join('\n');
+
+  const classes = Object.entries(typography)
+    .map(
+      ([key, styles]) => `.Manifold__Typography__${capitalize(key)} {
+${Object.entries(styles)
   .map(([property, value]) => `  ${slugify(property)}: ${value};`)
   .join('\n')}
 }`
-      )
-      .join('\n\n')
-  );
+    )
+    .join('\n\n');
+
+  return prefix([variables, classes].join('\n\n'));
 }
 
 export default function buildSass(tokens: DesignTokens): void {

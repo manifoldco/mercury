@@ -21,8 +21,8 @@
     "build:css": "sass pkg/index.scss pkg/index.css --no-source-map && postcss pkg/index.css -o pkg/index.min.css",
     "clean-package-json": "node scripts/clean-package-json",
     "extract": "npm run extract:styles && npm run extract:icons",
-    "extract:icons": "figma-export use-config",
-    "extract:styles": "ts-node --files figma && node scripts/rename-icons",
+    "extract:icons": "figma-export use-config && node scripts/rename-icons",
+    "extract:styles": "ts-node --files figma",
     "lint": "eslint '**/*.ts'",
     "test": "jest"
   },

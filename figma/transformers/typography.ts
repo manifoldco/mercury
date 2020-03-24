@@ -36,11 +36,17 @@ function figmaStyleToCSS(style: Figma.TypeStyle) {
         break;
       }
       case 'letterSpacing': {
-        css.letterSpacing = `${val / style.fontSize}em`;
+        const letterSpacing = val / style.fontSize;
+        if (letterSpacing) {
+          css.letterSpacing = `${letterSpacing}em`;
+        }
         break;
       }
       case 'lineHeightPercent': {
-        css.lineHeight = `${Math.round(val) / 100}`;
+        const lineHeight = Math.round(val) / 100;
+        if (lineHeight !== 1) {
+          css.lineHeight = `${lineHeight}`;
+        }
         break;
       }
       case 'textCase': {
