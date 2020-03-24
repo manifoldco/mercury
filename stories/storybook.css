@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji;
+  font-size: 16px;
+}
+
+.Swatch {
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Swatch__Color {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-top: 1rem;
+  padding-top: 100%;
+}
+
+.Swatch__Grid {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.Swatch__Name,
+.Swatch__Value {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.Swatch__Name {
+  font-size: 14px;
+  margin-bottom: 0.75rem;
+  padding-top: 1rem;
+}
+
+.Swatch__Value {
+  font-family: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 10px;
+  padding-bottom: 1rem;
+}
+
+.Typography__Table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.Typography__Table td {
+  border-bottom: 1px solid #f0f0f0;
+  border-top: 1px solid #f0f0f0;
+  padding: 1rem 0.5rem;
+  vertical-align: top;
+}
+
+.Typography__Table th {
+  background-color: #f5f5f5;
+  text-align: left;
+  padding: 1rem 0.5rem;
+}
+
+.Typography__Key {
+  font-family: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 12px;
+}
