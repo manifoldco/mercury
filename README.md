@@ -14,7 +14,7 @@ Mercury ships with some [Sass Modules][sass-modules] which can be imported and e
 using Sass:
 
 ```scss
-@use "@manifoldco/mercury";
+@use "node_modules/@manifoldco/mercury";
 
 .Manifold__Button {
   @include mercury.button; /* extend button styles */

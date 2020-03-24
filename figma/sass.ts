@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import { DesignTokens } from '../types/design-tokens';
 
-const GENERATED = path.resolve(__dirname, '..', 'src', 'styles', 'design-tokens');
+const GENERATED = path.resolve(__dirname, '..', 'src', 'design-tokens');
 const COLOR_FILE = path.resolve(GENERATED, 'color.scss');
 const GRADIENT_FILE = path.resolve(GENERATED, 'gradient.scss');
 const SHADOW_FILE = path.resolve(GENERATED, 'shadow.scss');

@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import { DesignTokens } from '../types/design-tokens';
 
-const OUTPUT = path.resolve(__dirname, '..', 'src', 'dist', 'index.js');
+const OUTPUT = path.resolve(__dirname, '..', 'src', 'index.js');
 
 export default function buildJS(tokens: DesignTokens) {
   fs.writeFileSync(
