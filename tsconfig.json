@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "lib": ["ESNext"],
+    "lib": ["DOM", "ESNext"],
     "module": "CommonJS",
     "noImplicitAny": true,
     "outDir": "dist",

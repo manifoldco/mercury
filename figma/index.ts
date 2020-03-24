@@ -9,6 +9,7 @@ import { DesignTokens } from '../types/design-tokens';
 import transformColor from './transformers/color';
 import transformGradient from './transformers/gradient';
 import transformShadow from './transformers/shadow';
+import transformTypography from './transformers/typography';
 import buildSass from './sass';
 import buildJS from './js';
 
@@ -98,8 +99,9 @@ function buildMercury(meta: TeamMeta, fileMap: NodeMap): void {
   const color = transformColor(meta.styles, fileMap);
   const shadow = transformShadow(meta.styles, fileMap);
   const gradient = transformGradient();
+  const typography = transformTypography(meta.styles, fileMap);
 
-  const tokens: DesignTokens = { color, gradient, shadow };
+  const tokens: DesignTokens = { color, gradient, shadow, typography };
 
   buildSass(tokens);
   buildJS(tokens);

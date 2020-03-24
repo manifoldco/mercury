@@ -1,6 +1,6 @@
 @use "../design-tokens/color";
 
-.button {
+.Manifold__Button {
   align-items: center;
   background: color.$color-white;
   border-color: hsl(210, 5%, 78%);

@@ -16,10 +16,9 @@
  * returning static values here is less work and easier to manage since these
  * don’t change very often.
  */
+import { DesignTokens } from '../../types/design-tokens';
 
-type StyleMap = { [key: string]: string };
-
-export default function transform(): StyleMap {
+export default function transform(): DesignTokens['gradient'] {
   return {
     brand: 'linear-gradient(45deg, #da566c 0%, #8c4794 100%)',
     brandMuted: 'linear-gradient(45deg, #edc2ca 0%, #e3cfe6 100%)',
