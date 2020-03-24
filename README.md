@@ -1,8 +1,10 @@
-# @manifoldco/mercury
+# ☤ Mercury
 
 Design tokens auto-generated from our Figma files.
 
-## 📚 Usage
+## 💽 Usage
+
+With [Node][node] installed, run the following in the project folder of your choice:
 
 ```bash
 npm install @manifoldco/mercury
@@ -11,7 +13,7 @@ npm install @manifoldco/mercury
 ### 👓 Sass
 
 Mercury ships with some [Sass Modules][sass-modules] which can be imported and extended if you’re
-using Sass:
+using version `1.23.0` or greater:
 
 ```scss
 @use "node_modules/@manifoldco/mercury";
@@ -26,7 +28,7 @@ using Sass:
 }
 ```
 
-For reference, please see the [generated `.scss` files](./dist) which are tracked in version
+For reference, please see the [generated `.scss` files][local-scss] which are tracked in version
 control.
 
 ### 🐢 JS
@@ -41,28 +43,37 @@ const header = css`
 `;
 ```
 
-## 🌀 Variables
+## 🌈 Tokens
 
-| Group                                             | Sass Prefix     |
-| :------------------------------------------------ | :-------------- |
-| [Color](./src/design-tokens/color.scss)           | `$color-*`      |
-| [Gradient](./src/design-tokens/gradient.scss)     | `$gradient-*`   |
-| [Shadow](./src/design-tokens/shadow.scss)         | `$shadow-*`     |
-| [Typography](./src/design-tokens/typography.scss) | `$typography-*` |
+| Group                                             | Sass            | JS             |
+| :------------------------------------------------ | :-------------- | :------------- |
+| [Color](./src/design-tokens/color.scss)           | `$color-*`      | `color.*`      |
+| [Gradient](./src/design-tokens/gradient.scss)     | `$gradient-*`   | `gradient.*`   |
+| [Shadow](./src/design-tokens/shadow.scss)         | `$shadow-*`     | `shadow.*`     |
+| [Typography](./src/design-tokens/typography.scss) | `$typography-*` | `typography.*` |
 
-## ⚛️ Components
+### ⚛️ Components
 
-| Component | Description                              |
-| :-------- | :--------------------------------------- |
-| `.button` | Those Manifold buttons you know and love |
+| Component               | Description                                                     |
+| :---------------------- | :-------------------------------------------------------------- |
+| `.Manifold__Button`     | Those Manifold buttons you know and love                        |
+| `.Manifold__Typography` | Global typography styles to really lighten that copy/paste load |
 
-## 🚺 Icons
+### 🚺 Icons
 
-Icons are all included in the [`icons/`](./src/icons) folder as `.svg` files. You should be able to
+Icons are all included in the [`icons/`][local-icons] folder as `.svg` files. You should be able to
 import these however you normally import files from npm. If using webpack, you may need to enable
 [raw-loader][raw-loader] for SVG files.
 
-## ♻️ Updating from Figma
+## Contributing
+
+### 📚 Running Storybook Locally
+
+```
+npm run dev
+```
+
+### ♻️ Updating from Figma
 
 In your `.zshrc` or `.bashrc`, add your [Figma access token][figma] (needed to access Manifold
 files):
@@ -77,31 +88,24 @@ Then run:
 npm run extract
 ```
 
-## 🚀 Deploying
+If something breaks, bug Drew.
 
-Currently, deploying happens manually. You’ll need to be signed into npm.
+### 🚀 Deploying to npm
 
-Bump the patch number (the last digit) in `package.json` manually:
+Simply draft a new [release][local-releases] and tag it:
 
-```diff
--  "version": "0.0.9",
-+  "version": "0.0.10",
-```
-
-**Commit this change.**
-
-_Note: decause this is all managed by design, the version number doesn’t matter as much as
-traditional packages._
-
-Then, run:
-
-```
-npm run deploy
-```
+| Tag             | Release                                                       |
+| :-------------- | :------------------------------------------------------------ |
+| `v#.#.#`        | **Stable**: ⚠️ dependabot will update all our repos using it! |
+| `v#.#.#-beta.0` | **Unstable**: this is safe for testing                        |
 
 ⚠️ **Note**: deploying won’t update the tokens! You’ll need to run `npm run extract` to pull the
 latest values.
 
 [figma]: https://www.figma.com/developers/api#access-tokens
+[local-icons]: ./src/icons
+[local-releases]: ./releases
+[local-scss]: ./src
+[node]: https://nodejs.org
 [raw-loader]: https://github.com/webpack-contrib/raw-loader
 [sass-modules]: https://sass-lang.com/blog/the-module-system-is-launched
