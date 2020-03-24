@@ -84,7 +84,7 @@ In your `.zshrc` or `.bashrc`, add your [Figma access token][figma] (needed to a
 files):
 
 ```
-export FIGMA_ACCESS_TOKEN=myaccesstoken
+export FIGMA_TOKEN=myaccesstoken
 ```
 
 Then run:

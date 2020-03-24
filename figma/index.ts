@@ -28,7 +28,7 @@ const REQUEST_OPTIONS: https.RequestOptions = {
   headers: {
     Connection: 'keep-alive',
     'Content-type': 'application/json',
-    'X-FIGMA-TOKEN': process.env.FIGMA_ACCESS_TOKEN,
+    'X-FIGMA-TOKEN': process.env.FIGMA_TOKEN,
   },
 };
 
