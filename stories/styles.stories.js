@@ -54,7 +54,7 @@ export const Typography = () => `
   <tr>
     <td><div class="Typography__Key">${name}</div></td>
     <td><div class="Typography__Preview" style="${Object.entries(styles)
-      .map(([k, v]) => `${slugify(k)}:${v};`)
+      .map(([k, v]) => `${slugify(k)}:${v.replace(/"/g, "'")};`)
       .join('')}">${LOREM_IPSUM}</div></td>
   </tr>
     `
