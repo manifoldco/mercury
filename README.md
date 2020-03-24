@@ -1,75 +1,111 @@
-# @manifoldco/mercury
+# ☤ Mercury
 
-Design tokens auto-generated from our Figma files. Powered by [Diez][diez].
+Design tokens auto-generated from our Figma files.
 
-## 📚 Usage
+## 💽 Usage
+
+With [Node][node] installed, run the following in the project folder of your choice:
 
 ```bash
 npm install @manifoldco/mercury
 ```
 
-### CSS (preferred)
+### 👓 Sass
 
-You’ll find some starter classes and CSS variables within `/static/styles.min.css`. Import it like
-so:
+Mercury ships with some [Sass Modules][sass-modules] which can be imported and extended if you’re
+using version `1.23.0` or greater:
 
-```js
-import '@manifoldco/mercury/static/styles.min.css';
+```scss
+@use "node_modules/@manifoldco/mercury";
+
+.Manifold__Button {
+  @include mercury.Manifold__Button; /* extend button styles */
+  @include mercury.Manifold__Typography__Body;
+
+  background: mercury.$color-purple; /* provide overrides from common variables */
+  color: mercury.$color-white;
+  font-family: mercury.$typography-bodyMonoFontFamily;
+}
 ```
 
-To view the generated CSS, see the [`static`](./build/diez-manifoldco-mercury-web/static) folder in
-this repo.
+For reference, please see the [generated `.scss` files][local-scss] which are tracked in version
+control.
 
-Refer to the [Diez documentation][diez-css] for more info.
-
-### JavaScript
-
-The JavaScript client allows for color manipulation and better handling of some values, but at an
-impact on your bundlesize.
+### 🐢 JS
 
 ```js
-import { DesignLanguage } from '@manifoldco/mercury';
+import { css } from 'linaria';
+import { color, typography } from '@manifoldco/mercury';
+
+const header = css`
+  font-family: ${typography.body.fontFamily};
+  color: ${color.black};
+`;
 ```
 
-Refer to the [Diez documentation][diez-js] for usage.
+## 🌈 Tokens
 
-[diez-css]: https://diez.org/getting-started/css-sass.html
-[diez-js]: https://diez.org/getting-started/javascript.html
+| Group                                             | Sass            | JS             |
+| :------------------------------------------------ | :-------------- | :------------- |
+| [Color](./src/design-tokens/color.scss)           | `$color-*`      | `color.*`      |
+| [Gradient](./src/design-tokens/gradient.scss)     | `$gradient-*`   | `gradient.*`   |
+| [Shadow](./src/design-tokens/shadow.scss)         | `$shadow-*`     | `shadow.*`     |
+| [Typography](./src/design-tokens/typography.scss) | `$typography-*` | `typography.*` |
 
-## ♻️ Updating from Figma
+### ⚛️ Components
+
+| Component               | Description                                                     |
+| :---------------------- | :-------------------------------------------------------------- |
+| `.Manifold__Button`     | Those Manifold buttons you know and love                        |
+| `.Manifold__Typography` | Global typography styles to really lighten that copy/paste load |
+
+### 🚺 Icons
+
+Icons are all included in the [`icons/`][local-icons] folder as `.svg` files. You should be able to
+import these however you normally import files from npm. If using webpack, you may need to enable
+[raw-loader][raw-loader] for SVG files.
+
+## Contributing
+
+### 📚 Running Storybook Locally
+
+```
+npm run dev
+```
+
+### ♻️ Updating from Figma
+
+In your `.zshrc` or `.bashrc`, add your [Figma access token][figma] (needed to access Manifold
+files):
+
+```
+export FIGMA_TOKEN=myaccesstoken
+```
+
+Then run:
 
 ```bash
 npm run extract
 ```
 
-You’ll need to authenticate with Figma.
+If something breaks, bug Drew.
 
-⚠️ **Note**: when updating, be mindful of missing assets. Often times, Figma will simply time-out,
-and fail to download.
+### 🚀 Deploying to npm
 
-## 🚀 Deploying
+Simply draft a new [release][local-releases] and tag it:
 
-Currently, deploying happens manually. You’ll need to be signed into npm.
-
-Bump the patch number (the last digit) in `package.json` manually:
-
-```diff
--  "version": "0.0.9",
-+  "version": "0.0.10",
-```
-
-**Commit this change.**
-
-_Note: decause this is all managed by design, the version number doesn’t matter as much as
-traditional packages._
-
-Then, run:
-
-```
-npm run deploy
-```
+| Tag             | Release                                                       |
+| :-------------- | :------------------------------------------------------------ |
+| `v#.#.#`        | **Stable**: ⚠️ dependabot will update all our repos using it! |
+| `v#.#.#-beta.0` | **Unstable**: this is safe for testing                        |
 
 ⚠️ **Note**: deploying won’t update the tokens! You’ll need to run `npm run extract` to pull the
 latest values.
 
-[diez]: https://diez.org
+[figma]: https://www.figma.com/developers/api#access-tokens
+[local-icons]: ./src/icons
+[local-releases]: ./releases
+[local-scss]: ./src
+[node]: https://nodejs.org
+[raw-loader]: https://github.com/webpack-contrib/raw-loader
+[sass-modules]: https://sass-lang.com/blog/the-module-system-is-launched

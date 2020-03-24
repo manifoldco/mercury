@@ -1,5 +1,6 @@
-.diez
+.env
 .DS_Store
-lib/*
-node_modules/
-tsconfig.tsbuildinfo
+dist
+pkg
+node_modules
+storybook-static
