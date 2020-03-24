@@ -1,11 +1,5 @@
-import fs from 'fs';
-import path from 'path';
+import icons from './icons.json';
 import './storybook.css';
-
-const ICON_DIR = path.resolve(__dirname, '..', 'src', 'icons');
-const icons = fs
-  .readFileSync(ICON_DIR)
-  .map((icon) => fs.readFileSync(path.resolve(ICON_DIR), icon, 'utf8'));
 
 export default {
   title: 'Components',
@@ -13,10 +7,13 @@ export default {
 
 export const Icons = () => `
 <div class="Icon__Grid">
-  ${icons
+  ${Object.entries(icons)
     .map(
-      (icon) => `
-    <div class="Icon">${icon}</div>
+      ([name, svg]) => `
+    <div class="Icon">
+      <div class="Icon__SVG">${svg}</div>
+      <div class="Icon__Name">${name.replace(/\.svg$/, '')}</div>
+    </div>
   `
     )
     .join('')}

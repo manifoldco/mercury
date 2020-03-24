@@ -7,7 +7,7 @@ const STORIES_DIR = path.resolve(__dirname, '..', 'stories');
 const icons = fs.readdirSync(ICON_DIR).reduce(
   (icons, icon) => ({
     ...icons,
-    [icon]: fs.readFileSync(path.resolve(ICON_DIR), icon, 'utf8'),
+    [icon]: fs.readFileSync(path.resolve(ICON_DIR, icon), 'utf8'),
   }),
   {}
 );

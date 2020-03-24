@@ -21,7 +21,7 @@
     "build": "rm -rf pkg && mkdir pkg && cp -r src/. pkg && npm run build:css",
     "build:css": "sass pkg/index.scss pkg/index.css --no-source-map && postcss pkg/index.css -o pkg/index.min.css",
     "build:ts": "tsc --module ESNext --declaration --skipLibCheck pkg/index.ts",
-    "build-storybook": "make package && build-storybook",
+    "build-storybook": "make package && node scripts/storybook-icons && build-storybook",
     "clean-package-json": "node scripts/clean-package-json",
     "dev": "make package && node scripts/storybook-icons && start-storybook -p 6006",
     "extract": "npm run extract:styles && npm run extract:icons",
