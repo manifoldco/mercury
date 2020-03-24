@@ -8,7 +8,7 @@ Design tokens auto-generated from our Figma files.
 npm install @manifoldco/mercury
 ```
 
-### Sass Modules
+### 👓 Sass Modules
 
 Mercury ships with some [Sass Modules][sass-modules] which can be imported and extended if you’re
 using Sass:
@@ -17,66 +17,37 @@ using Sass:
 @use "node_modules/@manifoldco/mercury";
 
 .Manifold__Button {
-  @include mercury.button; /* extend button styles */
+  @include mercury.Manifold__Button; /* extend button styles */
+  @include mercury.Manifold__Typography__Body;
 
   background: mercury.$color-purple; /* provide overrides from common variables */
   color: mercury.$color-white;
+  font-family: mercury.$typography-bodyMonoFontFamily;
 }
 ```
 
 For reference, please see the [generated `.scss` files](./dist) which are tracked in version
 control.
 
-## Variables
+## 🌀 Variables
 
-| Group    | Sass Name               |
-| :------- | :---------------------- |
-| Color    | `$color-black`          |
-| Color    | `$color-blue`           |
-| Color    | `$color-borderGray`     |
-| Color    | `$color-gray`           |
-| Color    | `$color-grayDark`       |
-| Color    | `$color-grayDarker`     |
-| Color    | `$color-grayLight`      |
-| Color    | `$color-grayLighter`    |
-| Color    | `$color-grayLightest`   |
-| Color    | `$color-green`          |
-| Color    | `$color-mutedBlue`      |
-| Color    | `$color-mutedGreen`     |
-| Color    | `$color-mutedOrange`    |
-| Color    | `$color-mutedPurple`    |
-| Color    | `$color-mutedRed`       |
-| Color    | `$color-mutedTeal`      |
-| Color    | `$color-mutedYellow`    |
-| Color    | `$color-orange`         |
-| Color    | `$color-purple`         |
-| Color    | `$color-red`            |
-| Color    | `$color-teal`           |
-| Color    | `$color-white`          |
-| Color    | `$color-yellow`         |
-| Gradient | `$gradient-brand`       |
-| Gradient | `$gradient-brandMuted`  |
-| Gradient | `$gradient-green`       |
-| Gradient | `$gradient-greenMuted`  |
-| Gradient | `$gradient-red`         |
-| Gradient | `$gradient-redMuted`    |
-| Gradient | `$gradient-yellow`      |
-| Gradient | `$gradient-yellowMuted` |
-| Gradient | `$gradient-orange`      |
-| Gradient | `$gradient-orangeMuted` |
-| Gradient | `$gradient-purple`      |
-| Gradient | `$gradient-purpleMuted` |
-| Gradient | `$gradient-blue`        |
-| Gradient | `$gradient-blueMuted`   |
-| Gradient | `$gradient-manifold`    |
-| Shadow   | `$shadow-far`           |
-| Shadow   | `$shadow-near`          |
+| Group                                             | Sass Prefix     |
+| :------------------------------------------------ | :-------------- |
+| [Color](./src/design-tokens/color.scss)           | `$color-*`      |
+| [Gradient](./src/design-tokens/gradient.scss)     | `$gradient-*`   |
+| [Shadow](./src/design-tokens/shadow.scss)         | `$shadow-*`     |
+| [Typography](./src/design-tokens/typography.scss) | `$typography-*` |
 
-## Components
+## ⚛️ Components
 
 | Component | Description                              |
 | :-------- | :--------------------------------------- |
 | `.button` | Those Manifold buttons you know and love |
+
+## 🚺 Icons
+
+Icons are all included in the [`icons/`](./src/icons) folder as `.svg` files. You should be able to
+import these however you normally import files from npm.
 
 ## ♻️ Updating from Figma
 
