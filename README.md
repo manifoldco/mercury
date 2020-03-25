@@ -24,7 +24,7 @@ using version `1.23.0` or greater:
 
   background: mercury.$color-purple; /* provide overrides from common variables */
   color: mercury.$color-white;
-  font-family: mercury.$typography-bodyMonoFontFamily;
+  font-family: mercury.$typography-bodyMono-fontFamily;
 }
 ```
 

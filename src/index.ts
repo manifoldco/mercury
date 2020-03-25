@@ -43,25 +43,25 @@ const designTokens = {
       "linear-gradient(272.4deg, #fe1360 -13.37%, #814eae 26.05%, #2d98cc 77.38%, #fd8745 95.25%, #fdC935 135.64%)",
   },
   shadow: {
-    far: "0 6px 10px rgba(0, 0, 0, 0.15000000596046448)",
-    near: "0 2px 8px rgba(0, 0, 0, 0.07999999821186066)",
+    far: "0 6px 10px rgba(0, 0, 0, 0.15)",
+    near: "0 2px 8px rgba(0, 0, 0, 0.08)",
   },
   typography: {
     body: {
       fontFamily:
-        "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       fontWeight: "400",
       fontSize: "16px",
     },
     caption: {
       fontFamily:
-        "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       fontWeight: "400",
       fontSize: "12px",
     },
     heading: {
       fontFamily:
-        "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       fontWeight: "400",
       fontSize: "20px",
       letterSpacing: "-0.01em",
@@ -69,7 +69,7 @@ const designTokens = {
     },
     headingExtraLarge: {
       fontFamily:
-        "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       fontWeight: "500",
       fontSize: "32px",
       letterSpacing: "-0.0125em",
@@ -77,72 +77,72 @@ const designTokens = {
     },
     headingLarge: {
       fontFamily:
-        "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       fontWeight: "400",
       fontSize: "25px",
       letterSpacing: "-0.0125em",
     },
     label: {
       fontFamily:
-        "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       fontWeight: "400",
       fontSize: "14px",
     },
     monoBody: {
       fontFamily:
-        '"IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace',
+        "'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
       fontWeight: "400",
       fontSize: "14px",
       letterSpacing: "-0.01em",
     },
     monoCaption: {
       fontFamily:
-        '"IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace',
+        "'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
       fontWeight: "400",
       fontSize: "10px",
       letterSpacing: "-0.01em",
     },
     monoLabel: {
       fontFamily:
-        '"IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace',
+        "'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
       fontWeight: "400",
       fontSize: "12px",
       letterSpacing: "-0.01em",
     },
     sidebarBigTitle: {
       fontFamily:
-        "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       fontWeight: "600",
       fontSize: "16px",
     },
     sidebarSmallTitle: {
       fontFamily:
-        "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       fontWeight: "700",
       fontSize: "14px",
     },
     smallScreenBody: {
       fontFamily:
-        "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       fontWeight: "400",
       fontSize: "16px",
     },
     smallScreenCaption: {
       fontFamily:
-        "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       fontWeight: "400",
       fontSize: "13px",
     },
     smallScreenHeading: {
       fontFamily:
-        "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       fontWeight: "400",
       fontSize: "18px",
       letterSpacing: "-0.01em",
     },
     smallScreenHeadingExtraLarge: {
       fontFamily:
-        "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       fontWeight: "500",
       fontSize: "26px",
       letterSpacing: "-0.0125em",
@@ -150,20 +150,20 @@ const designTokens = {
     },
     smallScreenHeadingLarge: {
       fontFamily:
-        "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       fontWeight: "400",
       fontSize: "22px",
       letterSpacing: "-0.0125em",
     },
     smallScreenLabel: {
       fontFamily:
-        "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       fontWeight: "400",
       fontSize: "14px",
     },
     subheading: {
       fontFamily:
-        "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       fontWeight: "600",
       textTransform: "uppercase",
       fontSize: "13px",
@@ -171,7 +171,7 @@ const designTokens = {
     },
     subheadingSmall: {
       fontFamily:
-        "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       fontWeight: "500",
       textTransform: "uppercase",
       fontSize: "11px",
@@ -179,4 +179,5 @@ const designTokens = {
     },
   },
 };
+
 export default designTokens;

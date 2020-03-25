@@ -9,7 +9,7 @@ module.exports = {
         onlyFromPages: ['Icons'],
         transformers: [
           require('@figma-export/transform-svg-with-svgo')({
-            plugins: [{ removeViewBox: false }, { removeDimensions: true }],
+            plugins: [{ removeDimensions: true }, { removeViewBox: false }],
           }),
         ],
         outputters: [

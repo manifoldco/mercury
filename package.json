@@ -13,13 +13,12 @@
   "version": "0.1.0",
   "main": "index.js",
   "module": "index.js",
-  "style": "index.min.css",
   "sass": "index.scss",
   "types": "index.d.ts",
   "license": "BSD-3",
   "scripts": {
     "build": "rm -rf pkg && mkdir pkg && cp -r src/. pkg && npm run build:css",
-    "build:css": "sass pkg/index.scss pkg/index.css --no-source-map && postcss pkg/index.css -o pkg/index.min.css",
+    "build:css": "sass pkg/index.scss --no-source-map |> /dev/null",
     "build:ts": "tsc --module ESNext --declaration --skipLibCheck pkg/index.ts",
     "build-storybook": "make package && node scripts/storybook-icons && build-storybook",
     "clean-package-json": "node scripts/clean-package-json",
@@ -54,12 +53,10 @@
     "figma-js": "^1.9.0",
     "jest": "^25.1.0",
     "jest-cli": "^25.1.0",
-    "postcss": "^7.0.27",
-    "postcss-cli": "^7.1.0",
-    "postcss-preset-env": "^6.7.0",
     "prettier": "^2.0.2",
     "rgb2hex": "^0.1.10",
     "sass": "^1.26.3",
+    "sass-loader": "^8.0.2",
     "ts-node": "^8.8.1",
     "typescript": "^3.8.3"
   }
