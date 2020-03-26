@@ -17,7 +17,10 @@ export const Colors = () => `
   <div class="Swatch">
     <div class="Swatch__Color" style="background:${color}"></div>
     <div class="Swatch__Name">${name}</div>
-    <div class="Swatch__Value">${color}</div>
+    <dl class="Swatch__Code">
+      <dt>Sass</dt><dd>$color-${name}</dd>
+      <dt>JS</dt><dd>color.${name}</dd>
+    </dl>
   </div>
 `
     )
@@ -33,7 +36,10 @@ export const Gradients = () => `
   <div class="Swatch">
     <div class="Swatch__Color" style="background:${gradient}"></div>
     <div class="Swatch__Name">${name}</div>
-    <div class="Swatch__Value">${gradient}</div>
+    <dl class="Swatch__Code">
+      <dt>Sass</dt><dd>$gradient-${name}</dd>
+      <dt>JS</dt><dd>gradient.${name}</dd>
+    </dl>
   </div>
 `
     )
@@ -42,6 +48,13 @@ export const Gradients = () => `
 `;
 
 const LOREM_IPSUM = 'Everything you need to build an add-ons marketplace';
+const typographyProperties = [
+  'fontSize',
+  'fontWeight',
+  'letterSpacing',
+  'lineHeight',
+  'textTransform',
+];
 
 export const Typography = () => `
 <table class="Typography__Table">
@@ -52,8 +65,18 @@ export const Typography = () => `
     .map(
       ([name, styles]) => `
   <tr>
-    <td><div class="Typography__Key">${name}</div></td>
-    <td><div class="Typography__Preview" style="${Object.entries(styles)
+    <td width="25%"><div class="Typography__Key">
+      ${name}
+      <dl class="Typography__Code">
+        <dt>Sass</dt><dd>${typographyProperties
+          .map((attr) => `$typography-${name}-${attr}`)
+          .join('<br />')}</dd>
+        <dt>JS</dt><dd>${typographyProperties
+          .map((attr) => `typography.${name}.${attr}`)
+          .join('<br />')}</dd>
+      </dl>
+    </div></td>
+    <td width="75%"><div class="Typography__Preview" style="${Object.entries(styles)
       .map(([k, v]) => `${slugify(k)}:${v.replace(/"/g, "'")};`)
       .join('')}">${LOREM_IPSUM}</div></td>
   </tr>

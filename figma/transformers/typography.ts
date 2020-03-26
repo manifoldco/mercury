@@ -11,7 +11,14 @@ export function isTypography(meta: Figma.FullStyleMetadata): boolean {
 }
 
 function figmaStyleToCSS(style: Figma.TypeStyle) {
-  const css: CSS = {};
+  // defaults
+  const css: CSS = {
+    fontSize: '16px',
+    fontWeight: '400',
+    letterSpacing: 'normal',
+    lineHeight: '1',
+    textTransform: 'none',
+  };
 
   const replacementFont: { [key: string]: string | undefined } = {
     'SF Pro Text':
@@ -23,22 +30,28 @@ function figmaStyleToCSS(style: Figma.TypeStyle) {
   Object.entries(style).forEach(([attr, val]) => {
     switch (attr) {
       case 'fontFamily': {
-        // replace SF Pro with default font
-        css.fontFamily = replacementFont[val] || val;
+        if (val) {
+          // replace SF Pro with default font
+          css.fontFamily = replacementFont[val] || val;
+        }
         break;
       }
       case 'fontSize': {
-        css.fontSize = `${val}px`;
+        if (val) {
+          css.fontSize = `${val}px`;
+        }
         break;
       }
       case 'fontWeight': {
-        css.fontWeight = `${val}`;
+        if (val) {
+          css.fontWeight = `${val || 400}`;
+        }
         break;
       }
       case 'letterSpacing': {
-        const letterSpacing = val / style.fontSize;
-        if (letterSpacing) {
-          css.letterSpacing = `${letterSpacing}em`;
+        const letterSpacing = Math.round((val / style.fontSize) * 10000) / 10000;
+        if (!Number.isNaN(letterSpacing) && letterSpacing !== 0) {
+          css.letterSpacing = letterSpacing > 0 ? `${letterSpacing}em` : 'normal';
         }
         break;
       }
@@ -53,6 +66,7 @@ function figmaStyleToCSS(style: Figma.TypeStyle) {
         if (val === 'UPPER') {
           css.textTransform = 'uppercase';
         }
+        break;
       }
     }
   });
