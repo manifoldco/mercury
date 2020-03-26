@@ -21,7 +21,7 @@ ${file}`;
 function buildColor(color: DesignTokens['color']): string {
   return prefix(
     Object.entries(color)
-      .map(([key, value]) => `$color-${key}: ${value};`)
+      .map(([key, value]) => `$color-${key}: ${value};$colour-${key}: ${value};`)
       .join('\n')
   );
 }

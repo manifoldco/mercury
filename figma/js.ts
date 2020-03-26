@@ -15,7 +15,7 @@ function prettify(file: string): string {
 export default function build(tokens: DesignTokens): void {
   // the JS to be exported
   const template = `
-const designTokens = ${JSON.stringify(tokens)};
+const designTokens = ${JSON.stringify({ ...tokens, colour: tokens.color })};
 
 export default designTokens;
 `;
