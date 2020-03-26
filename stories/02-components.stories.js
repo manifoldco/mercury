@@ -7,7 +7,7 @@ export default {
   decorators: [withKnobs],
 };
 
-const colors = ['White', 'Black', 'Brand', 'Danger'];
+const styles = ['White', 'Black', 'Brand', 'Danger', 'Disabled'];
 
 export const Buttons = () => {
   const btnText = text(`text`, `Button Text`);
@@ -17,18 +17,18 @@ export const Buttons = () => {
   return `
   <table class="Button__Table">
     <tr>
-      <th>Color</th>
+      <th style="width:18rem;">Style</th>
       <th>Example</th>
     </tr>
-    ${colors
+    ${styles
       .map(
-        (color) => `
+        (style) => `
     <tr>
-      <td width="25%">
-        ${color}
-        <dl class="Button__Code"><dt>Sass</dt><dd>Manifold__Button--${color}</dd></dl>
+      <td>
+        ${style}
+        <dl class="Button__Code"><dt>Sass</dt><dd>@include mercury.Manifold__Button--${style};</dd></dl>
       </td>
-      <td><button type="button" ${disabled && 'disabled'} class="Button Button--${color} Button--${
+      <td><button type="button" ${disabled && 'disabled'} class="Button Button--${style} Button--${
           size ? 'Small' : 'Med'
         }">${btnText}</button></td>
     </tr>

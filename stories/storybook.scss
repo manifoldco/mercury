@@ -18,6 +18,10 @@ body {
     @include mercury.Manifold__Button--Brand;
   }
 
+  &--Disabled {
+    @include mercury.Manifold__Button--Disabled;
+  }
+
   &--Danger {
     @include mercury.Manifold__Button--Danger;
   }
@@ -46,6 +50,7 @@ body {
     width: 100%;
 
     & td {
+      border-top: 1px solid #f0f0f0;
       padding: 1rem 0.5rem;
     }
 
@@ -93,7 +98,7 @@ body {
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 
   &__Color {
     border-top-left-radius: 4px;
@@ -106,42 +111,58 @@ body {
   &__Grid {
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     padding-left: 2rem;
     padding-right: 2rem;
   }
 
   &__Name,
-  &__Code {
+  &__Code,
+  &__Value {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
   &__Name {
     font-size: 14px;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.25rem;
     padding-top: 1rem;
   }
 
   &__Code {
+    display: grid;
+    grid-gap: 0;
     grid-template-columns: min-content auto;
-    margin: 0;
+    margin: 1rem 0 0;
 
     & dt {
+      border-top: 1px solid mercury.$color-grayLighter;
       display: block;
       font-size: 12px;
       font-weight: 700;
+      padding: 0.5rem 0.75rem 0.5rem 0;
+
+      &:first-of-type {
+        border-top: none;
+      }
     }
 
     & dd {
+      border-top: 1px solid mercury.$color-grayLighter;
       font-family: mercury.$typography-monoBody-fontFamily;
       font-size: 10px;
       margin: 0;
+      padding: 0.5rem 0;
 
-      & + dt {
-        margin-top: 0.5rem;
+      &:first-of-type {
+        border-top: none;
       }
     }
+  }
+
+  &__Value {
+    font-family: mercury.$typography-monoBody-fontFamily;
+    font-size: 10px;
   }
 }
 
@@ -150,7 +171,7 @@ body {
     display: grid;
     grid-gap: 0.5rem 1rem;
     grid-template-columns: min-content auto;
-    margin: 0.5rem 0 0;
+    margin: 1rem 0 0;
     padding-right: 1rem;
 
     & dt {
@@ -165,12 +186,15 @@ body {
     }
   }
 
+  &__Preview {
+    margin-top: 2rem;
+  }
+
   &__Table {
     border-collapse: collapse;
     width: 100%;
 
     & td {
-      border-bottom: 1px solid #f0f0f0;
       border-top: 1px solid #f0f0f0;
       padding: 1rem 0.5rem;
       vertical-align: top;
