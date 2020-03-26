@@ -1,5 +1,5 @@
 /**
- * Generate JS from library
+ * Generate JS object + types from design tokens
  */
 import fs from 'fs';
 import path from 'path';
@@ -8,10 +8,17 @@ import { DesignTokens } from '../types/design-tokens';
 
 const OUTPUT = path.resolve(__dirname, '..', 'src', 'index.ts');
 
-export default function buildJS(tokens: DesignTokens) {
-  fs.writeFileSync(
-    OUTPUT,
-    prettier.format(`const designTokens=${JSON.stringify(tokens)};export default designTokens`),
-    'utf8'
-  );
+function prettify(file: string): string {
+  return prettier.format(file); // specify options here if desired
+}
+
+export default function build(tokens: DesignTokens): void {
+  // the JS to be exported
+  const template = `
+const designTokens = ${JSON.stringify(tokens)};
+
+export default designTokens;
+`;
+
+  fs.writeFileSync(OUTPUT, prettify(template), 'utf8');
 }

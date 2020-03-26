@@ -1,7 +1,6 @@
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 import icons from './icons.json';
-import '../pkg/index.min.css';
-import './storybook.css';
+import './storybook.scss';
 
 export default {
   title: 'Components',
@@ -10,14 +9,14 @@ export default {
 
 export const Buttons = () => {
   const btnText = text(`text`, `Button Text`);
-  const color = select(`color`, ['white', 'black', 'brand', 'danger'], 'white');
+  const color = select(`color`, ['White', 'Black', 'Brand', 'Danger'], 'white');
   const disabled = boolean(`disabled`, false);
-  const small = boolean(`small`, false);
+  const size = boolean(`small`, false);
 
   return `
-<button type="button" ${disabled && 'disabled'} class="Manifold__Button" data-color="${color}" ${
-    small && 'data-size="small"'
-  }>${btnText}</button>
+<button type="button" ${disabled && 'disabled'} class="Button Button--${color} Button--${
+    size ? 'Small' : 'Med'
+  }">${btnText}</button>
 `;
 };
 

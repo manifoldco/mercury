@@ -10,5 +10,6 @@ export default function convertColor({ r, g, b, a }: Figma.Color): string {
   if (a === 1) {
     return rgb2hex(`rgb(${scale(r)}, ${scale(g)}, ${scale(b)})`).hex; // return rgb() if fully opaque
   }
-  return `rgba(${scale(r)}, ${scale(g)}, ${scale(b)}, ${a})`;
+  const roundedAlpha = Math.round(a * 100) / 100; // clamp alpha values to 2 decimal places
+  return `rgba(${scale(r)}, ${scale(g)}, ${scale(b)}, ${roundedAlpha})`;
 }

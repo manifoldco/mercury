@@ -3,7 +3,7 @@
 @use "../design-tokens/shadow";
 @use "../design-tokens/typography";
 
-.Manifold__Button {
+@mixin Manifold__Button {
   appearance: none;
   background: color.$color-white;
   border-color: color.$color-borderGray;
@@ -64,67 +64,83 @@
     transform: translateY(1px);
   }
 
-  &[data-color='black'] {
-    background: color.$color-grayDarker;
-    border-color: transparent;
-    color: color.$color-white;
-
-    &:hover {
-      background: color.$color-black;
-    }
+  &:disabled {
+    @include Manifold__Button--Disabled;
   }
+}
 
-  &[data-color='brand'] {
-    background: gradient.$gradient-brand;
-    border-color: transparent;
-    color: color.$color-white;
+@mixin Manifold__Button--Black {
+  background: color.$color-grayDarker;
+  border-color: transparent;
+  color: color.$color-white;
 
-    &:hover {
-      filter: saturate(150%);
-    }
-  }
-
-  &[data-color='danger'] {
-    background: color.$color-white;
-    color: color.$color-red;
-    border-color: currentColor;
-
-    &:hover {
-      background: #fef7f9;
-    }
+  &:hover {
+    background: color.$color-black;
   }
 
   &:disabled {
+    @include Manifold__Button--Disabled;
+  }
+}
+
+@mixin Manifold__Button--Brand {
+  background: gradient.$gradient-brand;
+  border-color: transparent;
+  color: color.$color-white;
+
+  &:hover {
+    filter: saturate(150%);
+  }
+
+  &:disabled {
+    @include Manifold__Button--Disabled;
+  }
+}
+
+@mixin Manifold__Button--Danger {
+  background: color.$color-white;
+  color: color.$color-red;
+  border-color: currentColor;
+
+  &:hover {
+    background: #fef7f9;
+  }
+
+  &:disabled {
+    @include Manifold__Button--Disabled;
+  }
+}
+
+@mixin Manifold__Button--Disabled {
+  background: color.$color-grayLighter;
+  border-color: color.$color-borderGray;
+  box-shadow: none;
+  color: color.$color-gray;
+  cursor: not-allowed;
+  opacity: 0.8;
+
+  &:focus,
+  &:hover {
     background: color.$color-grayLighter;
     border-color: color.$color-borderGray;
     box-shadow: none;
     color: color.$color-gray;
-    cursor: not-allowed;
-    opacity: 0.8;
-
-    &:focus,
-    &:hover {
-      background: color.$color-grayLighter;
-      border-color: color.$color-borderGray;
-      box-shadow: none;
-      color: color.$color-gray;
-    }
-
-    &:focus::before {
-      opacity: 0;
-    }
-
-    &:active {
-      background: color.$color-grayLighter;
-      border-color: color.$color-borderGray;
-      box-shadow: none;
-      color: color.$color-gray;
-      transform: none;
-    }
   }
 
-  &[data-size='small'] {
-    font-size: 13px;
-    padding: 8px 14px;
+  &:focus::before {
+    opacity: 0;
   }
+
+  &:active {
+    background: color.$color-grayLighter;
+    border-color: color.$color-borderGray;
+    box-shadow: none;
+    color: color.$color-gray;
+    transform: none;
+  }
+}
+
+@mixin Manifold__Button--Small {
+  font-size: 13px;
+  padding: 8px 14px;
 }

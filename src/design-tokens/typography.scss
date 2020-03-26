@@ -1,202 +1,251 @@
 // THIS FILE IS AUTO-GENERATED! DO NOT EDIT!
-$typography-body-fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$typography-body-fontFamily: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 $typography-body-fontWeight: 400;
 $typography-body-fontSize: 16px;
-$typography-caption-fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$typography-caption-fontFamily: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 $typography-caption-fontWeight: 400;
 $typography-caption-fontSize: 12px;
-$typography-heading-fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$typography-heading-fontFamily: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 $typography-heading-fontWeight: 400;
 $typography-heading-fontSize: 20px;
 $typography-heading-letterSpacing: -0.01em;
 $typography-heading-lineHeight: 1.11;
-$typography-headingExtraLarge-fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$typography-headingExtraLarge-fontFamily: -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji';
 $typography-headingExtraLarge-fontWeight: 500;
 $typography-headingExtraLarge-fontSize: 32px;
 $typography-headingExtraLarge-letterSpacing: -0.0125em;
 $typography-headingExtraLarge-lineHeight: 0.96;
-$typography-headingLarge-fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$typography-headingLarge-fontFamily: -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji';
 $typography-headingLarge-fontWeight: 400;
 $typography-headingLarge-fontSize: 25px;
 $typography-headingLarge-letterSpacing: -0.0125em;
-$typography-label-fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$typography-label-fontFamily: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 $typography-label-fontWeight: 400;
 $typography-label-fontSize: 14px;
-$typography-monoBody-fontFamily: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+$typography-monoBody-fontFamily: 'IBM Plex Mono', 'SFMono-Regular', Consolas,
+  'Liberation Mono', Menlo, monospace;
 $typography-monoBody-fontWeight: 400;
 $typography-monoBody-fontSize: 14px;
 $typography-monoBody-letterSpacing: -0.01em;
-$typography-monoCaption-fontFamily: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+$typography-monoCaption-fontFamily: 'IBM Plex Mono', 'SFMono-Regular', Consolas,
+  'Liberation Mono', Menlo, monospace;
 $typography-monoCaption-fontWeight: 400;
 $typography-monoCaption-fontSize: 10px;
 $typography-monoCaption-letterSpacing: -0.01em;
-$typography-monoLabel-fontFamily: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+$typography-monoLabel-fontFamily: 'IBM Plex Mono', 'SFMono-Regular', Consolas,
+  'Liberation Mono', Menlo, monospace;
 $typography-monoLabel-fontWeight: 400;
 $typography-monoLabel-fontSize: 12px;
 $typography-monoLabel-letterSpacing: -0.01em;
-$typography-sidebarBigTitle-fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$typography-sidebarBigTitle-fontFamily: -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji';
 $typography-sidebarBigTitle-fontWeight: 600;
 $typography-sidebarBigTitle-fontSize: 16px;
-$typography-sidebarSmallTitle-fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$typography-sidebarSmallTitle-fontFamily: -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji';
 $typography-sidebarSmallTitle-fontWeight: 700;
 $typography-sidebarSmallTitle-fontSize: 14px;
-$typography-smallScreenBody-fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$typography-smallScreenBody-fontFamily: -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji';
 $typography-smallScreenBody-fontWeight: 400;
 $typography-smallScreenBody-fontSize: 16px;
-$typography-smallScreenCaption-fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$typography-smallScreenCaption-fontFamily: -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji';
 $typography-smallScreenCaption-fontWeight: 400;
 $typography-smallScreenCaption-fontSize: 13px;
-$typography-smallScreenHeading-fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$typography-smallScreenHeading-fontFamily: -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji';
 $typography-smallScreenHeading-fontWeight: 400;
 $typography-smallScreenHeading-fontSize: 18px;
 $typography-smallScreenHeading-letterSpacing: -0.01em;
-$typography-smallScreenHeadingExtraLarge-fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$typography-smallScreenHeadingExtraLarge-fontFamily: -apple-system,
+  BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji';
 $typography-smallScreenHeadingExtraLarge-fontWeight: 500;
 $typography-smallScreenHeadingExtraLarge-fontSize: 26px;
 $typography-smallScreenHeadingExtraLarge-letterSpacing: -0.0125em;
 $typography-smallScreenHeadingExtraLarge-lineHeight: 1.18;
-$typography-smallScreenHeadingLarge-fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$typography-smallScreenHeadingLarge-fontFamily: -apple-system,
+  BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji';
 $typography-smallScreenHeadingLarge-fontWeight: 400;
 $typography-smallScreenHeadingLarge-fontSize: 22px;
 $typography-smallScreenHeadingLarge-letterSpacing: -0.0125em;
-$typography-smallScreenLabel-fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$typography-smallScreenLabel-fontFamily: -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji';
 $typography-smallScreenLabel-fontWeight: 400;
 $typography-smallScreenLabel-fontSize: 14px;
-$typography-subheading-fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$typography-subheading-fontFamily: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 $typography-subheading-fontWeight: 600;
 $typography-subheading-textTransform: uppercase;
 $typography-subheading-fontSize: 13px;
 $typography-subheading-letterSpacing: 0.030000000000000002em;
-$typography-subheadingSmall-fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$typography-subheadingSmall-fontFamily: -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji';
 $typography-subheadingSmall-fontWeight: 500;
 $typography-subheadingSmall-textTransform: uppercase;
 $typography-subheadingSmall-fontSize: 11px;
 $typography-subheadingSmall-letterSpacing: 0.04em;
 
-.Manifold__Typography__Body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+@mixin Manifold__Typography__Body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   font-weight: 400;
   font-size: 16px;
 }
 
-.Manifold__Typography__Caption {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+@mixin Manifold__Typography__Caption {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   font-weight: 400;
   font-size: 12px;
 }
 
-.Manifold__Typography__Heading {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+@mixin Manifold__Typography__Heading {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   font-weight: 400;
   font-size: 20px;
   letter-spacing: -0.01em;
   line-height: 1.11;
 }
 
-.Manifold__Typography__HeadingExtraLarge {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+@mixin Manifold__Typography__HeadingExtraLarge {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   font-weight: 500;
   font-size: 32px;
   letter-spacing: -0.0125em;
   line-height: 0.96;
 }
 
-.Manifold__Typography__HeadingLarge {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+@mixin Manifold__Typography__HeadingLarge {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   font-weight: 400;
   font-size: 25px;
   letter-spacing: -0.0125em;
 }
 
-.Manifold__Typography__Label {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+@mixin Manifold__Typography__Label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   font-weight: 400;
   font-size: 14px;
 }
 
-.Manifold__Typography__MonoBody {
-  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+@mixin Manifold__Typography__MonoBody {
+  font-family: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono',
+    Menlo, monospace;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: -0.01em;
 }
 
-.Manifold__Typography__MonoCaption {
-  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+@mixin Manifold__Typography__MonoCaption {
+  font-family: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono',
+    Menlo, monospace;
   font-weight: 400;
   font-size: 10px;
   letter-spacing: -0.01em;
 }
 
-.Manifold__Typography__MonoLabel {
-  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+@mixin Manifold__Typography__MonoLabel {
+  font-family: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono',
+    Menlo, monospace;
   font-weight: 400;
   font-size: 12px;
   letter-spacing: -0.01em;
 }
 
-.Manifold__Typography__SidebarBigTitle {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+@mixin Manifold__Typography__SidebarBigTitle {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   font-weight: 600;
   font-size: 16px;
 }
 
-.Manifold__Typography__SidebarSmallTitle {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+@mixin Manifold__Typography__SidebarSmallTitle {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   font-weight: 700;
   font-size: 14px;
 }
 
-.Manifold__Typography__SmallScreenBody {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+@mixin Manifold__Typography__SmallScreenBody {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   font-weight: 400;
   font-size: 16px;
 }
 
-.Manifold__Typography__SmallScreenCaption {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+@mixin Manifold__Typography__SmallScreenCaption {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   font-weight: 400;
   font-size: 13px;
 }
 
-.Manifold__Typography__SmallScreenHeading {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+@mixin Manifold__Typography__SmallScreenHeading {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   font-weight: 400;
   font-size: 18px;
   letter-spacing: -0.01em;
 }
 
-.Manifold__Typography__SmallScreenHeadingExtraLarge {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+@mixin Manifold__Typography__SmallScreenHeadingExtraLarge {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   font-weight: 500;
   font-size: 26px;
   letter-spacing: -0.0125em;
   line-height: 1.18;
 }
 
-.Manifold__Typography__SmallScreenHeadingLarge {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+@mixin Manifold__Typography__SmallScreenHeadingLarge {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   font-weight: 400;
   font-size: 22px;
   letter-spacing: -0.0125em;
 }
 
-.Manifold__Typography__SmallScreenLabel {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+@mixin Manifold__Typography__SmallScreenLabel {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   font-weight: 400;
   font-size: 14px;
 }
 
-.Manifold__Typography__Subheading {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+@mixin Manifold__Typography__Subheading {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   font-weight: 600;
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 0.030000000000000002em;
 }
 
-.Manifold__Typography__SubheadingSmall {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+@mixin Manifold__Typography__SubheadingSmall {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   font-weight: 500;
   text-transform: uppercase;
   font-size: 11px;

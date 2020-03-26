@@ -1,8 +1,9 @@
 /**
- * Generate Sass from library
+ * Generate Sass from design tokens
  */
 import fs from 'fs';
 import path from 'path';
+import prettier from 'prettier';
 import { DesignTokens } from '../types/design-tokens';
 import { capitalize, slugify } from './utils/string';
 
@@ -46,26 +47,32 @@ function buildTypography(typography: DesignTokens['typography']): string {
     .map(([key, styles]) =>
       Object.entries(styles)
         .map(([property, value]) => `$typography-${key}-${property}: ${value};`)
-        .join('\n')
+        .join('')
     )
-    .join('\n');
+    .join('');
 
-  const classes = Object.entries(typography)
+  const mixins = Object.entries(typography)
     .map(
-      ([key, styles]) => `.Manifold__Typography__${capitalize(key)} {
-${Object.entries(styles)
-  .map(([property, value]) => `  ${slugify(property)}: ${value};`)
-  .join('\n')}
+      ([key, styles]) =>
+        `
+@mixin Manifold__Typography__${capitalize(key)} {${Object.entries(styles)
+          .map(([property, value]) => `${slugify(property)}: ${value};`)
+          .join('')}
 }`
     )
     .join('\n\n');
 
-  return prefix([variables, classes].join('\n\n'));
+  return prefix([variables, mixins].join('\n\n'));
 }
 
-export default function buildSass(tokens: DesignTokens): void {
-  fs.writeFileSync(COLOR_FILE, buildColor(tokens.color), 'utf8');
-  fs.writeFileSync(GRADIENT_FILE, buildGradient(tokens.gradient), 'utf8');
-  fs.writeFileSync(SHADOW_FILE, buildShadow(tokens.shadow), 'utf8');
-  fs.writeFileSync(TYPOGRAPHY_FILE, buildTypography(tokens.typography), 'utf8');
+// Run files through Prettier before saving (cuz we probably have whitespace errors above)
+function prettify(file: string): string {
+  return prettier.format(file, { parser: 'scss', singleQuote: true });
+}
+
+export default function build(tokens: DesignTokens): void {
+  fs.writeFileSync(COLOR_FILE, prettify(buildColor(tokens.color)), 'utf8');
+  fs.writeFileSync(GRADIENT_FILE, prettify(buildGradient(tokens.gradient)), 'utf8');
+  fs.writeFileSync(SHADOW_FILE, prettify(buildShadow(tokens.shadow)), 'utf8');
+  fs.writeFileSync(TYPOGRAPHY_FILE, prettify(buildTypography(tokens.typography)), 'utf8');
 }

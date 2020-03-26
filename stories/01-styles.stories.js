@@ -1,4 +1,4 @@
-import './storybook.css';
+import './storybook.scss';
 import designTokens from '../pkg';
 
 function slugify(text) {

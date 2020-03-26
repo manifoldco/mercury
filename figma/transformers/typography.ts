@@ -15,9 +15,9 @@ function figmaStyleToCSS(style: Figma.TypeStyle) {
 
   const replacementFont: { [key: string]: string | undefined } = {
     'SF Pro Text':
-      '-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
+      "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
     'IBM Plex Mono':
-      '"IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace',
+      "'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
   };
 
   Object.entries(style).forEach(([attr, val]) => {
