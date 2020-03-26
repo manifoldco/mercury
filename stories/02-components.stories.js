@@ -1,4 +1,4 @@
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import icons from './icons.json';
 import './storybook.scss';
 
@@ -7,16 +7,35 @@ export default {
   decorators: [withKnobs],
 };
 
+const styles = ['White', 'Black', 'Brand', 'Danger', 'Disabled'];
+
 export const Buttons = () => {
   const btnText = text(`text`, `Button Text`);
-  const color = select(`color`, ['White', 'Black', 'Brand', 'Danger'], 'white');
   const disabled = boolean(`disabled`, false);
   const size = boolean(`small`, false);
 
   return `
-<button type="button" ${disabled && 'disabled'} class="Button Button--${color} Button--${
-    size ? 'Small' : 'Med'
-  }">${btnText}</button>
+  <table class="Button__Table">
+    <tr>
+      <th style="width:18rem;">Style</th>
+      <th>Example</th>
+    </tr>
+    ${styles
+      .map(
+        (style) => `
+    <tr>
+      <td>
+        ${style}
+        <dl class="Button__Code"><dt>Sass</dt><dd>@include mercury.Manifold__Button--${style};</dd></dl>
+      </td>
+      <td><button type="button" ${disabled && 'disabled'} class="Button Button--${style} Button--${
+          size ? 'Small' : 'Med'
+        }">${btnText}</button></td>
+    </tr>
+`
+      )
+      .join('')}
+  </table>
 `;
 };
 
