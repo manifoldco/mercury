@@ -21,7 +21,18 @@ ${file}`;
 function buildColor(color: DesignTokens['color']): string {
   return prefix(
     Object.entries(color)
-      .map(([key, value]) => `$color-${key}: ${value};$colour-${key}: ${value};`)
+      .map(([key, value]) => {
+        // add “grey” alias for convenience
+        const grey = key.toLocaleLowerCase().includes('gray')
+          ? `$color-${key.replace(/(g)ray/i, '$1rey')}: ${value};$colour-${key.replace(
+              /(g)ray/i,
+              '$1rey'
+            )}: ${value};`
+          : '';
+
+        // add “colour” alias
+        return `$color-${key}: ${value};$colour-${key}: ${value};${grey}`;
+      })
       .join('\n')
   );
 }

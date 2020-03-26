@@ -23,6 +23,13 @@ const designTokens = {
     teal: "#10b5d0",
     white: "#ffffff",
     yellow: "#ffde52",
+    borderGrey: "#c4c7ca",
+    grey: "#8f8f95",
+    greyDark: "#575b5f",
+    greyDarker: "#323940",
+    greyLight: "#ddddde",
+    greyLighter: "#ececed",
+    greyLightest: "#f7f7f8",
   },
   gradient: {
     brand: "linear-gradient(45deg, #da566c 0%, #8c4794 100%)",
@@ -243,6 +250,13 @@ const designTokens = {
     teal: "#10b5d0",
     white: "#ffffff",
     yellow: "#ffde52",
+    borderGrey: "#c4c7ca",
+    grey: "#8f8f95",
+    greyDark: "#575b5f",
+    greyDarker: "#323940",
+    greyLight: "#ddddde",
+    greyLighter: "#ececed",
+    greyLightest: "#f7f7f8",
   },
 };
 

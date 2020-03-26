@@ -13,9 +13,20 @@ function prettify(file: string): string {
 }
 
 export default function build(tokens: DesignTokens): void {
+  // add “grey” alias
+  Object.keys(tokens.color).forEach((c) => {
+    console.log(c.toLocaleLowerCase());
+    if (c.toLocaleLowerCase().includes('gray')) {
+      tokens.color[c.replace(/(g)ray/i, '$1rey')] = tokens.color[c];
+    }
+  });
+
+  // add “colour” alias
+  (tokens as any).colour = tokens.color;
+
   // the JS to be exported
   const template = `
-const designTokens = ${JSON.stringify({ ...tokens, colour: tokens.color })};
+const designTokens = ${JSON.stringify(tokens)};
 
 export default designTokens;
 `;
