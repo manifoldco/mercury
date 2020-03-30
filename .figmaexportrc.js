@@ -14,7 +14,7 @@ module.exports = {
         ],
         outputters: [
           require('@figma-export/output-components-as-svg')({
-            output: './src/icons',
+            output: './src',
           }),
         ],
       },

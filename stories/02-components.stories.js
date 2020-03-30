@@ -26,7 +26,9 @@ export const Buttons = () => {
     <tr>
       <td>
         ${style}
-        <dl class="Button__Code"><dt>Sass</dt><dd>@include mercury.Manifold__Button--${style};</dd></dl>
+        <dl class="Button__Code"><dt>Sass</dt><dd>@include mercury.Manifold__Button;${
+          style !== 'White' ? `<br />@include mercury.Manifold__Button--${style};` : ''
+        }</dd></dl>
       </td>
       <td><button type="button" ${disabled && 'disabled'} class="Button Button--${style} Button--${
           size ? 'Small' : 'Med'

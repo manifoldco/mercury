@@ -54,13 +54,6 @@ export const Gradients = () => `
 `;
 
 const LOREM_IPSUM = 'Everything you need to build an add-ons marketplace';
-const typographyProperties = [
-  'fontSize',
-  'fontWeight',
-  'letterSpacing',
-  'lineHeight',
-  'textTransform',
-];
 
 export const Typography = () => `
 <table class="Typography__Table">
@@ -74,9 +67,11 @@ export const Typography = () => `
     <td><div class="Typography__Key">
       ${name}
       <dl class="Typography__Code">
-        <dt>Sass</dt><dd>@include mercury.Manifold__Typography__${capitalize(name)};</dd>
-        <dt>JS</dt><dd>${typographyProperties
-          .map((attr) => `typography.${name}.${attr} = ${styles[attr]};`)
+        <dt>Sass</dt><dd>@include mercury.Manifold__Typography__${capitalize(
+          name
+        )};<br />$typography-${name}-*</dd>
+        <dt>JS</dt><dd>${Object.entries(styles)
+          .map(([k, v]) => `typography.${name}.${k} = ${v};`)
           .join('<br />')}</dd>
       </dl>
     </div></td>
