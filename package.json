@@ -36,7 +36,7 @@
     "@babel/preset-typescript": "^7.9.0",
     "@figma-export/cli": "^1.2.0",
     "@figma-export/output-components-as-svg": "^2.0.0",
-    "@figma-export/transform-svg-with-svgo": "^1.1.1",
+    "@figma-export/transform-svg-with-svgo": "^2.0.0",
     "@storybook/addon-knobs": "^5.3.17",
     "@storybook/html": "^5.3.17",
     "@types/jest": "^25.1.4",
