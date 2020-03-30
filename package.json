@@ -34,7 +34,7 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-typescript": "^7.9.0",
-    "@figma-export/cli": "^1.2.0",
+    "@figma-export/cli": "^2.0.0",
     "@figma-export/output-components-as-svg": "^2.0.0",
     "@figma-export/transform-svg-with-svgo": "^2.0.0",
     "@storybook/addon-knobs": "^5.3.17",
