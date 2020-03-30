@@ -4,7 +4,7 @@
 import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
-import { DesignTokens } from '../types/design-tokens';
+import { DesignTokens } from '../../types/design-tokens';
 
 const OUTPUT = path.resolve(__dirname, '..', 'src', 'index.ts');
 
