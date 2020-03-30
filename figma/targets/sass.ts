@@ -4,8 +4,8 @@
 import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
-import { DesignTokens } from '../types/design-tokens';
-import { capitalize, slugify } from './utils/string';
+import { DesignTokens } from '../../types/design-tokens';
+import { capitalize, slugify } from '../utils/string';
 
 const GENERATED = path.resolve(__dirname, '..', 'src', 'design-tokens');
 const COLOR_FILE = path.resolve(GENERATED, 'color.scss');

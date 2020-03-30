@@ -10,8 +10,8 @@ import transformColor from './transformers/color';
 import transformGradient from './transformers/gradient';
 import transformShadow from './transformers/shadow';
 import transformTypography from './transformers/typography';
-import buildSass from './sass';
-import buildJS from './js';
+import buildSass from './targets/sass';
+import buildJS from './targets/js';
 
 // settings
 const FIGMA_TEAM_ID = '801112506271617584';
