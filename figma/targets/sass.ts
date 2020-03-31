@@ -7,7 +7,7 @@ import prettier from 'prettier';
 import { DesignTokens } from '../../types/design-tokens';
 import { capitalize, slugify } from '../utils/string';
 
-const GENERATED = path.resolve(__dirname, '..', 'src', 'design-tokens');
+const GENERATED = path.resolve(__dirname, '..', '..', 'src', 'design-tokens');
 const COLOR_FILE = path.resolve(GENERATED, 'color.scss');
 const GRADIENT_FILE = path.resolve(GENERATED, 'gradient.scss');
 const SHADOW_FILE = path.resolve(GENERATED, 'shadow.scss');

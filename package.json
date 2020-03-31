@@ -24,7 +24,7 @@
     "clean-package-json": "node scripts/clean-package-json",
     "dev": "make package && node scripts/storybook-icons && start-storybook -p 6006",
     "extract": "npm run extract:styles && npm run extract:icons",
-    "extract:icons": "figma-export use-config",
+    "extract:icons": "figma-export use-config && node scripts/strip-icon-colors",
     "extract:styles": "ts-node --files figma",
     "lint": "eslint '**/*.ts'",
     "test": "jest"
