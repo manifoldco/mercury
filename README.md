@@ -99,8 +99,9 @@ Simply draft a new [release][local-releases] and tag it:
 | `v#.#.#`        | **Stable**: ⚠️ dependabot will update all our repos using it! |
 | `v#.#.#-beta.0` | **Unstable**: this is safe for testing                        |
 
-⚠️ **Note**: deploying won’t update the tokens! You’ll need to run `npm run extract` to pull the
-latest values.
+⚠️ **Note**: **deploying WILL NOT update the tokens from Figma!** You’ll need to run
+`npm run extract` manually to pull the latest values. The reason is that we want changes to be
+committed to version control, and reviewed before publishing.
 
 [figma]: https://www.figma.com/developers/api#access-tokens
 [local-icons]: ./src/icons
