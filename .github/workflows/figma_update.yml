@@ -1,0 +1,26 @@
+name: figma_update
+
+on:
+  schedule:
+    - cron: '0 14 * * 1-5' # run this at 9:00 EST (14:00 UTC), Mon—Fri only (1-5)
+
+jobs:
+  figma_update:
+    env:
+      FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm install
+      - name: Extract latest from Figma
+        run: npm run extract
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'Figma Update $(date +%Y-%m-%d)'
+          branch: 'figma-$(date +%Y-%m-%d)'
+          author: Manifold Frontend <frontend@manifold.co>
+          committer: Manifold Frontend <frontend@manifold.co>
+          labels: automated

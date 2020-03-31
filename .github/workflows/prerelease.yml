@@ -10,9 +10,6 @@ jobs:
     env:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [13.x]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
