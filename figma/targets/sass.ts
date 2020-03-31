@@ -8,10 +8,10 @@ import { DesignTokens } from '../../types/design-tokens';
 import { capitalize, slugify } from '../utils/string';
 
 const GENERATED = path.resolve(__dirname, '..', '..', 'src', 'design-tokens');
-const COLOR_FILE = path.resolve(GENERATED, 'color.scss');
-const GRADIENT_FILE = path.resolve(GENERATED, 'gradient.scss');
-const SHADOW_FILE = path.resolve(GENERATED, 'shadow.scss');
-const TYPOGRAPHY_FILE = path.resolve(GENERATED, 'typography.scss');
+const COLOR_FILE = path.resolve(GENERATED, '_color.scss');
+const GRADIENT_FILE = path.resolve(GENERATED, '_gradient.scss');
+const SHADOW_FILE = path.resolve(GENERATED, '_shadow.scss');
+const TYPOGRAPHY_FILE = path.resolve(GENERATED, '_typography.scss');
 
 function prefix(file: string): string {
   return `// THIS FILE IS AUTO-GENERATED! DO NOT EDIT!

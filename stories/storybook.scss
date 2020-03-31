@@ -97,6 +97,52 @@ svg {
   }
 }
 
+.Skeleton {
+  @include mercury.Manifold__Skeleton;
+
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+
+  &--White {
+    @include mercury.Manifold__Skeleton--White;
+  }
+}
+
+.Skeleton__Grid {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  &__Code {
+    font-family: mercury.$typography-monoBody-fontFamily;
+    font-size: 10px;
+    margin: 0;
+    padding: 2rem 2rem 2rem;
+
+    & dt {
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    & dd {
+      font-family: mercury.$typography-monoBody-fontFamily;
+      font-size: 10px;
+      margin: 0;
+    }
+  }
+
+  &--Black {
+    background: mercury.$color-black;
+    color: mercury.$color-white;
+  }
+
+  &--GrayLighter {
+    background: mercury.$color-grayLighter;
+  }
+}
+
 .Swatch {
   box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
