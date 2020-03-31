@@ -6,7 +6,7 @@ import path from 'path';
 import prettier from 'prettier';
 import { DesignTokens } from '../../types/design-tokens';
 
-const OUTPUT = path.resolve(__dirname, '..', 'src', 'index.ts');
+const OUTPUT = path.resolve(__dirname, '..', '..', 'src', 'index.ts');
 
 function prettify(file: string): string {
   return prettier.format(file); // specify options here if desired

@@ -1,3 +1,6 @@
+/**
+ * Remove scripts from package.json when sending to npm
+ */
 const fs = require('fs');
 const path = require('path');
 

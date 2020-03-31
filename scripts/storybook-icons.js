@@ -1,3 +1,6 @@
+/**
+ * Package all icons for Storybook (so they don’t have to be manually imported one-by-one)
+ */
 const fs = require('fs');
 const path = require('path');
 
