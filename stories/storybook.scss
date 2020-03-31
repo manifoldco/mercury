@@ -7,6 +7,10 @@ body {
   font-size: 16px;
 }
 
+svg {
+  fill: currentColor;
+}
+
 .Button {
   @include mercury.Manifold__Button;
 
