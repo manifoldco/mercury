@@ -1,5 +1,5 @@
 /**
- * Remove unnecessary stroke and fill from SVGs
+ * Strip SVGs of colors
  */
 const fs = require('fs');
 const path = require('path');
