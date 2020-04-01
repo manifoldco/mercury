@@ -10,7 +10,7 @@
   "bugs": {
     "url": "https://github.com/manifoldco/mercury/issues"
   },
-  "version": "0.1.1-beta.0",
+  "version": "0.1.1-beta.1",
   "main": "index.cjs.js",
   "module": "index.mjs",
   "sass": "index.scss",
@@ -24,7 +24,7 @@
     "clean-package-json": "node scripts/clean-package-json",
     "dev": "make package && node scripts/storybook-icons && start-storybook -p 6006",
     "extract": "npm run extract:styles && npm run extract:icons",
-    "extract:icons": "figma-export use-config && node scripts/strip-icon-colors",
+    "extract:icons": "rm -rf src/icons && figma-export use-config && mv src/Icons src/icons && node scripts/strip-icon-colors",
     "extract:styles": "ts-node --files figma",
     "update-version": "node scripts/version-from-git",
     "lint": "eslint '**/*.ts'",

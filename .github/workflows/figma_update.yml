@@ -2,7 +2,7 @@ name: figma_update
 
 on:
   schedule:
-    - cron: '0 14 * * 1-5' # run this at 9:00 EST (14:00 UTC), Mon—Fri only (1-5)
+    - cron: '0 12 * * 1-5' # run this at 7:00 EST (12:00 UTC), Mon—Fri only (1-5)
 
 jobs:
   figma_update:
@@ -19,8 +19,9 @@ jobs:
         uses: peter-evans/create-pull-request@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: 'Figma Update $(date +%Y-%m-%d)'
-          branch: 'figma-$(date +%Y-%m-%d)'
+          commit-message: Figma Update ${{ github.run_id }}
+          title: Figma Update ${{ github.run_id }}
+          branch: figma-${{ github.run_id }}
           author: Manifold Frontend <frontend@manifold.co>
           committer: Manifold Frontend <frontend@manifold.co>
           labels: automated
