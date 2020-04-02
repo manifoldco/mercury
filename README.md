@@ -83,10 +83,19 @@ run `npm run extract`.
 
 ### 🚀 Deploying to npm
 
-npm deployment happens ✨ _automatically_ ✨ on merge to `master`. However, you may still manually
-create tags to release yourself (say if you were testing something in a branch, you could tag
-`v0.5.0-alpha.0` to test publishing to npm without creating a release that will update all our
-apps).
+npm deployment happens ✨ _automatically_ ✨ on merge to `master`.
+
+In order to release versions yourself, you’ll have to do so manually, locally:
+
+```
+make package
+```
+
+Then update `version` in `pkg/package.json` manually with your desired version.
+
+```
+cd pkg && npm publish --tag next
+```
 
 [figma]: https://www.figma.com/developers/api#access-tokens
 [local-icons]: ./src/icons

@@ -1,0 +1,21 @@
+name: npm-publish
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  npm-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm install
+      - run: make package
+      - run: echo ${{ github.events.pusher.name }}
+      - run: echo ${{ github.events.pusher.email }}
+      - if: github.events.pusher.email == 'foo@bar.com' # test: see if we can only run this event when the Figma bot commits, and no one else (not dependabot)
+        uses: mikeal/merge-release@master
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

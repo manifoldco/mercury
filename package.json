@@ -17,7 +17,7 @@
   "types": "index.d.ts",
   "license": "BSD-3",
   "scripts": {
-    "build": "npm run update-version && rm -rf pkg && mkdir pkg && cp -r src/. pkg && npm run build:css && npm run build:ts",
+    "build": "rm -rf pkg && mkdir pkg && cp -r src/. pkg && npm run build:css && npm run build:ts",
     "build:css": "sass pkg/index.scss --no-source-map |> /dev/null",
     "build:ts": "tsc --module esnext --declaration --skipLibCheck pkg/index.ts && mv pkg/index.js pkg/index.mjs && tsc --module commonjs --skipLibCheck pkg/index.ts && mv pkg/index.js pkg/index.cjs.js",
     "build-storybook": "make package && node scripts/storybook-icons && build-storybook",
@@ -26,7 +26,6 @@
     "extract": "npm run extract:styles && npm run extract:icons",
     "extract:icons": "rm -rf src/icons && figma-export use-config && mv src/Icons src/icons && node scripts/strip-icon-colors",
     "extract:styles": "ts-node --files figma",
-    "update-version": "node scripts/version-from-git",
     "lint": "eslint '**/*.ts'",
     "test": "jest"
   },
