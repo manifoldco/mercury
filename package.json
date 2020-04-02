@@ -10,7 +10,7 @@
   "bugs": {
     "url": "https://github.com/manifoldco/mercury/issues"
   },
-  "version": "0.1.1-beta.1",
+  "version": "0.1.0",
   "main": "index.cjs.js",
   "module": "index.mjs",
   "sass": "index.scss",
@@ -28,7 +28,18 @@
     "extract:styles": "ts-node --files figma",
     "update-version": "node scripts/version-from-git",
     "lint": "eslint '**/*.ts'",
+    "release": "release-it",
     "test": "jest"
+  },
+  "release-it": {
+    "git": {
+      "requireCleanWorkingDir": false,
+      "tag": true
+    },
+    "npm": {
+      "publish": true,
+      "publishPath": "pkg"
+    }
   },
   "dependencies": {},
   "devDependencies": {
@@ -54,6 +65,7 @@
     "jest": "^25.2.4",
     "jest-cli": "^25.2.4",
     "prettier": "^2.0.2",
+    "release-it": "^13.5.1",
     "rgb2hex": "^0.1.10",
     "sass": "^1.26.3",
     "sass-loader": "^8.0.2",

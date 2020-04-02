@@ -20,7 +20,12 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Figma Update ${{ github.run_id }}
-          title: Figma Update ${{ github.run_id }}
+          title: 🤖 Figma Update ${{ github.run_id }}
+          body: |
+            `Beep boop!` A robot found some updates in Figma to Manifold’s design system. You may take the following actions:
+
+            - ✅ By **approving and merging** this update, you accept the changes to the design system, and a new version will be released to npm upon merge.
+            - 🚫 By **closing** this PR and **deleting the branch**, nothing will happen (though be warned another PR may be opened up tomorrow; consult with design on the changes made if this was an error or if something is unexpected).
           branch: figma-${{ github.run_id }}
           author: Manifold Frontend <frontend@manifold.co>
           committer: Manifold Frontend <frontend@manifold.co>
