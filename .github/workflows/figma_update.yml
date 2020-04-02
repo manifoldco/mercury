@@ -19,14 +19,14 @@ jobs:
         uses: peter-evans/create-pull-request@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: Figma Update ${{ github.run_id }}
-          title: 🤖 Figma Update ${{ github.run_id }}
+          commit-message: Figma Update ${{ github.run_number }}
+          title: 🤖 Figma Update ${{ github.run_number }}
           body: |
             `Beep boop!` A robot found some updates in Figma to Manifold’s design system. You may take the following actions:
 
             - ✅ By **approving and merging** this update, you accept the changes to the design system, and a new version will be released to npm upon merge.
             - 🚫 By **closing** this PR and **deleting the branch**, nothing will happen (though be warned another PR may be opened up tomorrow; consult with design on the changes made if this was an error or if something is unexpected).
-          branch: figma-${{ github.run_id }}
-          author: Manifold Frontend <frontend@manifold.co>
-          committer: Manifold Frontend <frontend@manifold.co>
+          branch: figma-${{ github.run_number }}
+          author: Figmabot <figmabot+frontend@manifold.co>
+          committer: Figmabot <figmabot+frontend@manifold.co>
           labels: automated

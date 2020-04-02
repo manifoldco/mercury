@@ -4,13 +4,17 @@ on:
   push:
     branches:
       - master
+    tags-ignore:
+      - '*'
 
 jobs:
   bump-version:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: anothrNick/github-tag-action@1.17.2
+      - run: echo ${{ github.event.pusher.email }}
+      - if: github.event.pusher.name == 'figmabot+frontend@manifold.co'
+        uses: anothrNick/github-tag-action@1.17.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEFAULT_BUMP: patch
