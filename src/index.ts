@@ -2,7 +2,6 @@ const designTokens = {
   color: {
     black: "#000000",
     blue: "#1e50da",
-    borderGray: "#c4c7ca",
     gray: "#8f8f95",
     grayDark: "#575b5f",
     grayDarker: "#323940",
@@ -20,7 +19,10 @@ const designTokens = {
     orange: "#f58b23",
     purple: "#7748d2",
     red: "#d52049",
+    shadowFar: "#c4c4c4",
     teal: "#10b5d0",
+    utilitiesGray: "#c4c7ca",
+    utilitiesModalOverlay: "#1a2631",
     white: "#ffffff",
     yellow: "#ffde52",
   },
@@ -43,7 +45,9 @@ const designTokens = {
       "linear-gradient(272.4deg, #fe1360 -13.37%, #814eae 26.05%, #2d98cc 77.38%, #fd8745 95.25%, #fdC935 135.64%)",
   },
   shadow: {
-    far: "0 6px 10px rgba(0, 0, 0, 0.15)",
+    shadowFar:
+      "0 2.767256498336792px 2.5735485553741455px rgba(24, 26, 32, 0.02),0 6.650102138519287px 6.184595108032227px rgba(24, 26, 32, 0.03),0 12.521552085876465px 11.64504337310791px rgba(24, 26, 32, 0.04),0 22.3363094329834px 20.772768020629883px rgba(24, 26, 32, 0.04),0 41.777610778808594px 38.85317611694336px rgba(24, 26, 32, 0.05),0 100px 93px rgba(24, 26, 32, 0.07)",
+    shadowNear: "0 2px 8px rgba(0, 0, 0, 0.08)",
     near: "0 2px 8px rgba(0, 0, 0, 0.08)",
   },
   typography: {
