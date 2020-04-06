@@ -7,18 +7,15 @@ on:
 
 jobs:
   npm-publish:
+    if: github.event.pusher.email == 'actions@github.com' # only run after figma_update workflow (not dependabot)
     runs-on: ubuntu-latest
     env:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - if: github.event.pusher.email == 'actions@github.com'
-        run: npm install
-      - if: github.event.pusher.email == 'actions@github.com'
-        run: npm version patch
-      - if: github.event.pusher.email == 'actions@github.com'
-        run: make package
+      - run: npm install
+      - run: npm version patch
+      - run: make package
       - run: 'echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc'
-      - if: github.event.pusher.email == 'actions@github.com'
-        run: 'cd pkg && npm publish --tag latest'
+      - run: 'cd pkg && npm publish --tag latest'
