@@ -13,13 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - run: npm install
-      - run: echo ${{ github.event.pusher.name }}
-      - run: echo ${{ github.event.pusher.email }}
-      - name: Bump patch version
-        if: github.event.pusher.email == 'foo@bar.com' # test: see if we can only run this event when the Figma bot commits, and no one else (not dependabot)
+      - if: github.event.pusher.email == 'actions@github.com'
+        run: npm install
+      - if: github.event.pusher.email == 'actions@github.com'
         run: npm version patch
-      - run: make package
+      - if: github.event.pusher.email == 'actions@github.com'
+        run: make package
       - run: 'echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc'
-      - if: github.event.pusher.email == 'foo@bar.com'
+      - if: github.event.pusher.email == 'actions@github.com'
         run: 'cd pkg && npm publish --tag latest'
