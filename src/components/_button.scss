@@ -6,7 +6,7 @@
 @mixin Manifold__Button {
   appearance: none;
   background: color.$color-white;
-  border-color: color.$color-borderGray;
+  border-color: color.$color-utilitiesGray;
   border-radius: 4px;
   border-style: solid;
   border-width: 1px;
@@ -114,7 +114,7 @@
 
 @mixin Manifold__Button--Disabled {
   background: color.$color-grayLighter;
-  border: 1px solid color.$color-borderGray;
+  border: 1px solid color.$color-utilitiesGray;
   box-shadow: none;
   color: color.$color-gray;
   cursor: not-allowed;
@@ -123,7 +123,7 @@
   &:focus,
   &:hover {
     background: color.$color-grayLighter;
-    border: 1px solid color.$color-borderGray;
+    border: 1px solid color.$color-utilitiesGray;
     box-shadow: none;
     color: color.$color-gray;
   }
@@ -134,7 +134,7 @@
 
   &:active {
     background: color.$color-grayLighter;
-    border-color: color.$color-borderGray;
+    border-color: color.$color-utilitiesGray;
     box-shadow: none;
     color: color.$color-gray;
     transform: none;
