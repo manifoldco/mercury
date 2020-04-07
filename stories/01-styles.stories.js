@@ -1,17 +1,12 @@
+import { cssifyObject } from 'css-in-js-utils';
 import './storybook.scss';
 import designTokens from '../pkg';
-
-function slugify(text) {
-  return text.replace(/[A-Z]/g, (letter) => `-${letter.toLocaleLowerCase()}`);
-}
 
 function capitalize(text) {
   return text.replace(/[A-Z]/i, (letter) => letter.toLocaleUpperCase());
 }
 
-export default {
-  title: 'Styles',
-};
+export default { title: 'Styles' };
 
 export const Colors = () => `
 <div class="Swatch__Grid">
@@ -70,14 +65,10 @@ export const Typography = () => `
         <dt>Sass</dt><dd>@include mercury.Manifold__Typography__${capitalize(
           name
         )};<br />$typography-${name}-*</dd>
-        <dt>JS</dt><dd>${Object.entries(styles)
-          .map(([k, v]) => `typography.${name}.${k} = ${v};`)
-          .join('<br />')}</dd>
+        <dt>JS</dt><dd>typography.${name}.*</dd>
       </dl>
     </div></td>
-    <td><div class="Typography__Preview" style="${Object.entries(styles)
-      .map(([k, v]) => `${slugify(k)}:${v};`)
-      .join('')}">${LOREM_IPSUM}</div></td>
+    <td><div class="Typography__Preview" style="${cssifyObject(styles)}">${LOREM_IPSUM}</div></td>
   </tr>
     `
     )

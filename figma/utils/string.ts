@@ -16,10 +16,3 @@ export function camelCase(text: string): string {
 export function capitalize(text: string): string {
   return text.replace(/[A-Z]/i, (letter) => letter.toLocaleUpperCase());
 }
-
-/**
- * Convert camelCase to slug-case
- */
-export function slugify(text: string): string {
-  return text.replace(/[A-Z]/g, (letter) => `-${letter.toLocaleLowerCase()}`);
-}

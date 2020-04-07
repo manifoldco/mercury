@@ -4,8 +4,9 @@
 import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
+import { cssifyObject } from 'css-in-js-utils';
 import { DesignTokens } from '../../types/design-tokens';
-import { capitalize, slugify } from '../utils/string';
+import { capitalize } from '../utils/string';
 
 const GENERATED = path.resolve(__dirname, '..', '..', 'src', 'design-tokens');
 const COLOR_FILE = path.resolve(GENERATED, '_color.scss');
@@ -55,10 +56,7 @@ function buildTypography(typography: DesignTokens['typography']): string {
     .map(
       ([key, styles]) =>
         `
-@mixin Manifold__Typography__${capitalize(key)} {${Object.entries(styles)
-          .map(([property, value]) => `${slugify(property)}: ${value};`)
-          .join('')}
-}`
+@mixin Manifold__Typography__${capitalize(key)} {${cssifyObject(styles)}}`
     )
     .join('\n\n');
 

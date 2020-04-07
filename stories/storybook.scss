@@ -3,15 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 body {
-  font-family: mercury.$typography-body-fontFamily;
   font-size: 16px;
+  font-family: mercury.$typography-body-fontFamily;
 }
 
 svg {
   fill: currentColor;
 }
 
-.Button {
+.Manifold__Button {
   @include mercury.Manifold__Button;
 
   &--Black {
@@ -22,10 +22,6 @@ svg {
     @include mercury.Manifold__Button--Brand;
   }
 
-  &--Disabled {
-    @include mercury.Manifold__Button--Disabled;
-  }
-
   &--Danger {
     @include mercury.Manifold__Button--Danger;
   }
@@ -33,77 +29,47 @@ svg {
   &--Small {
     @include mercury.Manifold__Button--Small;
   }
-
-  &__Code {
-    margin: 0.5rem 0 0;
-
-    & dt {
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    & dd {
-      font-family: mercury.$typography-monoBody-fontFamily;
-      font-size: 10px;
-      margin: 0;
-    }
-  }
-
-  &__Table {
-    border-collapse: collapse;
-    width: 100%;
-
-    & td {
-      border-top: 1px solid #f0f0f0;
-      padding: 1rem 0.5rem;
-    }
-
-    & th {
-      background-color: #f5f5f5;
-      text-align: left;
-      padding: 1rem 0.5rem;
-    }
-  }
 }
 
 .Icon {
-  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
   display: flex;
   flex-direction: column;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
 
   &__SVG {
     padding: 1rem;
 
     & svg {
       display: block;
-      height: 2rem;
       width: 2rem;
+      height: 2rem;
     }
   }
 
   &__Name {
-    font-family: mercury.$typography-monoBody-fontFamily;
-    font-size: 10px;
     padding: 0 1rem 1rem 1rem;
+    font-size: 10px;
+    font-family: mercury.$typography-monoBody-fontFamily;
   }
 
   &__Grid {
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 2rem;
+    background: mercury.$color-grayLightest;
   }
 }
 
 .Skeleton {
   @include mercury.Manifold__Skeleton;
 
-  margin-left: 2rem;
-  margin-right: 2rem;
   margin-top: 0;
+  margin-right: 2rem;
   margin-bottom: 2rem;
+  margin-left: 2rem;
 
   &--White {
     @include mercury.Manifold__Skeleton--White;
@@ -111,31 +77,38 @@ svg {
 }
 
 .Skeleton__Grid {
-  box-sizing: border-box;
   display: grid;
+  grid-column-gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr;
+  box-sizing: border-box;
+  padding: 2rem;
+  background: mercury.$color-grayLightest;
 
   &__Code {
-    font-family: mercury.$typography-monoBody-fontFamily;
-    font-size: 10px;
     margin: 0;
     padding: 2rem 2rem 2rem;
+    font-size: 10px;
+    font-family: mercury.$typography-monoBody-fontFamily;
 
     & dt {
-      font-size: 12px;
       font-weight: 700;
+      font-size: 12px;
     }
 
     & dd {
-      font-family: mercury.$typography-monoBody-fontFamily;
-      font-size: 10px;
       margin: 0;
+      font-size: 10px;
+      font-family: mercury.$typography-monoBody-fontFamily;
     }
   }
 
+  &--White {
+    background: white;
+  }
+
   &--Black {
-    background: mercury.$color-black;
     color: mercury.$color-white;
+    background: mercury.$color-black;
   }
 
   &--GrayLighter {
@@ -144,39 +117,39 @@ svg {
 }
 
 .Swatch {
-  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
   display: flex;
   flex-direction: column;
   padding-bottom: 0.5rem;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
 
   &__Color {
+    padding-top: 75%;
+    border-bottom: 1px solid #f0f0f0;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    border-bottom: 1px solid #f0f0f0;
-    margin-top: 1rem;
-    padding-top: 75%;
   }
 
   &__Grid {
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 2rem;
+    background: mercury.$color-grayLightest;
   }
 
   &__Name,
   &__Code,
   &__Value {
-    padding-left: 1rem;
     padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   &__Name {
-    font-size: 14px;
     margin-bottom: 0.25rem;
     padding-top: 1rem;
+    font-size: 14px;
   }
 
   &__Code {
@@ -186,11 +159,11 @@ svg {
     margin: 1rem 0 0;
 
     & dt {
-      border-top: 1px solid mercury.$color-grayLighter;
       display: block;
-      font-size: 12px;
-      font-weight: 700;
       padding: 0.5rem 0.75rem 0.5rem 0;
+      font-weight: 700;
+      font-size: 12px;
+      border-top: 1px solid mercury.$color-grayLighter;
 
       &:first-of-type {
         border-top: none;
@@ -198,11 +171,11 @@ svg {
     }
 
     & dd {
-      border-top: 1px solid mercury.$color-grayLighter;
-      font-family: mercury.$typography-monoBody-fontFamily;
-      font-size: 10px;
       margin: 0;
       padding: 0.5rem 0;
+      font-size: 10px;
+      font-family: mercury.$typography-monoBody-fontFamily;
+      border-top: 1px solid mercury.$color-grayLighter;
 
       &:first-of-type {
         border-top: none;
@@ -211,8 +184,8 @@ svg {
   }
 
   &__Value {
-    font-family: mercury.$typography-monoBody-fontFamily;
     font-size: 10px;
+    font-family: mercury.$typography-monoBody-fontFamily;
   }
 }
 
@@ -225,14 +198,14 @@ svg {
     padding-right: 1rem;
 
     & dt {
-      font-size: 12px;
       font-weight: 700;
+      font-size: 12px;
     }
 
     & dd {
-      font-family: mercury.$typography-monoBody-fontFamily;
-      font-size: 10px;
       margin: 0;
+      font-size: 10px;
+      font-family: mercury.$typography-monoBody-fontFamily;
     }
   }
 
@@ -241,19 +214,164 @@ svg {
   }
 
   &__Table {
-    border-collapse: collapse;
     width: 100%;
+    border-collapse: collapse;
 
     & td {
-      border-top: 1px solid #f0f0f0;
       padding: 1rem 0.5rem;
       vertical-align: top;
+      border-top: 1px solid #f0f0f0;
     }
 
     & th {
-      background-color: #f5f5f5;
-      text-align: left;
       padding: 1rem 0.5rem;
+      text-align: left;
+      background-color: #f5f5f5;
     }
+  }
+}
+
+.StorybookView {
+  margin: 1.5rem;
+  background: mercury.$color-grayLightest;
+  border: 1px solid mercury.$color-grayLighter;
+  border-radius: 1rem;
+  box-shadow: mercury.$shadow-shadowFar;
+
+  &__Demo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 8rem;
+    padding: 2rem;
+
+    & h1 {
+      margin-top: 0;
+    }
+  }
+
+  &__Description {
+    padding: 2rem;
+    background: white;
+    border-top: 1px solid mercury.$color-grayLight;
+    border-bottom: 1px solid mercury.$color-grayLight;
+  }
+
+  &__Code {
+    @include mercury.Manifold__Typography__MonoBody;
+
+    display: flex;
+    color: mercury.$color-grayDark;
+    font-size: 12px;
+    background: mercury.$color-grayLighter;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+
+    @media (min-width: 800px) {
+      display: flex;
+    }
+
+    &__Copy {
+      @include mercury.Manifold__Typography__SubheadingSmall;
+
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      color: mercury.$color-gray;
+      background: none;
+      border: none;
+      cursor: pointer;
+      appearance: none;
+
+      &:hover {
+        color: mercury.$color-grayDark;
+      }
+
+      & svg {
+        display: block;
+        width: 1em;
+        height: 1em;
+        margin-right: 0.25em;
+      }
+    }
+
+    &__Tab {
+      position: relative;
+      flex-basis: 0;
+      flex-grow: 1;
+      flex-shrink: 0;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 3rem 1rem 1rem;
+      border-left: 1px solid mercury.$color-grayLight;
+
+      &::before {
+        @include mercury.Manifold__Typography__SubheadingSmall;
+
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        color: mercury.$color-gray;
+        content: attr(lang);
+      }
+
+      &:first-of-type {
+        border-left: 0;
+      }
+
+      & pre {
+        overflow: auto;
+      }
+    }
+  }
+}
+
+// PrismJS
+
+// HTML
+[lang='html'] {
+  .attr-name {
+    color: mercury.$color-green;
+  }
+  .attr-value {
+    color: mercury.$color-purple;
+  }
+  .comment {
+    color: mercury.$color-gray;
+  }
+  .tag {
+    color: mercury.$color-teal;
+  }
+}
+
+// CSS
+[lang='scss'] {
+  .rule {
+    color: mercury.$color-purple;
+  }
+  .selector {
+    color: mercury.$color-teal;
+  }
+  .string {
+    color: mercury.$color-orange;
+  }
+}
+
+// JS
+[lang='js'] {
+  .function {
+    color: mercury.$color-orange;
+  }
+  .keyword {
+    color: mercury.$color-purple;
+  }
+  .parameter {
+    color: #ea62b3;
+  }
+  .string {
+    color: mercury.$color-orange;
   }
 }

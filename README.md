@@ -24,9 +24,9 @@ using version `1.23.0` or greater:
   @include mercury.Manifold__Button; /* extend button styles */
   @include mercury.Manifold__Typography__Body;
 
-  background: mercury.$color-purple; /* provide overrides from common variables */
   color: mercury.$color-white;
   font-family: mercury.$typography-bodyMono-fontFamily;
+  background: mercury.$color-purple; /* provide overrides from common variables */
 }
 ```
 

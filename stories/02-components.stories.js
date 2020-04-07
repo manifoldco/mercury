@@ -1,43 +1,20 @@
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import icons from './icons.json';
 import './storybook.scss';
 
-export default {
-  title: 'Components',
-  decorators: [withKnobs],
-};
-
-const styles = ['White', 'Black', 'Brand', 'Danger', 'Disabled'];
+export default { title: 'Components' };
 
 export const Buttons = () => {
-  const btnText = text(`text`, `Button Text`);
-  const disabled = boolean(`disabled`, false);
-  const size = boolean(`small`, false);
-
   return `
-  <table class="Button__Table">
-    <tr>
-      <th style="width:18rem;">Style</th>
-      <th>Example</th>
-    </tr>
-    ${styles
-      .map(
-        (style) => `
-    <tr>
-      <td>
-        ${style}
-        <dl class="Button__Code"><dt>Sass</dt><dd>@include mercury.Manifold__Button;${
-          style !== 'White' ? `<br />@include mercury.Manifold__Button--${style};` : ''
-        }</dd></dl>
-      </td>
-      <td><button type="button" ${disabled && 'disabled'} class="Button Button--${style} Button--${
-          size ? 'Small' : 'Med'
-        }">${btnText}</button></td>
-    </tr>
-`
-      )
-      .join('')}
-  </table>
+  <button type="button" class="Manifold__Button">Default Button</button>
+  <button type="button" class="Manifold__Button Manifold__Button--Small">Default Small</button>
+  <button type="button" class="Manifold__Button Manifold__Button--Black">Black Button</button>
+  <button type="button" class="Manifold__Button Manifold__Button--Black Manifold__Button--Small">Black Small</button>
+  <button type="button" class="Manifold__Button Manifold__Button--Brand">Brand Button</button>
+  <button type="button" class="Manifold__Button Manifold__Button--Brand Manifold__Button--Small">Brand Small</button>
+  <button type="button" class="Manifold__Button Manifold__Button--Danger">Danger Button</button>
+  <button type="button" class="Manifold__Button Manifold__Button--Danger Manifold__Button--Small">Danger Small</button>
+  <button type="button" disabled class="Manifold__Button">Disabled Button</button>
+  <button type="button" disabled class="Manifold__Button Manifold__Button--Small">Disabled Small</button>
 `;
 };
 
@@ -53,6 +30,12 @@ export const Icons = () => `
   `
     )
     .join('')}
+</div>
+`;
+
+export const Select = () => `
+<div class="Select__Container">
+<select class="Select__Input"></select>
 </div>
 `;
 
