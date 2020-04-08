@@ -52,16 +52,16 @@ When everything looks good, [open a PR](./pulls) and a member of the front-end t
 To understand the Figma updates, you’ll need to think in terms of **transformers** and **targets**.
 
 We currently have the following **transformers** in Figma: `color`, `gradient`, `typography`, and
-`shadow`. Each of those transformers in the [`./figma/transformers`][local-transfomers] directory
-map to a style namespace in Mercury. Basically, each transformer takes the Figma REST API data
-(JSON), pulls out what it needs for each, and converts the end result to a JS object.
+`shadow`. Each of those transformers in the [`./figma/transformers`][local-transformers] directory
+map to a style namespace in Mercury. Each transformer takes the Figma REST API data (JSON), pulls
+out what it needs for each, and converts the end result to a JS object.
 
 After each transformer has generated its own object, each **target** is responsible for taking that
 collection and converting it to a file output. Currently we have 2 targets: **JS** and **Sass**.
 Each of those map to a file in [`./figma/targets`][local-targets]. The JS target is the simplest, as
 it basically writes the object as-is from transformers. The Sass target has to do a little more
 work, converting JS (`{ fontSize: '12px' }`) to CSS strings (`font-size: 12px;`), as well as
-generate some wrappers (`@mixin Manifold__Typography { … }`). But overall, it’s not too much work.
+generating some wrappers (`@mixin Manifold__Typography { … }`). But overall, it’s not too much work.
 
 _OK, but how do I add something?_ Your process from here will be somewhat trial-and-error, because
 every “thing” you want to add will follow a different process (compare the `color` vs `typography`
