@@ -7,7 +7,7 @@ on:
 
 jobs:
   npm-publish:
-    if: github.event.pusher.email == 'actions@github.com' # only run after figma_update workflow (not dependabot)
+    if: github.actor == 'manifold-dangerzone' # only run after figma_update workflow (not dependabot)
     runs-on: ubuntu-latest
     env:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

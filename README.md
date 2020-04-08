@@ -76,21 +76,23 @@ pull out what you need into a JS object (transformers) that can be exported to J
 
 ### ♻️ Updating from Figma
 
-Updating from Figma happens ✨ _automatically_ ✨ with a daily check and Pull Requests. However, if
-you want to manually update (perhaps if you’re adding something), [create a Figma
-token][figma-docs-tokens] and add a new line to your `~/.zshrc` or `~/.bashrc` (whichever exists on
-your machine; most likely the former):
+Updating from Figma happens ✨ _automatically_ ✨ with a daily check. If you want to manually update
+(perhaps you’re testing something), [create a Figma token][figma-docs-tokens] and add a new line to
+your `~/.zshrc` or `~/.bashrc` (whichever exists on your machine; most likely the former):
 
 ```
 export FIGMA_TOKEN=[token]
 ```
 
-Then from your terminal, run `npm run extract` (be sure to open a new terminal window if you just
-added that token).
+Then run:
+
+```bash
+npm run extract
+```
 
 ### 🚀 Deploying to npm
 
-npm deployment happens ✨ _automatically_ ✨ on merge to `master`.
+npm deployment happens ✨ _automatically_ ✨ whenever Figma is updated.
 
 In order to release versions yourself, you’ll have to do so manually. Locally, run:
 
@@ -98,7 +100,7 @@ In order to release versions yourself, you’ll have to do so manually. Locally,
 make package
 ```
 
-Then update `version` in `pkg/package.json` manually with your desired version:
+Update `pkg/package.json`’s `version` manually, and run:
 
 ```
 cd pkg && npm publish --tag next
