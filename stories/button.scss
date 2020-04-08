@@ -1,0 +1,29 @@
+@use "../src/index.scss" as mercury;
+
+// ----------
+// Block
+// ----------
+
+.Manifold__Button {
+  @include mercury.Manifold__Button;
+
+  // ----------
+  //  Modifiers
+  // ----------
+
+  &--Black {
+    @include mercury.Manifold__Button--Black;
+  }
+
+  &--Brand {
+    @include mercury.Manifold__Button--Brand;
+  }
+
+  &--Danger {
+    @include mercury.Manifold__Button--Danger;
+  }
+
+  &--Small {
+    @include mercury.Manifold__Button--Small;
+  }
+}

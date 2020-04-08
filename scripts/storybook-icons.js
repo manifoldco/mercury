@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ICON_DIR = path.resolve(__dirname, '..', 'src', 'icons');
-const STORIES_DIR = path.resolve(__dirname, '..', 'stories');
+const STORYBOOK_DIR = path.resolve(__dirname, '..', 'stories', 'storybook');
 
 const icons = fs.readdirSync(ICON_DIR).reduce(
   (icons, icon) => ({
@@ -15,4 +15,4 @@ const icons = fs.readdirSync(ICON_DIR).reduce(
   {}
 );
 
-fs.writeFileSync(path.resolve(STORIES_DIR, 'icons.json'), JSON.stringify(icons, null, 2), 'utf8');
+fs.writeFileSync(path.resolve(STORYBOOK_DIR, 'icons.json'), JSON.stringify(icons, null, 2), 'utf8');

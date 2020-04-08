@@ -1,4 +1,9 @@
-@use "../src/index.scss" as mercury;
+/**
+ * Storybook Styles
+ * These are only for Storybook, and don’t ship with Mercury. Be sure nothing important is in here!
+ */
+
+@use "../../src/index.scss" as mercury;
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
@@ -9,111 +14,6 @@ body {
 
 svg {
   fill: currentColor;
-}
-
-.Manifold__Button {
-  @include mercury.Manifold__Button;
-
-  &--Black {
-    @include mercury.Manifold__Button--Black;
-  }
-
-  &--Brand {
-    @include mercury.Manifold__Button--Brand;
-  }
-
-  &--Danger {
-    @include mercury.Manifold__Button--Danger;
-  }
-
-  &--Small {
-    @include mercury.Manifold__Button--Small;
-  }
-}
-
-.Icon {
-  display: flex;
-  flex-direction: column;
-  background: white;
-  border-radius: 4px;
-  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
-
-  &__SVG {
-    padding: 1rem;
-
-    & svg {
-      display: block;
-      width: 2rem;
-      height: 2rem;
-    }
-  }
-
-  &__Name {
-    padding: 0 1rem 1rem 1rem;
-    font-size: 10px;
-    font-family: mercury.$typography-monoBody-fontFamily;
-  }
-
-  &__Grid {
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    padding: 2rem;
-    background: mercury.$color-grayLightest;
-  }
-}
-
-.Skeleton {
-  @include mercury.Manifold__Skeleton;
-
-  margin-top: 0;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
-  margin-left: 2rem;
-
-  &--White {
-    @include mercury.Manifold__Skeleton--White;
-  }
-}
-
-.Skeleton__Grid {
-  display: grid;
-  grid-column-gap: 2rem;
-  grid-template-columns: 1fr 1fr 1fr;
-  box-sizing: border-box;
-  padding: 2rem;
-  background: mercury.$color-grayLightest;
-
-  &__Code {
-    margin: 0;
-    padding: 2rem 2rem 2rem;
-    font-size: 10px;
-    font-family: mercury.$typography-monoBody-fontFamily;
-
-    & dt {
-      font-weight: 700;
-      font-size: 12px;
-    }
-
-    & dd {
-      margin: 0;
-      font-size: 10px;
-      font-family: mercury.$typography-monoBody-fontFamily;
-    }
-  }
-
-  &--White {
-    background: white;
-  }
-
-  &--Black {
-    color: mercury.$color-white;
-    background: mercury.$color-black;
-  }
-
-  &--GrayLighter {
-    background: mercury.$color-grayLighter;
-  }
 }
 
 .Swatch {
@@ -189,54 +89,20 @@ svg {
   }
 }
 
-.Typography {
-  &__Code {
-    display: grid;
-    grid-gap: 0.5rem 1rem;
-    grid-template-columns: min-content auto;
-    margin: 1rem 0 0;
-    padding-right: 1rem;
+// ----------
+//  Block
+// ----------
 
-    & dt {
-      font-weight: 700;
-      font-size: 12px;
-    }
-
-    & dd {
-      margin: 0;
-      font-size: 10px;
-      font-family: mercury.$typography-monoBody-fontFamily;
-    }
-  }
-
-  &__Preview {
-    margin-top: 2rem;
-  }
-
-  &__Table {
-    width: 100%;
-    border-collapse: collapse;
-
-    & td {
-      padding: 1rem 0.5rem;
-      vertical-align: top;
-      border-top: 1px solid #f0f0f0;
-    }
-
-    & th {
-      padding: 1rem 0.5rem;
-      text-align: left;
-      background-color: #f5f5f5;
-    }
-  }
-}
-
-.StorybookView {
+.Story {
   margin: 1.5rem;
   background: mercury.$color-grayLightest;
   border: 1px solid mercury.$color-grayLighter;
   border-radius: 1rem;
   box-shadow: mercury.$shadow-shadowFar;
+
+  // ----------
+  //  Elements
+  // ----------
 
   &__Demo {
     display: flex;
@@ -245,8 +111,8 @@ svg {
     min-height: 8rem;
     padding: 2rem;
 
-    & h1 {
-      margin-top: 0;
+    & > * {
+      margin: 1rem;
     }
   }
 
@@ -255,6 +121,10 @@ svg {
     background: white;
     border-top: 1px solid mercury.$color-grayLight;
     border-bottom: 1px solid mercury.$color-grayLight;
+
+    & h1 {
+      margin-top: 0;
+    }
   }
 
   &__Code {
@@ -305,7 +175,7 @@ svg {
       flex-shrink: 0;
       box-sizing: border-box;
       margin: 0;
-      padding: 3rem 1rem 1rem;
+      padding: 2rem 1rem 1rem;
       border-left: 1px solid mercury.$color-grayLight;
 
       &::before {
