@@ -4,42 +4,42 @@
 @use "../design-tokens/typography";
 
 @mixin Manifold__Button {
-  appearance: none;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10.5px 21px;
+  color: color.$color-grayDarker;
+  font-weight: 500;
+  font-size: typography.$typography-body-fontSize;
+  font-family: typography.$typography-body-fontFamily;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
   background: color.$color-white;
   border-color: color.$color-utilitiesGray;
-  border-radius: 4px;
   border-style: solid;
   border-width: 1px;
+  border-radius: 4px;
   box-shadow: shadow.$shadow-near;
-  box-sizing: border-box;
-  color: color.$color-grayDarker;
   cursor: pointer;
-  display: inline-block;
-  font-family: typography.$typography-body-fontFamily;
-  font-size: typography.$typography-body-fontSize;
-  font-weight: 500;
-  line-height: 1;
-  padding: 10.5px 21px;
-  position: relative;
-  text-decoration: none;
+  transition-timing-function: linear;
   transition-duration: 150ms;
   transition-property: background-color, border-color, color, box-shadow, filter;
-  transition-timing-function: linear;
-  white-space: nowrap;
+  appearance: none;
 
   &::before {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
     border: 2px solid color.$color-blue;
     border-radius: 8px;
-    bottom: -5px;
-    content: '';
-    left: -5px;
-    pointer-events: none;
-    position: absolute;
-    right: -5px;
-    top: -5px;
-    opacity: 0;
     transform: scale(0.95, 0.9); // x scale is more noticable
+    opacity: 0;
     transition: opacity 150ms linear, transform 150ms cubic-bezier(0, 0.5, 0.5, 1);
+    content: '';
+    pointer-events: none;
   }
 
   &::-moz-focus-inner {
@@ -55,8 +55,8 @@
     outline: none;
 
     &::before {
-      opacity: 1;
       transform: scale(1);
+      opacity: 1;
     }
   }
 
@@ -70,9 +70,9 @@
 }
 
 @mixin Manifold__Button--Black {
+  color: color.$color-white;
   background: color.$color-grayDarker;
   border: none;
-  color: color.$color-white;
 
   &:hover {
     background: color.$color-black;
@@ -84,9 +84,9 @@
 }
 
 @mixin Manifold__Button--Brand {
+  color: color.$color-white;
   background: gradient.$gradient-brand;
   border: none;
-  color: color.$color-white;
 
   &:hover {
     filter: saturate(150%);
@@ -98,8 +98,8 @@
 }
 
 @mixin Manifold__Button--Danger {
-  background: color.$color-white;
   color: color.$color-red;
+  background: color.$color-white;
   border-color: currentColor;
 
   &:hover {
@@ -113,19 +113,19 @@
 }
 
 @mixin Manifold__Button--Disabled {
+  color: color.$color-gray;
   background: color.$color-grayLighter;
   border: 1px solid color.$color-utilitiesGray;
   box-shadow: none;
-  color: color.$color-gray;
   cursor: not-allowed;
   opacity: 0.8;
 
   &:focus,
   &:hover {
+    color: color.$color-gray;
     background: color.$color-grayLighter;
     border: 1px solid color.$color-utilitiesGray;
     box-shadow: none;
-    color: color.$color-gray;
   }
 
   &:focus::before {
@@ -133,15 +133,15 @@
   }
 
   &:active {
+    color: color.$color-gray;
     background: color.$color-grayLighter;
     border-color: color.$color-utilitiesGray;
     box-shadow: none;
-    color: color.$color-gray;
     transform: none;
   }
 }
 
 @mixin Manifold__Button--Small {
-  font-size: 13px;
   padding: 8px 14px;
+  font-size: 13px;
 }

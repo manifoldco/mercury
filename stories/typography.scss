@@ -1,0 +1,89 @@
+@use "../src/index.scss" as mercury;
+
+// -----------
+//  Typography
+// -----------
+
+.Manifold__Typography {
+  // ----------
+  //  Elements
+  // ----------
+
+  &__Body {
+    @include mercury.Manifold__Typography__Body;
+  }
+
+  &__Caption {
+    @include mercury.Manifold__Typography__Caption;
+  }
+
+  &__Heading {
+    @include mercury.Manifold__Typography__Heading;
+  }
+
+  &__HeadingLarge {
+    @include mercury.Manifold__Typography__HeadingLarge;
+  }
+
+  &__HeadingExtraLarge {
+    @include mercury.Manifold__Typography__HeadingExtraLarge;
+  }
+
+  &__MonoBody {
+    @include mercury.Manifold__Typography__MonoBody;
+  }
+
+  &__MonoCaption {
+    @include mercury.Manifold__Typography__MonoCaption;
+  }
+
+  &__MonoLabel {
+    @include mercury.Manifold__Typography__MonoLabel;
+  }
+
+  &__Label {
+    @include mercury.Manifold__Typography__Label;
+  }
+
+  &__Subheading {
+    @include mercury.Manifold__Typography__SubheadingSmall;
+  }
+
+  &__SubheadingSmall {
+    @include mercury.Manifold__Typography__SubheadingSmall;
+  }
+
+  &__SidebarBigTitle {
+    @include mercury.Manifold__Typography__SidebarBigTitle;
+  }
+
+  &__SidebarSmallTitle {
+    @include mercury.Manifold__Typography__SidebarSmallTitle;
+  }
+
+  // Small Screens
+
+  &__SmallScreenBody {
+    @include mercury.Manifold__Typography__SmallScreenBody;
+  }
+
+  &__SmallScreenCaption {
+    @include mercury.Manifold__Typography__SmallScreenCaption;
+  }
+
+  &__SmallScreenHeading {
+    @include mercury.Manifold__Typography__SmallScreenHeading;
+  }
+
+  &__SmallScreenHeadingLarge {
+    @include mercury.Manifold__Typography__SmallScreenHeadingLarge;
+  }
+
+  &__SmallScreenHeadingExtraLarge {
+    @include mercury.Manifold__Typography__SmallScreenHeadingExtraLarge;
+  }
+
+  &__SmallScreenLabel {
+    @include mercury.Manifold__Typography__SmallScreenLabel;
+  }
+}

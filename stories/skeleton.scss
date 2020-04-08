@@ -1,0 +1,39 @@
+@use "../src/index.scss" as mercury;
+
+// ----------
+//  Skeleton
+// ----------
+
+.Skeleton {
+  @include mercury.Manifold__Skeleton;
+
+  margin: 1rem 0;
+
+  &--White {
+    @include mercury.Manifold__Skeleton--White;
+  }
+
+  // ----------
+  //  Elements
+  // ----------
+
+  &__Grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    box-sizing: border-box;
+    background: mercury.$color-grayLightest;
+
+    & > * {
+      padding: 2rem;
+    }
+
+    &--White {
+      background: white;
+    }
+
+    &--Black {
+      color: mercury.$color-white;
+      background: mercury.$color-black;
+    }
+  }
+}
