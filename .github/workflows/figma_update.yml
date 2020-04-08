@@ -20,4 +20,6 @@ jobs:
       - name: Commit changes (if any)
         uses: EndBug/add-and-commit@v4
         with:
+          author_name: 'manifold-dangerzone'
+          author_email: 'admin+github-bot-dangerzone@manifold.co'
           message: '🤖 Figma Update'

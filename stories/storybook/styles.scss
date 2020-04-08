@@ -97,8 +97,12 @@ svg {
   margin: 1.5rem;
   background: mercury.$color-grayLightest;
   border: 1px solid mercury.$color-grayLighter;
-  border-radius: 1rem;
-  box-shadow: mercury.$shadow-shadowFar;
+
+  @media (min-width: 800px) {
+    margin: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: mercury.$shadow-shadowFar;
+  }
 
   // ----------
   //  Elements
@@ -130,7 +134,6 @@ svg {
   &__Code {
     @include mercury.Manifold__Typography__MonoBody;
 
-    display: flex;
     color: mercury.$color-grayDark;
     font-size: 12px;
     background: mercury.$color-grayLighter;
@@ -176,6 +179,7 @@ svg {
       box-sizing: border-box;
       margin: 0;
       padding: 2rem 1rem 1rem;
+      overflow: auto;
       border-left: 1px solid mercury.$color-grayLight;
 
       &::before {
