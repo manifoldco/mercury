@@ -94,6 +94,8 @@ svg {
 // ----------
 
 .Story {
+  display: flex;
+  flex-direction: column;
   margin: 1.5rem;
   background: mercury.$color-grayLightest;
   border: 1px solid mercury.$color-grayLighter;
@@ -134,6 +136,8 @@ svg {
   &__Code {
     @include mercury.Manifold__Typography__MonoBody;
 
+    flex-grow: 1;
+    flex-shrink: 0;
     color: mercury.$color-grayDark;
     font-size: 12px;
     background: mercury.$color-grayLighter;
@@ -174,13 +178,14 @@ svg {
 
     &__Tab {
       position: relative;
+      display: flex;
       flex-basis: 0;
       flex-grow: 1;
       flex-shrink: 0;
       box-sizing: border-box;
       margin: 0;
-      padding: 2rem 1rem 1rem;
-      overflow: auto;
+      padding-top: 1rem;
+      overflow: hidden;
       border-top: 1px solid mercury.$color-grayLight;
 
       &::before {
@@ -194,6 +199,10 @@ svg {
       }
 
       & pre {
+        box-sizing: border-box;
+        height: 100%;
+        margin: 0;
+        padding: 1rem;
         overflow: auto;
       }
 
@@ -205,6 +214,16 @@ svg {
           border-left: 0;
         }
       }
+    }
+  }
+
+  // ----------
+  //  Modifiers
+  // ----------
+
+  &--Small {
+    @media (min-width: 800px) {
+      margin: 0;
     }
   }
 }
