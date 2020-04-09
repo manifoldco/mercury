@@ -82,14 +82,14 @@ export const headingExtraLarge = () => (
 
 export const subheading = () => (
   <TypographyDisplay component="Subheading" name="Subheading" element="h5">
-    <p>Useful for subdued headings or</p>
+    <p>Good for separating content without a gigantic heading.</p>
   </TypographyDisplay>
 );
 
 export const subheadingSmall = () => (
   <TypographyDisplay component="SubheadingSmall" name="Subheading (Small)" element="label">
     <p>
-      Great for form <code>&lt;label&gt;</code>s.
+      Great for form <code>&lt;label&gt;</code>s and other small annotations.
     </p>
   </TypographyDisplay>
 );

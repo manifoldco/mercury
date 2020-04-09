@@ -110,6 +110,7 @@ svg {
 
   &__Demo {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     min-height: 8rem;
@@ -124,7 +125,6 @@ svg {
     padding: 2rem;
     background: white;
     border-top: 1px solid mercury.$color-grayLight;
-    border-bottom: 1px solid mercury.$color-grayLight;
 
     & h1 {
       margin-top: 0;
@@ -142,6 +142,7 @@ svg {
 
     @media (min-width: 800px) {
       display: flex;
+      border-top: 1px solid mercury.$color-grayLight;
     }
 
     &__Copy {
@@ -180,7 +181,7 @@ svg {
       margin: 0;
       padding: 2rem 1rem 1rem;
       overflow: auto;
-      border-left: 1px solid mercury.$color-grayLight;
+      border-top: 1px solid mercury.$color-grayLight;
 
       &::before {
         @include mercury.Manifold__Typography__SubheadingSmall;
@@ -192,12 +193,17 @@ svg {
         content: attr(lang);
       }
 
-      &:first-of-type {
-        border-left: 0;
-      }
-
       & pre {
         overflow: auto;
+      }
+
+      @media (min-width: 800px) {
+        border-top: none;
+        border-left: 1px solid mercury.$color-grayLight;
+
+        &:first-of-type {
+          border-left: 0;
+        }
       }
     }
   }
