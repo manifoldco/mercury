@@ -5,7 +5,9 @@ import icons from './icons.json';
 
 // React components
 
-export const Story = ({ children }) => <div className="Story">{children}</div>;
+export const Story = ({ children, small }) => (
+  <div className={`Story${small ? ' Story--Small' : ''}`}>{children}</div>
+);
 
 export const Demo = ({ children }) => <div className="Story__Demo">{children}</div>;
 
