@@ -28,7 +28,7 @@ export default function transform(
     }
 
     const { effects } = node.document as Figma.Rectangle;
-    const name = s.name.replace(/Shadow\//i, ''); // remove “Shadow/” from beginning of name
+    const name = s.name.replace(/\s?Shadow\s?\/(\s?Shadow\s?)?/i, ''); // remove “Shadow/” from beginning of name
     const shadow = effects
       .map(({ color, offset, radius }) => {
         if (color) {
