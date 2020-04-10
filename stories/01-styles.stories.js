@@ -39,3 +39,20 @@ export const Gradients = () => (
     ))}
   </div>
 );
+
+export const Shadows = () => (
+  <div className="Swatch__Grid">
+    {Object.entries(designTokens.shadow).map(([name, shadow]) => (
+      <div key={name} className="Swatch" style={{ boxShadow: shadow }}>
+        <div className="Swatch__Name">{name}</div>
+        <div className="Swatch__Value">box-shadow: {shadow};</div>
+        <dl className="Swatch__Code">
+          <dt>Sass</dt>
+          <dd>$shadow-{name}</dd>
+          <dt>JS</dt>
+          <dd>shadow.{name}</dd>
+        </dl>
+      </div>
+    ))}
+  </div>
+);
