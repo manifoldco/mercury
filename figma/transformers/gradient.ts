@@ -1,9 +1,13 @@
 /**
  * Return static Manifold branded gradients
  *
- * Note(drew): This file is a little deceiving because you’d think we could
- * just pull gradients from Figma. Well, it’s HARD! I originalli tried copying
- * Diez’ linear-gradients code, but then I found a bug. 👀 Observe:
+ * Note(drew): You’ve found my secret!
+ *
+ * This file is a little deceiving because you’d think we could just pull
+ * gradients from Figma. Well, it’s HARD! Figma doesn’t just give you the CSS
+ * from the API like you’d expect; they give you 2D vectors you have to
+ * trigonometrize into CSS. I originally tried copying Diez’ linear-gradients
+ * code, but then I found a bug. 👀 Observe:
  *
  * Figma: linear-gradient(272.4deg, #FE1360 -13.37%, #814EAE 26.05%, #2D98CC 77.38%, #FD8745 95.25%, #FDC935 135.64%)
  * Diez: linear-gradient(240deg, hsla(340.3404255319149, 99.15611814345992%, 53.529411764705884%, 1) -12%, hsla(271.875, 38.095238095238095%, 49.411764705882355%, 1) 24%, hsla(199.62264150943395, 63.85542168674698%, 48.82352941176471%, 1) 70%, hsla(21.52173913043478, 97.87234042553192%, 63.13725490196078%, 1) 86%, hsla(44.39999999999999, 98.03921568627452%, 60%, 1) 123%);
@@ -12,9 +16,9 @@
  * values off by just enough each time it made me not want to use it.
  *
  * Until I either find an existing solution that can generate CSS from Figma
- * (currently CSS isn’t accessible from Figma’s API), or I do the maths myself,
- * returning static values here is less work and easier to manage since these
- * don’t change very often.
+ * (currently CSS isn’t accessible from Figma’s API), or I figure out a way to
+ * recreate Figma’s CSS with maths, keeping static values here is less work and
+ * easier to manage since these don’t change very often.
  */
 import { DesignTokens } from '../../types/design-tokens';
 

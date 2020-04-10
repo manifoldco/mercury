@@ -56,7 +56,8 @@ svg {
     display: grid;
     grid-gap: 0;
     grid-template-columns: min-content auto;
-    margin: 1rem 0 0;
+    margin: auto 0 0;
+    padding-top: 1rem;
 
     & dt {
       display: block;
@@ -103,7 +104,7 @@ svg {
   @media (min-width: 800px) {
     margin: 1.5rem;
     border-radius: 1rem;
-    box-shadow: mercury.$shadow-shadowFar;
+    box-shadow: mercury.$shadow-far;
   }
 
   // ----------
