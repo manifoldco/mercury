@@ -1,59 +1,93 @@
 @use "../design-tokens/color";
 @use "../design-tokens/typography";
 
-@mixin BannerTheme($color: color.$color-utilitiesGray, $iconColor: color.$color-blue) {
-  border-left: 0;
-  
+@mixin Manifold__Banner {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 16px 10px;
+  background: color.$color-white;
+  border-color: color.$color-utilitiesGray;
+  border-style: solid solid solid none;
+  border-width: 1px;
+  border-radius: 4px;
+
   &::before {
     position: absolute;
     top: -1px;
     left: 0;
     width: 3px;
     height: 100%;
-    background-color: $color;
-    border: 1px solid $color;
+    background-color: color.$color-utilitiesGray;
+    border: 1px solid color.$color-utilitiesGray;
     border-radius: 4px 0 0 4px;
     content: '';
   }
 
-  .Manifold__BannerIcon {
-    svg {
-      fill: $iconColor;
+  &__Icon svg {
+    fill: color.$color-blue;
+  }
+
+  p {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-top: 1px;
+    margin-bottom: 0;
+    @include typography.Manifold__Typography__SmallScreenBody;
+    @media (min-width: 600px) {
+      @include typography.Manifold__Typography__Body;
+    }
+  }
+
+  &--Error {
+    &::before {
+      background-color: color.$color-red;
+      border: 1px solid color.$color-red;
+    }
+
+    .Manifold__Banner__Icon svg {
+      fill: color.$color-red;
     }
   }
 }
 
-@mixin Manifold__Banner {
-  position: relative;
-  display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px 16px;
-  font-weight: 400;
-  font-size: typography.$typography-body-fontSize;
-  font-family: typography.$typography-body-fontFamily;
-  line-height: 1.25;
-  background: color.$color-white;
-  border-color: color.$color-utilitiesGray;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 4px;
-  @include BannerTheme();
-}
-
 @mixin Manifold__Banner--Error {
-  @include BannerTheme(color.$color-red, color.$color-red);
+  &::before {
+    background-color: color.$color-red;
+    border: 1px solid color.$color-red;
+  }
+
+  .Manifold__Banner__Icon svg {
+    fill: color.$color-red;
+  }
 }
 
 @mixin Manifold__Banner--Warning {
-  @include BannerTheme(color.$color-orange, color.$color-orange);
+  &::before {
+    background-color: color.$color-orange;
+    border: 1px solid color.$color-orange;
+  }
+
+  .Manifold__Banner__Icon svg {
+    fill: color.$color-orange;
+  }
 }
 
 @mixin Manifold__Banner--Success {
-  @include BannerTheme(color.$color-green, color.$color-green);
+  &::before {
+    background-color: color.$color-green;
+    border: 1px solid color.$color-green;
+  }
+
+  .Manifold__Banner__Icon svg {
+    fill: color.$color-green;
+  }
 }
 
-@mixin Manifold__BannerIcon {
+@mixin Manifold__Banner__Icon {
+  flex-grow: 0;
+  flex-shrink: 0;
   width: 20px;
   height: 20px;
   margin-right: 8px;
