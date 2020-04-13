@@ -3,6 +3,13 @@
 @use "../design-tokens/shadow";
 @use "../design-tokens/typography";
 
+$button-ease-in-sine: cubic-bezier(0.5, 0, 1, 0.5);
+$button-ease-out-sine: cubic-bezier(0, 0.5, 0.5, 1);
+
+// ----------
+//  Button
+// ----------
+
 @mixin Manifold__Button {
   position: relative;
   display: inline-block;
@@ -37,7 +44,7 @@
     border-radius: 8px;
     transform: scale(0.95, 0.9); // x scale is more noticable
     opacity: 0;
-    transition: opacity 150ms linear, transform 150ms cubic-bezier(0, 0.5, 0.5, 1);
+    transition: opacity 150ms linear, transform 150ms $button-ease-in-sine;
     content: '';
     pointer-events: none;
   }
@@ -57,6 +64,7 @@
     &::before {
       transform: scale(1);
       opacity: 1;
+      transition: opacity 150ms linear, transform 150ms $button-ease-out-sine;
     }
   }
 
@@ -69,13 +77,18 @@
   }
 }
 
+// ----------
+//  Modifiers
+// ----------
+
 @mixin Manifold__Button--Black {
   color: color.$color-white;
   background: color.$color-grayDarker;
-  border: none;
+  border-color: color.$color-grayDarker;
 
   &:hover {
     background: color.$color-black;
+    border-color: color.$color-black;
   }
 
   &:disabled {
@@ -86,9 +99,10 @@
 @mixin Manifold__Button--Brand {
   color: color.$color-white;
   background: gradient.$gradient-brand;
-  border: none;
+  border-color: transparent;
 
   &:hover {
+    border-color: transparent;
     filter: saturate(150%);
   }
 

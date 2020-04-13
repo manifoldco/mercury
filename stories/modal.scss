@@ -1,0 +1,21 @@
+@use "../src/index" as mercury;
+
+// ----------
+//  Modal
+// ----------
+
+.Manifold__Modal {
+  @include mercury.Manifold__Modal;
+
+  // ----------
+  //  Elements
+  // ----------
+
+  &__Close {
+    @include mercury.Manifold__Modal__Close;
+  }
+
+  &__Footer {
+    @include mercury.Manifold__Modal__Footer;
+  }
+}

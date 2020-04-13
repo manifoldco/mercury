@@ -1,0 +1,150 @@
+@use "../design-tokens/color";
+@use "../design-tokens/shadow";
+
+$modal-padding: 1.5rem;
+$modal-max-width: 30rem;
+$modal-ease-in-quartic: cubic-bezier(0.9, 0.03, 0.69, 0.22);
+$modal-ease-in-sine: cubic-bezier(0.5, 0, 1, 0.5);
+$modal-ease-out-quartic: cubic-bezier(0.17, 0.84, 0.44, 1);
+$modal-ease-out-sine: cubic-bezier(0, 0.5, 0.5, 1);
+$modal-corner-radius: 4px;
+
+// ----------
+//  Modal
+// ----------
+
+@mixin Manifold__Modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  margin: 0;
+  padding-right: $modal-padding;
+  padding-left: $modal-padding;
+  overflow: auto;
+  background: radial-gradient(rgba(color.$color-grayDark, 0.5), rgba(color.$color-grayDark, 0.6));
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 200ms linear, visibility 0ms 200ms;
+  pointer-events: none;
+
+  // ----------
+  //  Elements
+  //  ----------
+
+  & > div {
+    position: relative;
+    max-width: $modal-max-width;
+    margin: #{2 * $modal-padding} auto;
+    padding: $modal-padding;
+    background: color.$color-white;
+    border-radius: $modal-corner-radius;
+    box-shadow: shadow.$shadow-far;
+    transform: translateY(4rem);
+    opacity: 0;
+    transition: transform 200ms $modal-ease-in-quartic, opacity 200ms linear;
+  }
+
+  // ----------
+  //  State
+  // ----------
+
+  &[aria-modal='true'] {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 200ms linear;
+    pointer-events: auto;
+
+    & > div {
+      transform: translateY(0);
+      opacity: 1;
+      transition: transform 275ms $modal-ease-out-quartic 50ms, opacity 250ms 50ms linear;
+    }
+  }
+}
+
+// ----------
+//  Elements
+//  ----------
+
+@mixin Manifold__Modal__Close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: #{2 * $modal-padding};
+  height: #{2 * $modal-padding};
+  padding: 0;
+  color: color.$color-gray;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 150ms linear;
+  appearance: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &:focus,
+  &:hover {
+    color: color.$color-grayDarker;
+  }
+
+  &::before {
+    position: absolute;
+    top: 12.5%;
+    left: 12.5%;
+    box-sizing: border-box;
+    width: 75%;
+    height: 75%;
+    border: 2px solid color.$color-blue;
+    border-radius: 50%;
+    transform: scale(0.75);
+    opacity: 0;
+    transition: opacity 150ms linear, transform 150ms $modal-ease-in-sine;
+    content: '';
+    pointer-events: none;
+  }
+
+  &:focus {
+    outline: none;
+
+    &::before {
+      transform: scale(1);
+      opacity: 1;
+      transition: opacity 150ms linear, transform 150ms $modal-ease-out-sine;
+    }
+  }
+}
+
+@mixin Manifold__Modal__Footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: $modal-padding -#{$modal-padding} -#{$modal-padding};
+  padding: #{0.75 * $modal-padding} $modal-padding;
+  background: color.$color-grayLightest;
+  border-top: 1px solid color.$color-grayLight;
+  border-bottom-right-radius: $modal-corner-radius;
+  border-bottom-left-radius: $modal-corner-radius;
+
+  & > * + * {
+    margin-left: #{0.5 * $modal-padding};
+  }
+}
+
+// ----------
+//  Modifiers
+// ----------
+
+@mixin Manifold__Modal--Small {
+  & > div {
+    max-width: 50rem;
+  }
+}
