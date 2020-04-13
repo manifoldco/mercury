@@ -8,7 +8,7 @@ module.exports = {
   syntax: 'scss',
   rules: {
     'at-rule-no-unknown': null,
-    'selector-max-specificity': '0,1,1',
+    'selector-max-specificity': '0,1,2',
     'no-descending-specificity': null,
   },
 };
