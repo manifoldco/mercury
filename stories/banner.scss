@@ -1,0 +1,25 @@
+@use "../src/index.scss" as mercury;
+
+// ----------
+// Block
+// ----------
+
+.Manifold__Banner {
+  @include mercury.Manifold__Banner;
+
+  // ----------
+  //  Modifiers
+  // ----------
+
+  &--Error {
+    @include mercury.Manifold__Banner--Error;
+  }
+
+  &--Warning {
+    @include mercury.Manifold__Banner--Warning;
+  }
+
+  &--Success {
+    @include mercury.Manifold__Banner--Success;
+  }
+}

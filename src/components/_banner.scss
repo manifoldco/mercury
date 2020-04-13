@@ -1,0 +1,80 @@
+@use "../design-tokens/color";
+@use "../design-tokens/typography";
+
+@mixin Manifold__Banner {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 16px 10px;
+  background: color.$color-white;
+  border-color: color.$color-utilitiesGray;
+  border-style: solid solid solid none;
+  border-width: 1px;
+  border-radius: 4px;
+
+  &::before {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: color.$color-utilitiesGray;
+    border: 1px solid color.$color-utilitiesGray;
+    border-radius: 4px 0 0 4px;
+    content: '';
+  }
+
+  > svg {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    fill: color.$color-blue;
+  }
+
+  p {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-top: 1px;
+    margin-bottom: 0;
+    @include typography.Manifold__Typography__SmallScreenBody;
+    @media (min-width: 600px) {
+      @include typography.Manifold__Typography__Body;
+    }
+  }
+}
+
+@mixin Manifold__Banner--Error {
+  &::before {
+    background-color: color.$color-red;
+    border: 1px solid color.$color-red;
+  }
+
+  > svg {
+    fill: color.$color-red;
+  }
+}
+
+@mixin Manifold__Banner--Warning {
+  &::before {
+    background-color: color.$color-orange;
+    border: 1px solid color.$color-orange;
+  }
+
+  > svg {
+    fill: color.$color-orange;
+  }
+}
+
+@mixin Manifold__Banner--Success {
+  &::before {
+    background-color: color.$color-green;
+    border: 1px solid color.$color-green;
+  }
+
+  > svg {
+    fill: color.$color-green;
+  }
+}
