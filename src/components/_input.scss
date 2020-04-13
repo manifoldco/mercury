@@ -1,0 +1,108 @@
+@use "../design-tokens/color";
+@use "../design-tokens/typography";
+
+// ----------
+//  Block
+// ----------
+
+@mixin Manifold__Input {
+  transition: border-color 150ms linear;
+
+  // ----------
+  //  Elements
+  // ----------
+
+  & label {
+    @include typography.Manifold__Typography__SubheadingSmall;
+
+    display: block;
+    margin-bottom: 0.25rem;
+    color: color.$color-grayDark;
+    transition-timing-function: linear;
+    transition-duration: 150ms;
+    transition-property: color;
+  }
+
+  & input {
+    @include typography.Manifold__Typography__SmallScreenBody;
+
+    display: block;
+    box-sizing: border-box;
+    width: auto;
+    min-width: none;
+    padding: 0.5em 0.75em;
+    color: color.$color-grayDarker;
+    background: color.$color-white;
+    border: 1px solid color.$color-utilitiesGray;
+    border-radius: 3px;
+    outline: 0;
+    transition-timing-function: linear;
+    transition-duration: 150ms;
+    transition-property: border-color;
+    appearance: none;
+
+    @media (min-width: 600px) {
+      @include typography.Manifold__Typography__Body;
+    }
+
+    &[type='number'],
+    &[inputmode='numeric'],
+    &[inputmode='decimal'],
+    &[pattern='[0-9]*'],
+    &[pattern^='\d'] {
+      @include typography.Manifold__Typography__MonoBody;
+
+      text-align: right;
+    }
+  }
+
+  & input
+
+  // ----------
+  //  States
+  // ----------
+
+  & input:invalid,
+  & input[aria-invalid] {
+    border-color: color.$color-red;
+    box-shadow: none;
+  }
+
+  & input:disabled {
+    color: color.$color-gray;
+    background: color.$color-grayLightest;
+  }
+
+  &:focus-within {
+    & label {
+      color: color.$color-blue;
+    }
+
+    & input {
+      border-color: color.$color-blue;
+    }
+  }
+}
+
+// ----------
+//  Modifiers
+// ----------
+
+$label-width: 4rem;
+
+@mixin Manifold__Input--Inline {
+  position: relative;
+
+  & label {
+    position: absolute;
+    top: 50%;
+    width: $label-width;
+    text-align: center;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  & input {
+    padding-left: $label-width;
+  }
+}

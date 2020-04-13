@@ -1,0 +1,17 @@
+@use "../src/index" as mercury;
+
+// ----------
+//  Input
+// ----------
+
+.Manifold__Input {
+  @include mercury.Manifold__Input;
+
+  // ----------
+  //  Modifiers
+  // ----------
+
+  &--Inline {
+    @include mercury.Manifold__Input--Inline;
+  }
+}
