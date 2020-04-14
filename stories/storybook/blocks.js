@@ -1,5 +1,4 @@
 import React from 'react';
-import Prism from 'prismjs';
 import ReactCopyButtonWrapper from 'react-copy-button-wrapper';
 import icons from './icons.json';
 
@@ -13,39 +12,37 @@ export const Demo = ({ children }) => <div className="Story__Demo">{children}</d
 
 export const Description = ({ children }) => <div className="Story__Description">{children}</div>;
 
-export const Code = ({ tabs }) => (
-  <div className="Story__Code">
-    {Object.entries(tabs).map(([lang, code]) => {
-      const prefixedCode =
-        lang == 'scss'
-          ? `@use "node_modules/@manifoldco/mercury";
+export const Code = ({ tabs }) => {
+  React.useLayoutEffect(() => {
+    window.Prism.highlightAll();
+  });
+
+  return (
+    <div className="Story__Code">
+      {Object.entries(tabs).map(([lang, code]) => {
+        const prefixedCode =
+          lang == 'scss'
+            ? `@use "node_modules/@manifoldco/mercury";
 
 `.concat(code)
-          : code;
+            : code;
 
-      return (
-        <div key={lang} className="Story__Code__Tab" lang={lang}>
-          <ReactCopyButtonWrapper text={code}>
-            <button className="Story__Code__Copy">
-              <div dangerouslySetInnerHTML={{ __html: icons['clipboard.svg'] }} /> Copy
-            </button>
-          </ReactCopyButtonWrapper>
-          <pre lang={lang}>
-            <code
-              dangerouslySetInnerHTML={{
-                __html: Prism.highlight(
-                  prefixedCode,
-                  Prism.languages[lang.replace('scss', 'css')],
-                  lang
-                ),
-              }}
-            />
-          </pre>
-        </div>
-      );
-    })}
-  </div>
-);
+        return (
+          <div key={lang} className="Story__Code__Tab" lang={lang}>
+            <ReactCopyButtonWrapper text={code}>
+              <button className="Story__Code__Copy">
+                <div dangerouslySetInnerHTML={{ __html: icons['clipboard.svg'] }} /> Copy
+              </button>
+            </ReactCopyButtonWrapper>
+            <pre>
+              <code className={`language-${lang}`}>{prefixedCode}</code>
+            </pre>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
 // helpers
 

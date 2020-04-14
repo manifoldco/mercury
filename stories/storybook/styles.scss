@@ -247,8 +247,10 @@ code {
 
 // PrismJS
 
-// HTML
-[lang='html'] {
+// HTML / JS / JSX
+.language-html,
+.language-js,
+.language-jsx {
   .attr-name {
     color: mercury.$color-green;
   }
@@ -261,23 +263,6 @@ code {
   .tag {
     color: mercury.$color-teal;
   }
-}
-
-// CSS
-[lang='scss'] {
-  .rule {
-    color: mercury.$color-purple;
-  }
-  .selector {
-    color: mercury.$color-teal;
-  }
-  .string {
-    color: mercury.$color-orange;
-  }
-}
-
-// JS
-[lang='js'] {
   .function {
     color: mercury.$color-orange;
   }
@@ -292,7 +277,39 @@ code {
   }
 }
 
-// GitHub tables
+// CSS
+.language-scss {
+  .comment {
+    color: mercury.$color-gray;
+  }
+  .keyword {
+    color: mercury.$color-purple;
+  }
+  .rule {
+    color: mercury.$color-purple;
+  }
+  .selector {
+    color: mercury.$color-teal;
+  }
+  .string {
+    color: mercury.$color-orange;
+  }
+}
+
+// GitHub
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  color: #444d56;
+  font: 11px mercury.$typography-monoBody-fontFamily;
+  line-height: 10px;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
 
 table {
   display: block;

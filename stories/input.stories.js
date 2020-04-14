@@ -210,7 +210,7 @@ export const inputInline = () => (
         can use the <code>--Inline</code> modifier instead.
       </p>
       <p>
-        ⚠️ <em>Note: this will only work with really short labels (&lt; 6 charaters)</em>{' '}
+        ⚠️ <em>Note: this will only work with really short labels (&lt;= 6 characters)</em>{' '}
       </p>
     </Description>
     <Code
