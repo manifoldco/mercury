@@ -1,0 +1,25 @@
+@use "../src/index.scss" as mercury;
+
+// ----------
+// Block
+// ----------
+
+.Manifold__Tooltip {
+  @include mercury.Manifold__Tooltip;
+
+  // ----------
+  //  Modifiers
+  // ----------
+
+  &--Bottom {
+    @include mercury.Manifold__Tooltip--Bottom;
+  }
+
+  &--Left {
+    @include mercury.Manifold__Tooltip--Left;
+  }
+
+  &--Right {
+    @include mercury.Manifold__Tooltip--Right;
+  }
+}

@@ -1,0 +1,68 @@
+@use "../design-tokens/color";
+@use "../design-tokens/typography";
+@use "../design-tokens/shadow";
+
+$tooltip-arrow-width: 5px;
+$tooltip-color: color.$color-grayDarker;
+
+@mixin Manifold__Tooltip {
+  position: relative;
+  max-width: 20rem;
+  min-height: 1rem;
+  padding: 8px 12px;
+  background: $tooltip-color;
+  color: color.$color-white;
+  border-radius: 4px;
+  text-align: center;
+  @include typography.Manifold__Typography__Caption;
+  line-height: 1.25;
+  box-shadow: shadow.$shadow-near;
+  cursor: default;
+
+  &::after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: $tooltip-color;
+    border-width: $tooltip-arrow-width;
+    margin-left: -$tooltip-arrow-width;
+  }
+}
+
+@mixin Manifold__Tooltip--Bottom {
+  &::after {
+    top: auto;
+    bottom: 100%;
+    border-color: rgba(0, 0, 0, 0);
+    border-bottom-color: $tooltip-color;
+  }
+}
+
+@mixin Manifold__Tooltip--Left {
+  &::after {
+    top: 50%;
+    left: 100%;
+    margin-left: 0;
+    margin-top: -$tooltip-arrow-width;
+    border-color: rgba(0, 0, 0, 0);
+    border-left-color: $tooltip-color;
+  }
+}
+
+@mixin Manifold__Tooltip--Right {
+  &::after {
+    top: 50%;
+    right: 100%;
+    left: auto;
+    margin-left: 0;
+    margin-top: -$tooltip-arrow-width;
+    border-color: rgba(0, 0, 0, 0);
+    border-right-color: $tooltip-color;
+  }
+}
