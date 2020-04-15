@@ -4,6 +4,10 @@
 // Block
 // ----------
 
+.Manifold__Tooltip__Container {
+  @include mercury.Manifold__Tooltip__Container;
+}
+
 .Manifold__Tooltip {
   @include mercury.Manifold__Tooltip;
 
@@ -11,8 +15,8 @@
   //  Modifiers
   // ----------
 
-  &--Bottom {
-    @include mercury.Manifold__Tooltip--Bottom;
+  &--Down {
+    @include mercury.Manifold__Tooltip--Down;
   }
 
   &--Left {
@@ -21,5 +25,9 @@
 
   &--Right {
     @include mercury.Manifold__Tooltip--Right;
+  }
+
+  &--Large {
+    @include mercury.Manifold__Tooltip--Large;
   }
 }

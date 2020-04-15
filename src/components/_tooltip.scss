@@ -4,11 +4,68 @@
 
 $tooltip-arrow-width: 5px;
 $tooltip-color: color.$color-grayDarker;
+$tooltip-margin: 8px;
+
+@mixin Manifold__Tooltip__Container {
+  position: relative;
+  cursor: pointer;
+
+  .Manifold__Tooltip {
+    position: absolute;
+    opacity: 0;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transform-origin: top;
+    transition: all 0.1s ease-in-out 0.1s;
+    margin-bottom: $tooltip-margin;
+
+    &--Down {
+      bottom: auto;
+      top: 100%;
+      margin-top: $tooltip-margin;
+    }
+
+    &--Left {
+      bottom: auto;
+      left: auto;
+      right: 100%;
+      top: 50%;
+      margin-right: $tooltip-margin;
+      transform: translate(4px, -50%);
+    }
+
+    &--Right {
+      bottom: auto;
+      left: 100%;
+      top: 50%;
+      margin-left: $tooltip-margin;
+      transform: translate(-4px, -50%);
+    }
+  }
+
+  &:hover {
+    .Manifold__Tooltip {
+      opacity: 1;
+      transform: translate(-50%, -4px);
+
+      &--Down {
+        transform: translate(-50%, 4px);
+      }
+
+      &--Left {
+        transform: translate(0, -50%);
+      }
+
+      &--Right {
+        transform: translate(0, -50%);
+      }
+    }
+  }
+}
 
 @mixin Manifold__Tooltip {
   position: relative;
-  max-width: 20rem;
-  min-height: 1rem;
   padding: 8px 12px;
   background: $tooltip-color;
   color: color.$color-white;
@@ -17,7 +74,10 @@ $tooltip-color: color.$color-grayDarker;
   @include typography.Manifold__Typography__Caption;
   line-height: 1.25;
   box-shadow: shadow.$shadow-near;
+  white-space: nowrap;
   cursor: default;
+  pointer-events: none;
+  text-indent: 0;
 
   &::after {
     position: absolute;
@@ -35,7 +95,7 @@ $tooltip-color: color.$color-grayDarker;
   }
 }
 
-@mixin Manifold__Tooltip--Bottom {
+@mixin Manifold__Tooltip--Down {
   &::after {
     top: auto;
     bottom: 100%;
@@ -65,4 +125,9 @@ $tooltip-color: color.$color-grayDarker;
     border-color: rgba(0, 0, 0, 0);
     border-right-color: $tooltip-color;
   }
+}
+
+@mixin Manifold__Tooltip--Large {
+  white-space: normal;
+  width: 260px;
 }
