@@ -2,7 +2,7 @@
 @use "../design-tokens/typography";
 @use "../design-tokens/shadow";
 
-$tooltip-arrow-width: 5px;
+$tooltip-arrow-size: 5px;
 $tooltip-color: color.$color-grayDarker;
 $tooltip-margin: 8px;
 
@@ -10,7 +10,7 @@ $tooltip-margin: 8px;
   position: relative;
   cursor: pointer;
 
-  .Manifold__Tooltip {
+  [role='tooltip'] {
     position: absolute;
     bottom: 100%;
     left: 50%;
@@ -19,47 +19,57 @@ $tooltip-margin: 8px;
     transform-origin: top;
     opacity: 0;
     transition: all 0.1s ease-in-out 0.1s;
-
-    &--Down {
-      top: 100%;
-      bottom: auto;
-      margin-top: $tooltip-margin;
-    }
-
-    &--Left {
-      top: 50%;
-      right: 100%;
-      bottom: auto;
-      left: auto;
-      margin-right: $tooltip-margin;
-      transform: translate(4px, -50%);
-    }
-
-    &--Right {
-      top: 50%;
-      bottom: auto;
-      left: 100%;
-      margin-left: $tooltip-margin;
-      transform: translate(-4px, -50%);
-    }
   }
 
   &:hover {
-    .Manifold__Tooltip {
+    [role='tooltip'] {
       transform: translate(-50%, -4px);
       opacity: 1;
+    }
+  }
+}
 
-      &--Down {
-        transform: translate(-50%, 4px);
-      }
+@mixin Manifold__Tooltip__Container--Down {
+  [role='tooltip'] {
+    top: 100%;
+    bottom: auto;
+    margin-top: $tooltip-margin + $tooltip-arrow-size;
+    transform: translate(-50%, -4px);
+  }
+  &:hover {
+    [role='tooltip'] {
+      transform: translate(-50%, 0);
+    }
+  }
+}
 
-      &--Left {
-        transform: translate(0, -50%);
-      }
+@mixin Manifold__Tooltip__Container--Left {
+  [role='tooltip'] {
+    top: 50%;
+    right: 100%;
+    bottom: auto;
+    left: auto;
+    margin-right: $tooltip-margin + $tooltip-arrow-size;
+    transform: translate(4px, -50%);
+  }
+  &:hover {
+    [role='tooltip'] {
+      transform: translate(0, -50%);
+    }
+  }
+}
 
-      &--Right {
-        transform: translate(0, -50%);
-      }
+@mixin Manifold__Tooltip__Container--Right {
+  [role='tooltip'] {
+    top: 50%;
+    bottom: auto;
+    left: 100%;
+    margin-left: $tooltip-margin + $tooltip-arrow-size;
+    transform: translate(-4px, -50%);
+  }
+  &:hover {
+    [role='tooltip'] {
+      transform: translate(0, -50%);
     }
   }
 }
@@ -85,10 +95,10 @@ $tooltip-margin: 8px;
     left: 50%;
     width: 0;
     height: 0;
-    margin-left: -$tooltip-arrow-width;
+    margin-left: -$tooltip-arrow-size;
     border: solid transparent;
     border-color: rgba(0, 0, 0, 0);
-    border-width: $tooltip-arrow-width;
+    border-width: $tooltip-arrow-size;
     border-top-color: $tooltip-color;
     content: '';
     pointer-events: none;
@@ -108,7 +118,7 @@ $tooltip-margin: 8px;
   &::after {
     top: 50%;
     left: 100%;
-    margin-top: -$tooltip-arrow-width;
+    margin-top: -$tooltip-arrow-size;
     margin-left: 0;
     border-color: rgba(0, 0, 0, 0);
     border-left-color: $tooltip-color;
@@ -120,7 +130,7 @@ $tooltip-margin: 8px;
     top: 50%;
     right: 100%;
     left: auto;
-    margin-top: -$tooltip-arrow-width;
+    margin-top: -$tooltip-arrow-size;
     margin-left: 0;
     border-color: rgba(0, 0, 0, 0);
     border-right-color: $tooltip-color;

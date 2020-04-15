@@ -6,6 +6,18 @@
 
 .Manifold__Tooltip__Container {
   @include mercury.Manifold__Tooltip__Container;
+
+  &--Down {
+    @include mercury.Manifold__Tooltip__Container--Down;
+  }
+
+  &--Left {
+    @include mercury.Manifold__Tooltip__Container--Left;
+  }
+
+  &--Right {
+    @include mercury.Manifold__Tooltip__Container--Right;
+  }
 }
 
 .Manifold__Tooltip {
