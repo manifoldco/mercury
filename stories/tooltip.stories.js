@@ -11,7 +11,9 @@ export const defaultTooltip = () => (
   <Story>
     <Demo>
       <div class="Manifold__Tooltip__Container" aria-describedby="tooltip-1">
-        <p>Hover me</p>
+        <button type="button" className="Manifold__Button">
+          Hover me
+        </button>
         <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip">
           Tooltip describing the trigger element.
         </div>
@@ -33,7 +35,6 @@ export const defaultTooltip = () => (
       tabs={{
         html: `<!-- ${title} -->
 <div class="Manifold__Tooltip__Container" aria-describedby="tooltip-1">
-  <p>Hover me</p>
   <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip Manifold__Tooltip--Down">
     Tooltip describing the trigger element.
   </div>
@@ -56,7 +57,9 @@ export const down = () => (
   <Story>
     <Demo>
       <div class="Manifold__Tooltip__Container" aria-describedby="tooltip-1">
-        <p>Hover me</p>
+        <button type="button" className="Manifold__Button">
+          Hover me
+        </button>
         <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip Manifold__Tooltip--Down">
           Tooltip describing the trigger element.
         </div>
@@ -70,7 +73,6 @@ export const down = () => (
       tabs={{
         html: `<!-- ${title} -->
 <div class="Manifold__Tooltip__Container" aria-describedby="tooltip-1">
-  <p>Hover me</p>
   <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip Manifold__Tooltip--Down">
     Tooltip describing the trigger element.
   </div>
@@ -99,7 +101,9 @@ export const left = () => (
   <Story>
     <Demo>
       <div class="Manifold__Tooltip__Container" aria-describedby="tooltip-1">
-        <p>Hover me</p>
+        <button type="button" className="Manifold__Button">
+          Hover me
+        </button>
         <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip Manifold__Tooltip--Left">
           Tooltip describing the trigger element.
         </div>
@@ -113,7 +117,6 @@ export const left = () => (
       tabs={{
         html: `<!-- ${title} -->
 <div class="Manifold__Tooltip__Container" aria-describedby="tooltip-1">
-  <p>Hover me</p>
   <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip Manifold__Tooltip--Left">
     Tooltip describing the trigger element.
   </div>
@@ -142,7 +145,9 @@ export const right = () => (
   <Story>
     <Demo>
       <div class="Manifold__Tooltip__Container" aria-describedby="tooltip-1">
-        <p>Hover me</p>
+        <button type="button" className="Manifold__Button">
+          Hover me
+        </button>
         <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip Manifold__Tooltip--Right">
           Tooltip describing the trigger element.
         </div>
@@ -156,7 +161,6 @@ export const right = () => (
       tabs={{
         html: `<!-- ${title} -->
 <div class="Manifold__Tooltip__Container" aria-describedby="tooltip-1">
-  <p>Hover me</p>
   <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip Manifold__Tooltip--Right">
     Tooltip describing the trigger element.
   </div>
@@ -185,7 +189,9 @@ export const large = () => (
   <Story>
     <Demo>
       <div class="Manifold__Tooltip__Container" aria-describedby="tooltip-1">
-        <p>Hover me</p>
+        <button type="button" className="Manifold__Button">
+          Hover me
+        </button>
         <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip Manifold__Tooltip--Large">
           Tooltip describing the trigger element that will expand past one line neccessitating a
           line break. Use sparingly! Tooltips should always be brief if possible. They are just
@@ -201,7 +207,6 @@ export const large = () => (
       tabs={{
         html: `<!-- ${title} -->
 <div class="Manifold__Tooltip__Container" aria-describedby="tooltip-1">
-  <p>Hover me</p>
   <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip Manifold__Tooltip--Right">
     Tooltip describing the trigger element.
   </div>
