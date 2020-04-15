@@ -28,7 +28,7 @@ export const defaultTooltip = () => (
       <p>
         Make sure to add the <code>aria-describedby="tooltip-id"</code> attribute to the element
         triggering the tooltip. To use the tooltip without the trigger and position manually, omit
-        the `Manifold__Tooltip__Container` wrapping element.
+        the <code>Manifold__Tooltip__Container</code> wrapping element.
       </p>
     </Description>
     <Code
@@ -36,7 +36,7 @@ export const defaultTooltip = () => (
         html: `<!-- ${title} Container -->
 <div class="Manifold__Tooltip__Container" aria-describedby="tooltip-1">
   <!-- ${title} -->
-  <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip Manifold__Tooltip--Down">
+  <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip">
     Tooltip describing the trigger element.
   </div>
 </div>`,
@@ -90,7 +90,6 @@ export const down = () => (
   &--Down {
     @include mercury.${component}__Container--Down;
   }
-  
 }
 
 .${component} {
@@ -246,13 +245,13 @@ export const large = () => (
 
 .${component} {
   @include mercury.${component};
-}
 
   ${comment.modifier}
 
   &--Large {
     @include mercury.${component}--Large;
-  }`,
+  }
+}`,
       }}
     />
   </Story>

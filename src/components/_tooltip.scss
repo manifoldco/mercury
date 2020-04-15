@@ -1,3 +1,5 @@
+/* stylelint-disable selector-max-specificity */
+
 @use "../design-tokens/color";
 @use "../design-tokens/typography";
 @use "../design-tokens/shadow";
@@ -78,16 +80,15 @@ $tooltip-margin: 8px;
   position: relative;
   padding: 8px 12px;
   color: color.$color-white;
+  white-space: nowrap;
   text-align: center;
+  text-indent: 0;
   background: $tooltip-color;
   border-radius: 4px;
-  @include typography.Manifold__Typography__Caption;
-  line-height: 1.25;
-  white-space: nowrap;
-  text-indent: 0;
   box-shadow: shadow.$shadow-near;
   cursor: default;
   pointer-events: none;
+  @include typography.Manifold__Typography__Caption;
 
   &::after {
     position: absolute;
@@ -139,5 +140,6 @@ $tooltip-margin: 8px;
 
 @mixin Manifold__Tooltip--Large {
   width: 260px;
+  line-height: 1.25;
   white-space: normal;
 }
