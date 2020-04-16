@@ -32,22 +32,16 @@ export const select = () => (
         <li>
           <a href="/?path=/story/input--input">Input</a>
         </li>
+        <li>
+          <a href="/?path=/story/toggle--toggle">Toggle</a>
+        </li>
       </ul>
     </Description>
     <Code
       tabs={{
         html: `<div class="Manifold__Select">
-  <label for="select-input">Cheese</label>
-  <select id="select-input">
-    <option>Alpkäse</option>
-    <option>Brie</option>
-    <option>Brunost</option>
-    <option>Fontina</option>
-    <option>Gouda</option>
-    <option>Gruyère</option>
-    <option>Parmigiano-Reggiano</option>
-    <option>Syr</option>
-  </select>
+  <label for="select">Cheese</label>
+  <select id="select">…</select>
 </div>`,
         scss: `${comment.block('Select')}
 
@@ -145,20 +139,20 @@ export const selectState = () => (
       tabs={{
         html: `<!-- normal -->
 <div class="Manifold__Select">
-  <label for="normal-select">Normal</label>
-  <select name="normal-select" id="normal-select">…</select>
+  <label for="normal">Normal</label>
+  <select name="normal" id="normal">…</select>
 </div>
 
 <!-- disabled -->
 <div class="Manifold__Select">
-  <label for="disabled-select">Disabled</label>
-  <select disabled name="disabled-select" id="disabled-select">…</select>
+  <label for="disabled">Disabled</label>
+  <select disabled name="disabled" id="disabled">…</select>
 </div>
 
 <!-- invalid -->
 <div class="Manifold__Select">
-  <label for="invalid-select">Invalid</label>
-  <select aria-invalid name="invalid-select" id="invalid-select">…</select>
+  <label for="invalid">Invalid</label>
+  <select aria-invalid name="invalid" id="invalid">…</select>
 </div>`,
         scss: `${comment.block('Input')}
 
@@ -199,9 +193,9 @@ export const selectInline = () => (
     </Description>
     <Code
       tabs={{
-        html: `<div className="Manifold__Input Manifold__Input--Inline">
-  <label for="inline-input">Label</label>
-  <input type="text" autoCapitalize="off" name="inline-input" id="inline-input" value="Input text" />
+        html: `<div class="Manifold__Select Manifold__Select--Inline">
+  <label for="inline">Inline</label>
+  <select aria-invalid name="inline" id="inline">…</select>
 </div>`,
         scss: `${comment.block('Input')}
 

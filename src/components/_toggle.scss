@@ -1,0 +1,133 @@
+@use "../design-tokens/color";
+@use "../design-tokens/typography";
+
+$toggle-switch-size: 1rem;
+$toggle-ease-in-exponential: cubic-bezier(0.95, 0.05, 0.8, 0.04);
+$toggle-ease-in-sine: cubic-bezier(0.5, 0, 1, 0.5);
+$toggle-ease-out-sine: cubic-bezier(0, 0.5, 0.5, 1);
+
+/* stylelint-disable selector-max-specificity */
+
+@mixin Manifold__Toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: -4px;
+    width: #{2.75 * $toggle-switch-size};
+    height: #{1.75 * $toggle-switch-size};
+    border: 2px solid color.$color-blue;
+    border-radius: 2rem;
+    transform: translateY(-50%) scale(0.9);
+    opacity: 0;
+    transition: opacity 150ms linear, transform 150ms $toggle-ease-in-sine;
+    content: '';
+    pointer-events: none;
+  }
+
+  // ----------
+  //  Elements
+  // ----------
+
+  label {
+    @include typography.Manifold__Typography__SmallScreenBody;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    color: currentColor;
+    cursor: pointer;
+
+    @media (min-width: 600px) {
+      @include typography.Manifold__Typography__Body;
+    }
+
+    &::before {
+      order: 1;
+      box-sizing: border-box;
+      width: #{2.5 * $toggle-switch-size};
+      height: #{1.5 * $toggle-switch-size};
+      margin-left: 0.75rem;
+      background: color.$color-grayLighter;
+      border-radius: 2rem;
+      transition: background-color 150ms linear;
+      content: '';
+      pointer-events: none;
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0.25rem;
+      box-sizing: border-box;
+      width: $toggle-switch-size;
+      height: $toggle-switch-size;
+      background-color: color.$color-gray;
+      border-radius: 50%;
+      transform: translate(-100%, -50%);
+      transition: background-color 150ms linear, transform 100ms $toggle-ease-in-exponential;
+      content: '';
+    }
+  }
+
+  input {
+    position: absolute;
+    right: 100vw;
+    opacity: 0;
+  }
+
+  // ----------
+  //  State
+  // ----------
+
+  input:disabled {
+    ~ label {
+      cursor: default;
+
+      &::before {
+        background: none;
+        border: 1px solid color.$color-grayLight;
+      }
+
+      &::after {
+        background: color.$color-utilitiesGray;
+      }
+    }
+
+    &:checked ~ label {
+      &::before {
+        background: color.$color-grayLight;
+        border: none;
+      }
+
+      &::after {
+        background: color.$color-grayDark;
+      }
+    }
+  }
+
+  &:focus-within {
+    color: color.$color-blue;
+
+    &::before {
+      transform: translateY(-50%) scale(1);
+      opacity: 1;
+    }
+  }
+
+  input:checked ~ label {
+    &::before {
+      background: color.$color-mutedBlue;
+    }
+
+    &::after {
+      background: color.$color-blue;
+      transform: translate(0, -50%);
+    }
+  }
+}

@@ -12,7 +12,7 @@
   //  Elements
   // ----------
 
-  & label {
+  label {
     @include typography.Manifold__Typography__SubheadingSmall;
 
     display: block;
@@ -23,7 +23,7 @@
     transition-property: color;
   }
 
-  & select {
+  select {
     @include typography.Manifold__Typography__SmallScreenBody;
 
     display: block;
@@ -36,6 +36,7 @@
     color: color.$color-grayDark;
     line-height: 2.25;
     background-color: color.$color-white;
+    // https://css-tricks.com/probably-dont-base64-svg/
     background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill="%23575b5f" d="M7.558 12.808a.625.625 0 01.884 0l3.308 3.308 3.308-3.308a.625.625 0 11.884.884l-3.75 3.75a.625.625 0 01-.884 0l-3.75-3.75a.625.625 0 010-.884zM15.942 10.192a.625.625 0 01-.884 0L11.75 6.884l-3.308 3.308a.625.625 0 11-.884-.884l3.75-3.75a.625.625 0 01.884 0l3.75 3.75a.625.625 0 010 .884z"/%3E%3C/svg%3E');
     background-repeat: no-repeat, repeat;
     background-position: right 0.25rem top 50%;
@@ -63,7 +64,7 @@
     }
   }
 
-  & option {
+  option {
     font-weight: 400;
   }
 
@@ -71,14 +72,14 @@
   //  States
   // ----------
 
-  & select:invalid,
-  & select[aria-invalid] {
+  select:invalid,
+  select[aria-invalid] {
     background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill="%23d52049" d="M7.558 12.808a.625.625 0 01.884 0l3.308 3.308 3.308-3.308a.625.625 0 11.884.884l-3.75 3.75a.625.625 0 01-.884 0l-3.75-3.75a.625.625 0 010-.884zM15.942 10.192a.625.625 0 01-.884 0L11.75 6.884l-3.308 3.308a.625.625 0 11-.884-.884l3.75-3.75a.625.625 0 01.884 0l3.75 3.75a.625.625 0 010 .884z"/%3E%3C/svg%3E');
     border-color: color.$color-red;
     box-shadow: none;
   }
 
-  & select:disabled {
+  select:disabled {
     color: color.$color-gray;
     background-color: color.$color-grayLightest;
     background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill="%238f8f95" d="M7.558 12.808a.625.625 0 01.884 0l3.308 3.308 3.308-3.308a.625.625 0 11.884.884l-3.75 3.75a.625.625 0 01-.884 0l-3.75-3.75a.625.625 0 010-.884zM15.942 10.192a.625.625 0 01-.884 0L11.75 6.884l-3.308 3.308a.625.625 0 11-.884-.884l3.75-3.75a.625.625 0 01.884 0l3.75 3.75a.625.625 0 010 .884z"/%3E%3C/svg%3E');
@@ -90,11 +91,11 @@
   }
 
   &:focus-within {
-    & label {
+    label {
       color: color.$color-blue;
     }
 
-    & select {
+    select {
       border-color: color.$color-blue;
     }
   }
@@ -109,7 +110,7 @@ $select-label-width: 4rem;
 @mixin Manifold__Select--Inline {
   position: relative;
 
-  & label {
+  label {
     position: absolute;
     top: 50%;
     width: $select-label-width;
@@ -119,7 +120,7 @@ $select-label-width: 4rem;
     pointer-events: none;
   }
 
-  & select {
+  select {
     padding-left: $select-label-width;
   }
 }

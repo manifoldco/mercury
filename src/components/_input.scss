@@ -12,7 +12,7 @@
   //  Elements
   // ----------
 
-  & label {
+  label {
     @include typography.Manifold__Typography__SubheadingSmall;
 
     display: block;
@@ -23,7 +23,7 @@
     transition-property: color;
   }
 
-  & input {
+  input {
     @include typography.Manifold__Typography__SmallScreenBody;
 
     display: block;
@@ -66,13 +66,13 @@
   //  States
   // ----------
 
-  & input:invalid,
-  & input[aria-invalid] {
+  input:invalid,
+  input[aria-invalid] {
     border-color: color.$color-red;
     box-shadow: none;
   }
 
-  & input:disabled {
+  input:disabled {
     color: color.$color-gray;
     background: color.$color-grayLightest;
 
@@ -83,11 +83,11 @@
   }
 
   &:focus-within {
-    & label {
+    label {
       color: color.$color-blue;
     }
 
-    & input {
+    input {
       border-color: color.$color-blue;
     }
   }
@@ -102,7 +102,7 @@ $input-label-width: 4rem;
 @mixin Manifold__Input--Inline {
   position: relative;
 
-  & label {
+  label {
     position: absolute;
     top: 50%;
     width: $input-label-width;
@@ -112,7 +112,7 @@ $input-label-width: 4rem;
     pointer-events: none;
   }
 
-  & input {
+  input {
     padding-left: $input-label-width;
   }
 }

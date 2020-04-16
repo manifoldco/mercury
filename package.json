@@ -26,7 +26,10 @@
     "extract": "npm run extract:styles && npm run extract:icons",
     "extract:icons": "rm -rf src/icons && figma-export use-config && mv src/Icons src/icons && node scripts/prepare-icons",
     "extract:styles": "ts-node --files figma",
-    "lint": "eslint '**/*.ts' && stylelint 'src/components/*.scss' && stylelint --config stylelint.storybook.js 'stories/**/*.scss'",
+    "format": "stylelint 'src/components/*.scss' --fix && eslint '**/*.ts' --fix",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint '**/*.ts'",
+    "lint:css": "stylelint 'src/components/*.scss' && stylelint --config stylelint.storybook.js 'stories/**/*.scss'",
     "test": "jest"
   },
   "dependencies": {
