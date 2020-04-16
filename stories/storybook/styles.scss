@@ -16,6 +16,10 @@ svg {
   fill: currentColor;
 }
 
+a {
+  color: mercury.$color-blue;
+}
+
 code {
   @include mercury.Manifold__Typography__MonoBody;
 

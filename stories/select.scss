@@ -1,0 +1,17 @@
+@use "../src/index" as mercury;
+
+// ----------
+//  Select
+// ----------
+
+.Manifold__Select {
+  @include mercury.Manifold__Select;
+
+  // ----------
+  //  Modifiers
+  // ----------
+
+  &--Inline {
+    @include mercury.Manifold__Select--Inline;
+  }
+}

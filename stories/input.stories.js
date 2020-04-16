@@ -9,38 +9,26 @@ export const input = () => (
     <Demo>
       <div>
         <div className="Manifold__Input">
-          <label for="my-input">Text input</label>
-          <input
-            type="text"
-            autoCapitalize="off"
-            name="text-input"
-            id="my-input"
-            placeholder="Placeholder"
-          />
+          <label for="text">Text input</label>
+          <input type="text" autoCapitalize="off" name="text" id="text" placeholder="Placeholder" />
         </div>
       </div>
       <div>
         <div className="Manifold__Input">
-          <label for="email-input">Email</label>
-          <input type="email" name="email-input" id="email-input" value="info@manifold.co" />
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" value="info@manifold.co" />
         </div>
       </div>
       <div>
         <div className="Manifold__Input">
-          <label for="password-input">Password</label>
-          <input type="password" name="password-input" id="password-input" />
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
         </div>
       </div>
       <div>
         <div className="Manifold__Input">
-          <label for="number-input">Numeric</label>
-          <input
-            type="text"
-            inputmode="decimal"
-            pattern="\d+(\.\d*)?"
-            name="number-input"
-            id="number-input"
-          />
+          <label for="number">Numeric</label>
+          <input type="text" inputmode="decimal" pattern="\d+(\.\d*)?" name="number" id="number" />
         </div>
       </div>
     </Demo>
@@ -49,31 +37,37 @@ export const input = () => (
       <p>
         Standard <code>&lt;input&gt;</code> tags, from text to email to password to numeric inputs.
       </p>
+      <h2>See also</h2>
+      <ul>
+        <li>
+          <a href="/?path=/story/select--select">Select</a>
+        </li>
+      </ul>
     </Description>
     <Code
       tabs={{
         html: `<!-- text input -->
 <div class="Manifold__Input">
-  <label for="text-input">Text input</label>
-  <input type="text" autocapitalize="off" name="text-input" id="text-input" />
+  <label for="text">Text input</label>
+  <input type="text" autocapitalize="off" name="text" id="text" />
 </div>
 
 <!-- email input -->
 <div class="Manifold__Input">
-  <label for="email-input">Email</label>
-  <input type="email" name="email-input" id="email-input" />
+  <label for="email">Email</label>
+  <input type="email" name="email" id="email" />
 </div>
 
 <!-- password input -->
 <div class="Manifold__Input">
-  <label for="password-input">Password</label>
-  <input type="password" name="password-input" id="password-input" />
+  <label for="password">Password</label>
+  <input type="password" name="password" id="password" />
 </div>
 
 <!-- numeric input -->
 <div class="Manifold__Input">
-  <label for="number-input">Numeric input</label>
-  <input type="text" inputmode="decimal" pattern="\d+(\.\d*)?" name="number-input" id="number-input" />
+  <label for="number">Numeric input</label>
+  <input type="text" inputmode="decimal" pattern="\d+(\.\d*)?" name="number" id="number" />
 </div>`,
         scss: `${comment.block('Input')}
 
@@ -90,38 +84,32 @@ export const inputState = () => (
     <Demo>
       <div>
         <div className="Manifold__Input">
-          <label for="normal-input">Normal</label>
-          <input
-            type="text"
-            autoCapitalize="off"
-            name="normal-input"
-            id="normal-input"
-            value="Input text"
-          />
+          <label for="normal">Normal</label>
+          <input type="text" autoCapitalize="off" name="normal" id="normal" value="Input text" />
         </div>
       </div>
       <div>
         <div className="Manifold__Input">
-          <label for="disabled-input">Disabled</label>
+          <label for="disabled">Disabled</label>
           <input
             disabled
             type="text"
             autoCapitalize="off"
-            name="disabled-input"
-            id="disabled-input"
+            name="disabled"
+            id="disabled"
             value="Input text"
           />
         </div>
       </div>
       <div>
         <div className="Manifold__Input">
-          <label for="invalid-input">Invalid</label>
+          <label for="invalid">Invalid</label>
           <input
             aria-invalid
             type="text"
             autoCapitalize="off"
-            name="invalid-input"
-            id="invalid-input"
+            name="invalid"
+            id="invalid"
             value="Input text"
           />
         </div>
@@ -164,20 +152,20 @@ export const inputState = () => (
       tabs={{
         html: `<!-- normal -->
 <div class="Manifold__Input">
-  <label for="normal-input">Normal</label>
-  <input type="text" autocapitalize="off" name="text-input" id="normal-input" />
+  <label for="normal">Normal</label>
+  <input type="text" autocapitalize="off" name="normal" id="normal" />
 </div>
 
 <!-- disabled -->
 <div class="Manifold__Input">
-  <label for="disabled-input">Disabled</label>
-  <input disabled type="text" autocapitalize="off" name="disabled-input" id="disabled-input" />
+  <label for="disabled">Disabled</label>
+  <input disabled type="text" autocapitalize="off" name="disabled" id="disabled" />
 </div>
 
 <!-- invalid -->
 <div class="Manifold__Input">
-  <label for="invalid-input">Invalid</label>
-  <input aria-invalid type="text" autocapitalize="off" name="invalid-input" id="invalid-input" />
+  <label for="invalid">Invalid</label>
+  <input aria-invalid type="text" autocapitalize="off" name="invalid" id="invalid" />
 </div>`,
         scss: `${comment.block('Input')}
 

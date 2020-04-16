@@ -16,7 +16,7 @@
     @include typography.Manifold__Typography__SubheadingSmall;
 
     display: block;
-    margin-bottom: 0.25rem;
+    padding-bottom: 0.25rem;
     color: color.$color-grayDark;
     transition-timing-function: linear;
     transition-duration: 150ms;
@@ -30,8 +30,10 @@
     box-sizing: border-box;
     width: auto;
     min-width: none;
-    padding: 0.5em 0.75em;
+    height: 2.25rem;
+    padding: 0 0.75em;
     color: color.$color-grayDarker;
+    line-height: 2.25rem;
     background: color.$color-white;
     border: 1px solid color.$color-utilitiesGray;
     border-radius: 3px;
@@ -45,6 +47,10 @@
       @include typography.Manifold__Typography__Body;
     }
 
+    &:hover {
+      border-color: color.$color-gray;
+    }
+
     &[type='number'],
     &[inputmode='numeric'],
     &[inputmode='decimal'],
@@ -55,8 +61,6 @@
       text-align: right;
     }
   }
-
-  & input
 
   // ----------
   //  States
@@ -71,6 +75,11 @@
   & input:disabled {
     color: color.$color-gray;
     background: color.$color-grayLightest;
+
+    /* stylelint-disable-next-line selector-max-specificity */
+    &:hover {
+      border-color: color.$color-utilitiesGray;
+    }
   }
 
   &:focus-within {
@@ -88,7 +97,7 @@
 //  Modifiers
 // ----------
 
-$label-width: 4rem;
+$input-label-width: 4rem;
 
 @mixin Manifold__Input--Inline {
   position: relative;
@@ -96,13 +105,14 @@ $label-width: 4rem;
   & label {
     position: absolute;
     top: 50%;
-    width: $label-width;
+    width: $input-label-width;
+    padding-bottom: 0;
     text-align: center;
     transform: translateY(-50%);
     pointer-events: none;
   }
 
   & input {
-    padding-left: $label-width;
+    padding-left: $input-label-width;
   }
 }
