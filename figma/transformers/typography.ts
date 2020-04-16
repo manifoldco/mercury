@@ -55,8 +55,8 @@ function figmaStyleToCSS(style: Figma.TypeStyle) {
         }
         break;
       }
-      case 'lineHeightPercent': {
-        const lineHeight = Math.round(val) / 100;
+      case 'lineHeightPercentFontSize': {
+        const lineHeight = Math.round(val * 100) / 10000;
         if (lineHeight !== 1) {
           css.lineHeight = `${lineHeight}`;
         }

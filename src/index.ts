@@ -53,7 +53,7 @@ const designTokens = {
       fontSize: "16px",
       fontWeight: "400",
       letterSpacing: "normal",
-      lineHeight: "1.01",
+      lineHeight: "1.1875",
       textTransform: "none",
       fontFamily:
         "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
@@ -62,7 +62,7 @@ const designTokens = {
       fontSize: "12px",
       fontWeight: "400",
       letterSpacing: "normal",
-      lineHeight: "1.14",
+      lineHeight: "1.3333",
       textTransform: "none",
       fontFamily:
         "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
@@ -71,7 +71,7 @@ const designTokens = {
       fontSize: "20px",
       fontWeight: "400",
       letterSpacing: "normal",
-      lineHeight: "1.02",
+      lineHeight: "1.2",
       textTransform: "none",
       fontFamily:
         "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
@@ -80,7 +80,7 @@ const designTokens = {
       fontSize: "32px",
       fontWeight: "500",
       letterSpacing: "normal",
-      lineHeight: "0.96",
+      lineHeight: "1.125",
       textTransform: "none",
       fontFamily:
         "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
@@ -89,7 +89,7 @@ const designTokens = {
       fontSize: "25px",
       fontWeight: "400",
       letterSpacing: "normal",
-      lineHeight: "1.02",
+      lineHeight: "1.2",
       textTransform: "none",
       fontFamily:
         "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
@@ -98,7 +98,7 @@ const designTokens = {
       fontSize: "14px",
       fontWeight: "400",
       letterSpacing: "normal",
-      lineHeight: "1.04",
+      lineHeight: "1.2143",
       textTransform: "none",
       fontFamily:
         "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
@@ -107,7 +107,7 @@ const designTokens = {
       fontSize: "14px",
       fontWeight: "400",
       letterSpacing: "normal",
-      lineHeight: "1.1",
+      lineHeight: "1.2857",
       textTransform: "none",
       fontFamily:
         "'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
@@ -116,7 +116,7 @@ const designTokens = {
       fontSize: "10px",
       fontWeight: "400",
       letterSpacing: "normal",
-      lineHeight: "1.11",
+      lineHeight: "1.3",
       textTransform: "none",
       fontFamily:
         "'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
@@ -125,7 +125,7 @@ const designTokens = {
       fontSize: "12px",
       fontWeight: "400",
       letterSpacing: "normal",
-      lineHeight: "1.14",
+      lineHeight: "1.3333",
       textTransform: "none",
       fontFamily:
         "'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
@@ -152,7 +152,7 @@ const designTokens = {
       fontSize: "16px",
       fontWeight: "400",
       letterSpacing: "normal",
-      lineHeight: "1.07",
+      lineHeight: "1.25",
       textTransform: "none",
       fontFamily:
         "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
@@ -161,7 +161,7 @@ const designTokens = {
       fontSize: "13px",
       fontWeight: "400",
       letterSpacing: "normal",
-      lineHeight: "1.05",
+      lineHeight: "1.2308",
       textTransform: "none",
       fontFamily:
         "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
@@ -170,7 +170,7 @@ const designTokens = {
       fontSize: "18px",
       fontWeight: "400",
       letterSpacing: "normal",
-      lineHeight: "1.04",
+      lineHeight: "1.2222",
       textTransform: "none",
       fontFamily:
         "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
@@ -179,7 +179,7 @@ const designTokens = {
       fontSize: "26px",
       fontWeight: "500",
       letterSpacing: "normal",
-      lineHeight: "1.02",
+      lineHeight: "1.1923",
       textTransform: "none",
       fontFamily:
         "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
@@ -188,7 +188,7 @@ const designTokens = {
       fontSize: "22px",
       fontWeight: "400",
       letterSpacing: "normal",
-      lineHeight: "1.01",
+      lineHeight: "1.1818",
       textTransform: "none",
       fontFamily:
         "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
@@ -197,7 +197,7 @@ const designTokens = {
       fontSize: "14px",
       fontWeight: "400",
       letterSpacing: "normal",
-      lineHeight: "1.04",
+      lineHeight: "1.2143",
       textTransform: "none",
       fontFamily:
         "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
@@ -206,7 +206,7 @@ const designTokens = {
       fontSize: "13px",
       fontWeight: "600",
       letterSpacing: "0.03em",
-      lineHeight: "1.05",
+      lineHeight: "1.2308",
       textTransform: "uppercase",
       fontFamily:
         "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
@@ -215,7 +215,7 @@ const designTokens = {
       fontSize: "13px",
       fontWeight: "600",
       letterSpacing: "0.03em",
-      lineHeight: "1.05",
+      lineHeight: "1.2308",
       textTransform: "uppercase",
       fontFamily:
         "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
@@ -224,7 +224,7 @@ const designTokens = {
       fontSize: "11px",
       fontWeight: "500",
       letterSpacing: "0.04em",
-      lineHeight: "1.09",
+      lineHeight: "1.2727",
       textTransform: "uppercase",
       fontFamily:
         "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
