@@ -81,7 +81,7 @@ export const headingExtraLarge = () => (
 );
 
 export const subheading = () => (
-  <TypographyDisplay component="Subheading" name="Subheading" element="h5">
+  <TypographyDisplay component="Subheading" name="Subheading" element="h5" smallScreen>
     <p>Good for separating content without a gigantic heading.</p>
   </TypographyDisplay>
 );

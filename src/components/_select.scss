@@ -1,43 +1,126 @@
+@use "../design-tokens/color";
+@use "../design-tokens/typography";
+
+// ----------
+//  Select
+// ----------
+
 @mixin Manifold__Select {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0.6em 1.4em 0.5em 0.8em;
-  color: #444;
-  font-weight: 700;
-  font-size: 16px;
-  font-family: sans-serif;
-  line-height: 1.3;
-  background-color: #fff;
-  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
-    linear-gradient(to bottom, #fff 0%, #e5e5e5 100%);
-  background-repeat: no-repeat, repeat;
-  background-position: right 0.7em top 50%, 0 0;
-  background-size: 0.65em auto, 100%;
-  border: 1px solid #aaa;
-  border-radius: 0.5em;
-  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
-  appearance: none;
+  transition: border-color 150ms linear;
 
-  &::-ms-expand {
-    display: none;
+  // ----------
+  //  Elements
+  // ----------
+
+  label {
+    @include typography.Manifold__Typography__SubheadingSmall;
+
+    display: block;
+    padding-bottom: 0.25rem;
+    color: color.$color-grayDark;
+    transition-timing-function: linear;
+    transition-duration: 150ms;
+    transition-property: color;
   }
 
-  &:hover {
-    border-color: #888;
+  select {
+    @include typography.Manifold__Typography__SmallScreenBody;
+
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    height: 2.25em;
+    margin: 0;
+    padding: 0 1.5rem 0 0.75rem;
+    color: color.$color-grayDark;
+    line-height: 2.25;
+    background-color: color.$color-white;
+    // https://css-tricks.com/probably-dont-base64-svg/
+    background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill="%23575b5f" d="M7.558 12.808a.625.625 0 01.884 0l3.308 3.308 3.308-3.308a.625.625 0 11.884.884l-3.75 3.75a.625.625 0 01-.884 0l-3.75-3.75a.625.625 0 010-.884zM15.942 10.192a.625.625 0 01-.884 0L11.75 6.884l-3.308 3.308a.625.625 0 11-.884-.884l3.75-3.75a.625.625 0 01.884 0l3.75 3.75a.625.625 0 010 .884z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat, repeat;
+    background-position: right 0.25rem top 50%;
+    background-size: 1.5rem auto;
+    border: 1px solid color.$color-utilitiesGray;
+    border-radius: 4px;
+    transition: border-color 150ms linear, color 150ms linear;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:hover {
+      border-color: color.$color-gray;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @media (min-width: 600px) {
+      @include typography.Manifold__Typography__Body;
+    }
   }
 
-  &:focus {
-    color: #222;
-    border-color: #aaa;
-    outline: none;
-    box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
-    box-shadow: 0 0 0 3px -moz-mac-focusring;
+  option {
+    font-weight: 400;
   }
 
-  & option {
-    font-weight: normal;
+  // ----------
+  //  States
+  // ----------
+
+  select:invalid,
+  select[aria-invalid] {
+    background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill="%23d52049" d="M7.558 12.808a.625.625 0 01.884 0l3.308 3.308 3.308-3.308a.625.625 0 11.884.884l-3.75 3.75a.625.625 0 01-.884 0l-3.75-3.75a.625.625 0 010-.884zM15.942 10.192a.625.625 0 01-.884 0L11.75 6.884l-3.308 3.308a.625.625 0 11-.884-.884l3.75-3.75a.625.625 0 01.884 0l3.75 3.75a.625.625 0 010 .884z"/%3E%3C/svg%3E');
+    border-color: color.$color-red;
+    box-shadow: none;
+  }
+
+  select:disabled {
+    color: color.$color-gray;
+    background-color: color.$color-grayLightest;
+    background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill="%238f8f95" d="M7.558 12.808a.625.625 0 01.884 0l3.308 3.308 3.308-3.308a.625.625 0 11.884.884l-3.75 3.75a.625.625 0 01-.884 0l-3.75-3.75a.625.625 0 010-.884zM15.942 10.192a.625.625 0 01-.884 0L11.75 6.884l-3.308 3.308a.625.625 0 11-.884-.884l3.75-3.75a.625.625 0 01.884 0l3.75 3.75a.625.625 0 010 .884z"/%3E%3C/svg%3E');
+
+    /* stylelint-disable-next-line selector-max-specificity */
+    &:hover {
+      border-color: color.$color-utilitiesGray;
+    }
+  }
+
+  &:focus-within {
+    label {
+      color: color.$color-blue;
+    }
+
+    select {
+      border-color: color.$color-blue;
+    }
+  }
+}
+
+// ----------
+//  Modifiers
+// ----------
+
+$select-label-width: 4rem;
+
+@mixin Manifold__Select--Inline {
+  position: relative;
+
+  label {
+    position: absolute;
+    top: 50%;
+    width: $select-label-width;
+    padding-bottom: 0;
+    text-align: center;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  select {
+    padding-left: $select-label-width;
   }
 }

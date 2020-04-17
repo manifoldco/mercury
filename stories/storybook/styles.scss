@@ -16,6 +16,35 @@ svg {
   fill: currentColor;
 }
 
+a {
+  color: mercury.$color-blue;
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  color: mercury.$color-gray;
+  font-style: italic;
+  line-height: 1.5;
+  border-left: 4px solid mercury.$color-grayLighter;
+}
+
+h1 {
+  @include mercury.Manifold__Typography__HeadingExtraLarge;
+}
+
+h2 {
+  @include mercury.Manifold__Typography__HeadingLarge;
+}
+
+h3 {
+  @include mercury.Manifold__Typography__Heading;
+}
+
+h4 {
+  @include mercury.Manifold__Typography__Subheading;
+}
+
 code {
   @include mercury.Manifold__Typography__MonoBody;
 
@@ -23,6 +52,10 @@ code {
   padding: 0.5em;
   color: mercury.$color-grayDark;
   background: mercury.$color-grayLightest;
+}
+
+li {
+  margin: 0.25rem 0;
 }
 
 .Swatch {
