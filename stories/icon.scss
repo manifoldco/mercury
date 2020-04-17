@@ -5,10 +5,37 @@
 // ----------
 
 .Icon {
+  &__Copy {
+    button {
+      @include mercury.Manifold__Typography__SubheadingSmall;
+
+      display: flex;
+      align-items: center;
+      padding: 0;
+      color: mercury.$color-grayDark;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 150ms linear;
+      appearance: none;
+
+      &:hover {
+        color: mercury.$color-blue;
+      }
+    }
+
+    svg {
+      display: block;
+      width: 1em;
+      height: 1em;
+      margin-right: 0.5em;
+    }
+  }
+
   &__SVG {
     padding: 1rem;
 
-    & svg {
+    svg {
       display: block;
       width: 2rem;
       height: 2rem;
@@ -16,6 +43,8 @@
   }
 
   &__Name {
+    display: flex;
+    justify-content: space-between;
     padding: 0 1rem 1rem 1rem;
     font-size: 10px;
     font-family: mercury.$typography-monoBody-fontFamily;

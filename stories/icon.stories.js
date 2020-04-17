@@ -1,6 +1,7 @@
 import React from 'react';
+import ReactCopyButtonWrapper from 'react-copy-button-wrapper';
 import icons from './storybook/icons.json';
-import { Story, Code } from './storybook/blocks';
+import { Story } from './storybook/blocks';
 import './icon.scss';
 
 export default { title: 'Icons' };
@@ -12,8 +13,16 @@ export const gallery = () => (
       return (
         <Story small>
           <div className="Icon__SVG" dangerouslySetInnerHTML={{ __html: svg }} />
-          <div className="Icon__Name">{name}</div>
-          <Code tabs={{ html: svg }} />
+          <div className="Icon__Name">
+            {name}
+            <div className="Icon__Copy">
+              <ReactCopyButtonWrapper text={svg}>
+                <button>
+                  <div dangerouslySetInnerHTML={{ __html: icons['copy.svg'] }} /> Copy
+                </button>
+              </ReactCopyButtonWrapper>
+            </div>
+          </div>
         </Story>
       );
     })}
