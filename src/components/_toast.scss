@@ -1,0 +1,38 @@
+@use "../design-tokens/color";
+@use "../design-tokens/typography";
+@use "../design-tokens/shadow";
+
+@mixin Manifold__Toast {
+  display: flex;
+  flex-direction: row;
+  padding: 9px 16px 7px;
+  color: color.$color-grayLightest;
+  background-color: color.$color-grayDarker;
+  border-radius: 4px;
+  box-shadow: shadow.$shadow-far;
+  @include typography.Manifold__Typography__Label;
+
+  > svg {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    fill: color.$color-white;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: color.$color-grayLighter;
+    &:hover {
+      color: color.$color-white;
+    }
+  }
+}
+
+@mixin Manifold__Toast--Error {
+  background-color: color.$color-red;
+}
