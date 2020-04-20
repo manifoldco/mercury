@@ -61,7 +61,7 @@ collection and converting it to a file output. Currently we have 2 targets: **JS
 Each of those map to a file in [`./figma/targets`][local-targets]. The JS target is the simplest, as
 it basically writes the object as-is from transformers. The Sass target has to do a little more
 work, converting JS (`{ fontSize: '12px' }`) to CSS strings (`font-size: 12px;`), as well as
-generating some wrappers (`@mixin Manifold__Typography { … }`). But overall, it’s not too much work.
+generating some wrappers (`@mixin Typography { … }`). But overall, it’s not too much work.
 
 _OK, but how do I add something?_ Your process from here will be somewhat trial-and-error, because
 every “thing” you want to add will follow a different process (compare the `color` vs `typography`

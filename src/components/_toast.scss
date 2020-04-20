@@ -2,7 +2,7 @@
 @use "../design-tokens/typography";
 @use "../design-tokens/shadow";
 
-@mixin Manifold__Toast {
+@mixin Toast {
   display: flex;
   flex-direction: row;
   padding: 9px 16px 7px;
@@ -10,7 +10,7 @@
   background-color: color.$color-grayDarker;
   border-radius: 4px;
   box-shadow: shadow.$shadow-far;
-  @include typography.Manifold__Typography__Label;
+  @include typography.Typography__Label;
 
   > svg {
     flex-grow: 0;
@@ -33,6 +33,6 @@
   }
 }
 
-@mixin Manifold__Toast--Error {
+@mixin Toast--Error {
   background-color: color.$color-red;
 }

@@ -13,7 +13,7 @@ $modal-corner-radius: 4px;
 //  Modal
 // ----------
 
-@mixin Manifold__Modal {
+@mixin Modal {
   position: fixed;
   top: 0;
   right: 0;
@@ -69,7 +69,7 @@ $modal-corner-radius: 4px;
 //  Elements
 //  ----------
 
-@mixin Manifold__Modal__Close {
+@mixin Modal__Close {
   position: absolute;
   top: 0;
   right: 0;
@@ -123,7 +123,7 @@ $modal-corner-radius: 4px;
   }
 }
 
-@mixin Manifold__Modal__Footer {
+@mixin Modal__Footer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -143,7 +143,7 @@ $modal-corner-radius: 4px;
 //  Modifiers
 // ----------
 
-@mixin Manifold__Modal--Small {
+@mixin Modal--Small {
   & > div {
     max-width: 50rem;
   }

@@ -5,7 +5,7 @@
 //  Select
 // ----------
 
-@mixin Manifold__Select {
+@mixin Select {
   transition: border-color 150ms linear;
 
   // ----------
@@ -13,7 +13,7 @@
   // ----------
 
   label {
-    @include typography.Manifold__Typography__SubheadingSmall;
+    @include typography.Typography__SubheadingSmall;
 
     display: block;
     padding-bottom: 0.25rem;
@@ -24,7 +24,7 @@
   }
 
   select {
-    @include typography.Manifold__Typography__SmallScreenBody;
+    @include typography.Typography__SmallScreenBody;
 
     display: block;
     box-sizing: border-box;
@@ -60,7 +60,7 @@
     }
 
     @media (min-width: 600px) {
-      @include typography.Manifold__Typography__Body;
+      @include typography.Typography__Body;
     }
   }
 
@@ -107,7 +107,7 @@
 
 $select-label-width: 4rem;
 
-@mixin Manifold__Select--Inline {
+@mixin Select--Inline {
   position: relative;
 
   label {

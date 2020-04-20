@@ -27,12 +27,12 @@ export const modal = () => {
   return (
     <Story>
       <Demo>
-        <button type="button" className="Manifold__Button" onClick={() => openModal()}>
+        <button type="button" className="Manifold-Button" onClick={() => openModal()}>
           Save Game
         </button>
         <div>
           <div
-            className="Manifold__Modal"
+            className="Manifold-Modal"
             role="dialog"
             aria-modal={isModalVisible || undefined}
             aria-labelledby="dialog-title"
@@ -42,7 +42,7 @@ export const modal = () => {
             <div onClick={(e) => e.stopPropagation()}>
               <button
                 type="button"
-                className="Manifold__Modal__Close"
+                className="Manifold-Modal__Close"
                 onClick={() => closeModal()}
                 aria-label="Close"
               >
@@ -54,13 +54,13 @@ export const modal = () => {
               <p id="dialog-desc">
                 Are you sure you want to save your game? This will overwrite previous save data.
               </p>
-              <menu className="Manifold__Modal__Footer">
-                <button type="button" className="Manifold__Button" onClick={() => closeModal()}>
+              <menu className="Manifold-Modal__Footer">
+                <button type="button" className="Manifold-Button" onClick={() => closeModal()}>
                   Cancel
                 </button>
                 <button
                   type="button"
-                  className="Manifold__Button Manifold__Button--Black"
+                  className="Manifold-Button Manifold-Button--Black"
                   onClick={() => closeModal()}
                 >
                   Save
@@ -113,12 +113,12 @@ export const modal = () => {
       <Code
         tabs={{
           html: `<!-- modal hidden (default) -->
-<div class="Manifold__Modal" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc">
+<div class="Manifold-Modal" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc">
   <div>
-    <button type="button" class="Manifold__Modal__Close" aria-label="Close">✕</button>
+    <button type="button" class="Manifold-Modal__Close" aria-label="Close">✕</button>
     <h1 id="dialog-title">Save</h1>
     <p id="dialog-desc">Are you sure you want to save your game? This will overwrite previous save data.</p>
-    <menu class="Manifold__Modal__Footer">
+    <menu class="Manifold-Modal__Footer">
       <button type="button">Cancel</button>
       <button type="submit">Save</button>
     </menu>
@@ -126,12 +126,12 @@ export const modal = () => {
 </div>
 
 <!-- modal visible -->
-<div aria-modal="true" class="Manifold__Modal" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc">
+<div aria-modal="true" class="Manifold-Modal" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc">
   <div>
-    <button type="button" class="Manifold__Modal__Close" aria-label="Close">✕</button>
+    <button type="button" class="Manifold-Modal__Close" aria-label="Close">✕</button>
     <h1 id="dialog-title">Save</h1>
     <p id="dialog-desc">Are you sure you want to save your game? This will overwrite previous save data.</p>
-    <menu class="Manifold__Modal__Footer">
+    <menu class="Manifold-Modal__Footer">
       <button type="button">Cancel</button>
       <button type="submit">Save</button>
     </menu>
@@ -164,12 +164,12 @@ export const modal = () => {
       <button onClick={() => openModal()} type="button">Save Game</button>
 
       {/* modal */}
-      <div onClick={() => closeModal()} role="dialog" className="Manifold__Modal" aria-modal={isModalVisible || undefined} aria-labelledby="dialog-title" aria-describedby="dialog-desc">
+      <div onClick={() => closeModal()} role="dialog" className="Manifold-Modal" aria-modal={isModalVisible || undefined} aria-labelledby="dialog-title" aria-describedby="dialog-desc">
         <div onClick={(e) => e.stopPropagation()}>
-          <button onClick={() => closeModal()} className="Manifold__Modal__Close" type="button" aria-label="Close">✕</button>
+          <button onClick={() => closeModal()} className="Manifold-Modal__Close" type="button" aria-label="Close">✕</button>
           <h1 id="dialog-title">Save</h1>
           <p id="dialog-desc">Are you sure you want to save your game? This will overwrite previous save data.</p>
-          <menu className="Manifold__Modal__Footer">
+          <menu className="Manifold-Modal__Footer">
             <button type="button">Cancel</button>
             <button type="submit">Save</button>
           </menu>
@@ -180,17 +180,17 @@ export const modal = () => {
 };`,
           scss: `${comment.block('Modal')}
 
-.Manifold__Modal {
-  @include mercury.Manifold__Modal;
+.Manifold-Modal {
+  @include mercury.Modal;
 
   ${comment.element}
 
   &__Close {
-    @include mercury.Manifold__Modal__Close;
+    @include mercury.Modal__Close;
   }
 
   &__Footer {
-    @include mercury.Manifold__Modal__Footer;
+    @include mercury.Modal__Footer;
   }
 }`,
         }}

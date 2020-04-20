@@ -8,7 +8,7 @@ $tooltip-arrow-size: 5px;
 $tooltip-color: color.$color-grayDarker;
 $tooltip-margin: 8px;
 
-@mixin Manifold__Tooltip__Container {
+@mixin Tooltip__Container {
   position: relative;
   cursor: pointer;
 
@@ -31,7 +31,7 @@ $tooltip-margin: 8px;
   }
 }
 
-@mixin Manifold__Tooltip__Container--Down {
+@mixin Tooltip__Container--Down {
   [role='tooltip'] {
     top: 100%;
     bottom: auto;
@@ -45,7 +45,7 @@ $tooltip-margin: 8px;
   }
 }
 
-@mixin Manifold__Tooltip__Container--Left {
+@mixin Tooltip__Container--Left {
   [role='tooltip'] {
     top: 50%;
     right: 100%;
@@ -61,7 +61,7 @@ $tooltip-margin: 8px;
   }
 }
 
-@mixin Manifold__Tooltip__Container--Right {
+@mixin Tooltip__Container--Right {
   [role='tooltip'] {
     top: 50%;
     bottom: auto;
@@ -76,7 +76,7 @@ $tooltip-margin: 8px;
   }
 }
 
-@mixin Manifold__Tooltip {
+@mixin Tooltip {
   position: relative;
   padding: 8px 12px;
   color: color.$color-white;
@@ -88,7 +88,7 @@ $tooltip-margin: 8px;
   box-shadow: shadow.$shadow-near;
   cursor: default;
   pointer-events: none;
-  @include typography.Manifold__Typography__Caption;
+  @include typography.Typography__Caption;
 
   &::after {
     position: absolute;
@@ -106,7 +106,7 @@ $tooltip-margin: 8px;
   }
 }
 
-@mixin Manifold__Tooltip--Down {
+@mixin Tooltip--Down {
   &::after {
     top: auto;
     bottom: 100%;
@@ -115,7 +115,7 @@ $tooltip-margin: 8px;
   }
 }
 
-@mixin Manifold__Tooltip--Left {
+@mixin Tooltip--Left {
   &::after {
     top: 50%;
     left: 100%;
@@ -126,7 +126,7 @@ $tooltip-margin: 8px;
   }
 }
 
-@mixin Manifold__Tooltip--Right {
+@mixin Tooltip--Right {
   &::after {
     top: 50%;
     right: 100%;
@@ -138,7 +138,7 @@ $tooltip-margin: 8px;
   }
 }
 
-@mixin Manifold__Tooltip--Large {
+@mixin Tooltip--Large {
   width: 260px;
   line-height: 1.25;
   white-space: normal;

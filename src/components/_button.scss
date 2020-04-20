@@ -10,7 +10,7 @@ $button-ease-out-sine: cubic-bezier(0, 0.5, 0.5, 1);
 //  Button
 // ----------
 
-@mixin Manifold__Button {
+@mixin Button {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
@@ -73,7 +73,7 @@ $button-ease-out-sine: cubic-bezier(0, 0.5, 0.5, 1);
   }
 
   &:disabled {
-    @include Manifold__Button--Disabled;
+    @include Button--Disabled;
   }
 }
 
@@ -81,7 +81,7 @@ $button-ease-out-sine: cubic-bezier(0, 0.5, 0.5, 1);
 //  Modifiers
 // ----------
 
-@mixin Manifold__Button--Black {
+@mixin Button--Black {
   color: color.$color-white;
   background: color.$color-grayDarker;
   border-color: color.$color-grayDarker;
@@ -92,11 +92,11 @@ $button-ease-out-sine: cubic-bezier(0, 0.5, 0.5, 1);
   }
 
   &:disabled {
-    @include Manifold__Button--Disabled;
+    @include Button--Disabled;
   }
 }
 
-@mixin Manifold__Button--Brand {
+@mixin Button--Brand {
   color: color.$color-white;
   background: gradient.$gradient-brand;
   border-color: transparent;
@@ -107,11 +107,11 @@ $button-ease-out-sine: cubic-bezier(0, 0.5, 0.5, 1);
   }
 
   &:disabled {
-    @include Manifold__Button--Disabled;
+    @include Button--Disabled;
   }
 }
 
-@mixin Manifold__Button--Danger {
+@mixin Button--Danger {
   color: color.$color-red;
   background: color.$color-white;
   border-color: currentColor;
@@ -122,11 +122,11 @@ $button-ease-out-sine: cubic-bezier(0, 0.5, 0.5, 1);
   }
 
   &:disabled {
-    @include Manifold__Button--Disabled;
+    @include Button--Disabled;
   }
 }
 
-@mixin Manifold__Button--Disabled {
+@mixin Button--Disabled {
   color: color.$color-gray;
   background: color.$color-grayLighter;
   border: 1px solid color.$color-utilitiesGray;
@@ -155,7 +155,7 @@ $button-ease-out-sine: cubic-bezier(0, 0.5, 0.5, 1);
   }
 }
 
-@mixin Manifold__Button--Small {
+@mixin Button--Small {
   padding: 8px 14px;
   font-size: 13px;
 }

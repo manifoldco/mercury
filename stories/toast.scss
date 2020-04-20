@@ -4,14 +4,14 @@
 // Block
 // ----------
 
-.Manifold__Toast {
-  @include mercury.Manifold__Toast;
+.Manifold-Toast {
+  @include mercury.Toast;
 
   // ----------
   // Modifiers
   // ----------
 
   &--Error {
-    @include mercury.Manifold__Toast--Error;
+    @include mercury.Toast--Error;
   }
 }

@@ -7,7 +7,7 @@
 .Icon {
   &__Copy {
     button {
-      @include mercury.Manifold__Typography__SubheadingSmall;
+      @include mercury.Typography__SubheadingSmall;
 
       display: flex;
       align-items: center;

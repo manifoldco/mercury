@@ -4,14 +4,14 @@
 //  Select
 // ----------
 
-.Manifold__Select {
-  @include mercury.Manifold__Select;
+.Manifold-Select {
+  @include mercury.Select;
 
   // ----------
   //  Modifiers
   // ----------
 
   &--Inline {
-    @include mercury.Manifold__Select--Inline;
+    @include mercury.Select--Inline;
   }
 }

@@ -4,22 +4,22 @@
 // Block
 // ----------
 
-.Manifold__Banner {
-  @include mercury.Manifold__Banner;
+.Manifold-Banner {
+  @include mercury.Banner;
 
   // ----------
   //  Modifiers
   // ----------
 
   &--Error {
-    @include mercury.Manifold__Banner--Error;
+    @include mercury.Banner--Error;
   }
 
   &--Warning {
-    @include mercury.Manifold__Banner--Warning;
+    @include mercury.Banner--Warning;
   }
 
   &--Success {
-    @include mercury.Manifold__Banner--Success;
+    @include mercury.Banner--Success;
   }
 }

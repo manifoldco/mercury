@@ -4,18 +4,18 @@
 //  Modal
 // ----------
 
-.Manifold__Modal {
-  @include mercury.Manifold__Modal;
+.Manifold-Modal {
+  @include mercury.Modal;
 
   // ----------
   //  Elements
   // ----------
 
   &__Close {
-    @include mercury.Manifold__Modal__Close;
+    @include mercury.Modal__Close;
   }
 
   &__Footer {
-    @include mercury.Manifold__Modal__Footer;
+    @include mercury.Modal__Footer;
   }
 }

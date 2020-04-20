@@ -3,18 +3,18 @@ import { Story, Demo, Description, Code, comment } from './storybook/blocks';
 import './tooltip.scss';
 
 const title = 'Tooltip';
-const component = 'Manifold__Tooltip';
+const component = 'Manifold-Tooltip';
 
 export default { title, component };
 
 export const defaultTooltip = () => (
   <Story>
     <Demo>
-      <div className="Manifold__Tooltip__Container" aria-describedby="tooltip-1">
-        <button type="button" className="Manifold__Button">
+      <div className="Manifold-Tooltip__Container" aria-describedby="tooltip-1">
+        <button type="button" className="Manifold-Button">
           Hover me
         </button>
-        <div role="tooltip" id="tooltip-1" className="Manifold__Tooltip">
+        <div role="tooltip" id="tooltip-1" className="Manifold-Tooltip">
           Tooltip describing the trigger element.
         </div>
       </div>
@@ -28,26 +28,26 @@ export const defaultTooltip = () => (
       <p>
         Make sure to add the <code>aria-describedby="tooltip-id"</code> attribute to the element
         triggering the tooltip. To use the tooltip without the trigger and position manually, omit
-        the <code>Manifold__Tooltip__Container</code> wrapping element.
+        the <code>Manifold-Tooltip__Container</code> wrapping element.
       </p>
     </Description>
     <Code
       tabs={{
         html: `<!-- ${title} Container -->
-<div class="Manifold__Tooltip__Container" aria-describedby="tooltip-1">
+<div class="Manifold-Tooltip__Container" aria-describedby="tooltip-1">
   <!-- ${title} -->
-  <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip">
+  <div role="tooltip" id="tooltip-1" class="Manifold-Tooltip">
     Tooltip describing the trigger element.
   </div>
 </div>`,
         scss: `${comment.block(title + ' Container')}
 
 .${component}__Container {
-  @include mercury.${component}__Container;
+  @include mercury.${title}__Container;
 }
 
 .${component} {
-  @include mercury.${component};
+  @include mercury.${title};
 }`,
       }}
     />
@@ -58,13 +58,13 @@ export const down = () => (
   <Story>
     <Demo>
       <div
-        className="Manifold__Tooltip__Container Manifold__Tooltip__Container--Down"
+        className="Manifold-Tooltip__Container Manifold-Tooltip__Container--Down"
         aria-describedby="tooltip-1"
       >
-        <button type="button" className="Manifold__Button">
+        <button type="button" className="Manifold-Button">
           Hover me
         </button>
-        <div role="tooltip" id="tooltip-1" className="Manifold__Tooltip Manifold__Tooltip--Down">
+        <div role="tooltip" id="tooltip-1" className="Manifold-Tooltip Manifold-Tooltip--Down">
           Tooltip describing the trigger element.
         </div>
       </div>
@@ -76,29 +76,29 @@ export const down = () => (
     <Code
       tabs={{
         html: `<!-- ${title} Container -->
-<div class="Manifold__Tooltip__Container Manifold__Tooltip__Container--Down" aria-describedby="tooltip-1">
+<div class="Manifold-Tooltip__Container Manifold-Tooltip__Container--Down" aria-describedby="tooltip-1">
   <!-- ${title} -->
-  <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip Manifold__Tooltip--Down">
+  <div role="tooltip" id="tooltip-1" class="Manifold-Tooltip Manifold-Tooltip--Down">
     Tooltip describing the trigger element.
   </div>
 </div>`,
         scss: `${comment.block(title)}
 
 .${component}__Container {
-  @include mercury.${component}__Container;
+  @include mercury.${title}__Container;
 
   &--Down {
-    @include mercury.${component}__Container--Down;
+    @include mercury.${title}__Container--Down;
   }
 }
 
 .${component} {
-  @include mercury.${component};
+  @include mercury.${title};
 
   ${comment.modifier}
 
   &--Down {
-    @include mercury.${component}--Down;
+    @include mercury.${title}--Down;
   }
 }`,
       }}
@@ -110,13 +110,13 @@ export const left = () => (
   <Story>
     <Demo>
       <div
-        className="Manifold__Tooltip__Container Manifold__Tooltip__Container--Left"
+        className="Manifold-Tooltip__Container Manifold-Tooltip__Container--Left"
         aria-describedby="tooltip-1"
       >
-        <button type="button" className="Manifold__Button">
+        <button type="button" className="Manifold-Button">
           Hover me
         </button>
-        <div role="tooltip" id="tooltip-1" className="Manifold__Tooltip Manifold__Tooltip--Left">
+        <div role="tooltip" id="tooltip-1" className="Manifold-Tooltip Manifold-Tooltip--Left">
           Tooltip describing the trigger element.
         </div>
       </div>
@@ -128,29 +128,29 @@ export const left = () => (
     <Code
       tabs={{
         html: `<!-- ${title} Container -->
-<div class="Manifold__Tooltip__Container" aria-describedby="tooltip-1">
+<div class="Manifold-Tooltip__Container" aria-describedby="tooltip-1">
   <!-- ${title} -->
-  <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip Manifold__Tooltip--Left">
+  <div role="tooltip" id="tooltip-1" class="Manifold-Tooltip Manifold-Tooltip--Left">
     Tooltip describing the trigger element.
   </div>
 </div>`,
         scss: `${comment.block(title)}
 
 .${component}__Container {
-  @include mercury.${component}__Container;
+  @include mercury.${title}__Container;
 
   &--Left {
-    @include mercury.${component}__Container--Left;
+    @include mercury.${title}__Container--Left;
   }
 }
 
 .${component} {
-  @include mercury.${component};
+  @include mercury.${title};
 
   ${comment.modifier}
 
   &--Left {
-    @include mercury.${component}--Left;
+    @include mercury.${title}--Left;
   }
 }`,
       }}
@@ -162,13 +162,13 @@ export const right = () => (
   <Story>
     <Demo>
       <div
-        className="Manifold__Tooltip__Container Manifold__Tooltip__Container--Right"
+        className="Manifold-Tooltip__Container Manifold-Tooltip__Container--Right"
         aria-describedby="tooltip-1"
       >
-        <button type="button" className="Manifold__Button">
+        <button type="button" className="Manifold-Button">
           Hover me
         </button>
-        <div role="tooltip" id="tooltip-1" className="Manifold__Tooltip Manifold__Tooltip--Right">
+        <div role="tooltip" id="tooltip-1" className="Manifold-Tooltip Manifold-Tooltip--Right">
           Tooltip describing the trigger element.
         </div>
       </div>
@@ -180,29 +180,29 @@ export const right = () => (
     <Code
       tabs={{
         html: `<!-- ${title} Container -->
-<div class="Manifold__Tooltip__Container" aria-describedby="tooltip-1">
+<div class="Manifold-Tooltip__Container" aria-describedby="tooltip-1">
   <!-- ${title} -->
-  <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip Manifold__Tooltip--Right">
+  <div role="tooltip" id="tooltip-1" class="Manifold-Tooltip Manifold-Tooltip--Right">
     Tooltip describing the trigger element.
   </div>
 </div>`,
         scss: `${comment.block(title)}
 
 .${component}__Container {
-  @include mercury.${component}__Container;
+  @include mercury.${title}__Container;
 
   &--Right {
-    @include mercury.${component}__Container--Right;
+    @include mercury.${title}__Container--Right;
   }
 }
 
 .${component} {
-  @include mercury.${component};
+  @include mercury.${title};
 
   ${comment.modifier}
 
   &--Right {
-    @include mercury.${component}--Right;
+    @include mercury.${title}--Right;
   }
 }`,
       }}
@@ -213,11 +213,11 @@ export const right = () => (
 export const large = () => (
   <Story>
     <Demo>
-      <div class="Manifold__Tooltip__Container" aria-describedby="tooltip-1">
-        <button type="button" className="Manifold__Button">
+      <div class="Manifold-Tooltip__Container" aria-describedby="tooltip-1">
+        <button type="button" className="Manifold-Button">
           Hover me
         </button>
-        <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip Manifold__Tooltip--Large">
+        <div role="tooltip" id="tooltip-1" class="Manifold-Tooltip Manifold-Tooltip--Large">
           Tooltip describing the trigger element that will expand past one line neccessitating a
           line break. Use sparingly! Tooltips should always be brief if possible. They are just
           "tips" after all. 👍
@@ -231,25 +231,25 @@ export const large = () => (
     <Code
       tabs={{
         html: `<!-- ${title} Container -->
-<div class="Manifold__Tooltip__Container" aria-describedby="tooltip-1">
+<div class="Manifold-Tooltip__Container" aria-describedby="tooltip-1">
   <!-- ${title} -->
-  <div role="tooltip" id="tooltip-1" class="Manifold__Tooltip Manifold__Tooltip--Right">
+  <div role="tooltip" id="tooltip-1" class="Manifold-Tooltip Manifold-Tooltip--Right">
     Tooltip describing the trigger element.
   </div>
 </div>`,
         scss: `${comment.block(title)}
 
 .${component}__Container {
-  @include mercury.${component}__Container;
+  @include mercury.${title}__Container;
 }
 
 .${component} {
-  @include mercury.${component};
+  @include mercury.${title};
 
   ${comment.modifier}
 
   &--Large {
-    @include mercury.${component}--Large;
+    @include mercury.${title}--Large;
   }
 }`,
       }}

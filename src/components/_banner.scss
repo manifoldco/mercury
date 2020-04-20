@@ -1,7 +1,7 @@
 @use "../design-tokens/color";
 @use "../design-tokens/typography";
 
-@mixin Manifold__Banner {
+@mixin Banner {
   position: relative;
   display: flex;
   box-sizing: border-box;
@@ -39,14 +39,14 @@
     flex-shrink: 1;
     margin-top: 1px;
     margin-bottom: 0;
-    @include typography.Manifold__Typography__SmallScreenBody;
+    @include typography.Typography__SmallScreenBody;
     @media (min-width: 600px) {
-      @include typography.Manifold__Typography__Body;
+      @include typography.Typography__Body;
     }
   }
 }
 
-@mixin Manifold__Banner--Error {
+@mixin Banner--Error {
   &::before {
     background-color: color.$color-red;
     border: 1px solid color.$color-red;
@@ -57,7 +57,7 @@
   }
 }
 
-@mixin Manifold__Banner--Warning {
+@mixin Banner--Warning {
   &::before {
     background-color: color.$color-orange;
     border: 1px solid color.$color-orange;
@@ -68,7 +68,7 @@
   }
 }
 
-@mixin Manifold__Banner--Success {
+@mixin Banner--Success {
   &::before {
     background-color: color.$color-green;
     border: 1px solid color.$color-green;
