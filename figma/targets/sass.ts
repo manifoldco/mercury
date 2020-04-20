@@ -56,7 +56,7 @@ function buildTypography(typography: DesignTokens['typography']): string {
     .map(
       ([key, styles]) =>
         `
-@mixin Manifold__Typography__${capitalize(key)} {${cssifyObject(styles)}}`
+@mixin Typography__${capitalize(key)} {${cssifyObject(styles)}}`
     )
     .join('\n\n');
 

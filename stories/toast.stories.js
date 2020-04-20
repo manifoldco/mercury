@@ -9,7 +9,7 @@ export default { title };
 export const Toast = () => (
   <Story>
     <Demo>
-      <div role="alert" className="Manifold__Toast">
+      <div role="alert" className="Manifold-Toast">
         <svg aria-label="check" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path
             fill-rule="evenodd"
@@ -39,7 +39,7 @@ export const Toast = () => (
     </Description>
     <Code
       tabs={{
-        html: `<div role="alert" class="Manifold__Toast">
+        html: `<div role="alert" class="Manifold-Toast">
 <svg aria-label="check" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path
     fill-rule="evenodd"
@@ -51,8 +51,8 @@ export const Toast = () => (
 </div>`,
         scss: `${comment.block(title)}
 
-.Manifold__Banner {
-  @include mercury.Manifold__Banner;
+.Manifold-Toast {
+  @include mercury.Toast;
 }`,
       }}
     />
@@ -62,7 +62,7 @@ export const Toast = () => (
 export const Error = () => (
   <Story>
     <Demo>
-      <div role="alert" className="Manifold__Toast Manifold__Toast--Error">
+      <div role="alert" className="Manifold-Toast Manifold-Toast--Error">
         <svg
           aria-label="wifi-off"
           role="img"
@@ -93,7 +93,7 @@ export const Error = () => (
     </Description>
     <Code
       tabs={{
-        html: `<div role="alert" class="Manifold__Toast Manifold__Toast--Error">
+        html: `<div role="alert" class="Manifold-Toast Manifold-Toast--Error">
         <svg
           aria-label="wifi-off"
           role="img"
@@ -115,16 +115,15 @@ export const Error = () => (
         </p>
       </div>`,
         scss: `${comment.block(title)}
-  
-.Manifold__Banner {
-    @include mercury.Manifold__Banner;
-}
 
-    ${comment.modifier}    
+.Manifold-Toast {
+  @include mercury.Toast;
 
-    .Manifold__Banner--Error {
-        @include mercury.Manifold__Banner--Error;
-    }
+  ${comment.modifier}
+
+  &--Error {
+    @include mercury.Toast--Error;
+  }
 }`,
       }}
     />

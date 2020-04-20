@@ -1,5 +1,5 @@
 @use "../src/index" as mercury;
 
-.Manifold__Toggle {
-  @include mercury.Manifold__Toggle;
+.Manifold-Toggle {
+  @include mercury.Toggle;
 }

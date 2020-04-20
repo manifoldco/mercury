@@ -4,26 +4,26 @@
 // Block
 // ----------
 
-.Manifold__Button {
-  @include mercury.Manifold__Button;
+.Manifold-Button {
+  @include mercury.Button;
 
   // ----------
   //  Modifiers
   // ----------
 
   &--Black {
-    @include mercury.Manifold__Button--Black;
+    @include mercury.Button--Black;
   }
 
   &--Brand {
-    @include mercury.Manifold__Button--Brand;
+    @include mercury.Button--Brand;
   }
 
   &--Danger {
-    @include mercury.Manifold__Button--Danger;
+    @include mercury.Button--Danger;
   }
 
   &--Small {
-    @include mercury.Manifold__Button--Small;
+    @include mercury.Button--Small;
   }
 }

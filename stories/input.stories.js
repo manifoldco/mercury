@@ -8,25 +8,25 @@ export const input = () => (
   <Story>
     <Demo>
       <div>
-        <div className="Manifold__Input">
+        <div className="Manifold-Input">
           <label for="text">Text input</label>
           <input type="text" autoCapitalize="off" name="text" id="text" placeholder="Placeholder" />
         </div>
       </div>
       <div>
-        <div className="Manifold__Input">
+        <div className="Manifold-Input">
           <label for="email">Email</label>
           <input type="email" name="email" id="email" value="info@manifold.co" />
         </div>
       </div>
       <div>
-        <div className="Manifold__Input">
+        <div className="Manifold-Input">
           <label for="password">Password</label>
           <input type="password" name="password" id="password" />
         </div>
       </div>
       <div>
-        <div className="Manifold__Input">
+        <div className="Manifold-Input">
           <label for="number">Numeric</label>
           <input type="text" inputmode="decimal" pattern="\d+(\.\d*)?" name="number" id="number" />
         </div>
@@ -50,32 +50,32 @@ export const input = () => (
     <Code
       tabs={{
         html: `<!-- text input -->
-<div class="Manifold__Input">
+<div class="Manifold-Input">
   <label for="text">Text input</label>
   <input type="text" autocapitalize="off" name="text" id="text" />
 </div>
 
 <!-- email input -->
-<div class="Manifold__Input">
+<div class="Manifold-Input">
   <label for="email">Email</label>
   <input type="email" name="email" id="email" />
 </div>
 
 <!-- password input -->
-<div class="Manifold__Input">
+<div class="Manifold-Input">
   <label for="password">Password</label>
   <input type="password" name="password" id="password" />
 </div>
 
 <!-- numeric input -->
-<div class="Manifold__Input">
+<div class="Manifold-Input">
   <label for="number">Numeric input</label>
   <input type="text" inputmode="decimal" pattern="\d+(\.\d*)?" name="number" id="number" />
 </div>`,
         scss: `${comment.block('Input')}
 
-.Manifold__Input {
-  @include mercury.Manifold__Input;
+.Manifold-Input {
+  @include mercury.Input;
 }`,
       }}
     />
@@ -86,13 +86,13 @@ export const inputState = () => (
   <Story>
     <Demo>
       <div>
-        <div className="Manifold__Input">
+        <div className="Manifold-Input">
           <label for="normal">Normal</label>
           <input type="text" autoCapitalize="off" name="normal" id="normal" value="Input text" />
         </div>
       </div>
       <div>
-        <div className="Manifold__Input">
+        <div className="Manifold-Input">
           <label for="disabled">Disabled</label>
           <input
             disabled
@@ -105,7 +105,7 @@ export const inputState = () => (
         </div>
       </div>
       <div>
-        <div className="Manifold__Input">
+        <div className="Manifold-Input">
           <label for="invalid">Invalid</label>
           <input
             aria-invalid
@@ -154,26 +154,26 @@ export const inputState = () => (
     <Code
       tabs={{
         html: `<!-- normal -->
-<div class="Manifold__Input">
+<div class="Manifold-Input">
   <label for="normal">Normal</label>
   <input type="text" autocapitalize="off" name="normal" id="normal" />
 </div>
 
 <!-- disabled -->
-<div class="Manifold__Input">
+<div class="Manifold-Input">
   <label for="disabled">Disabled</label>
   <input disabled type="text" autocapitalize="off" name="disabled" id="disabled" />
 </div>
 
 <!-- invalid -->
-<div class="Manifold__Input">
+<div class="Manifold-Input">
   <label for="invalid">Invalid</label>
   <input aria-invalid type="text" autocapitalize="off" name="invalid" id="invalid" />
 </div>`,
         scss: `${comment.block('Input')}
 
-.Manifold__Input {
-  @include mercury.Manifold__Input;
+.Manifold-Input {
+  @include mercury.Input;
 }`,
       }}
     />
@@ -183,7 +183,7 @@ export const inputState = () => (
 export const inputInline = () => (
   <Story>
     <Demo>
-      <div className="Manifold__Input Manifold__Input--Inline">
+      <div className="Manifold-Input Manifold-Input--Inline">
         <label for="inline-input">Label</label>
         <input
           type="text"
@@ -206,19 +206,19 @@ export const inputInline = () => (
     </Description>
     <Code
       tabs={{
-        html: `<div className="Manifold__Input Manifold__Input--Inline">
+        html: `<div className="Manifold-Input Manifold-Input--Inline">
   <label for="inline-input">Label</label>
   <input type="text" autoCapitalize="off" name="inline-input" id="inline-input" value="Input text" />
 </div>`,
         scss: `${comment.block('Input')}
 
-.Manifold__Input {
-  @include mercury.Manifold__Input;
+.Manifold-Input {
+  @include mercury.Input;
 
   ${comment.modifier}
 
   &--Inline {
-    @include mercury.Manifold__Input--Inline;
+    @include mercury.Input--Inline;
   }
 }`,
       }}

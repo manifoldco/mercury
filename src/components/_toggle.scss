@@ -8,7 +8,7 @@ $toggle-ease-out-sine: cubic-bezier(0, 0.5, 0.5, 1);
 
 /* stylelint-disable selector-max-specificity */
 
-@mixin Manifold__Toggle {
+@mixin Toggle {
   position: relative;
   display: flex;
   align-items: center;
@@ -33,7 +33,7 @@ $toggle-ease-out-sine: cubic-bezier(0, 0.5, 0.5, 1);
   // ----------
 
   label {
-    @include typography.Manifold__Typography__SmallScreenBody;
+    @include typography.Typography__SmallScreenBody;
 
     position: relative;
     display: flex;
@@ -44,7 +44,7 @@ $toggle-ease-out-sine: cubic-bezier(0, 0.5, 0.5, 1);
     cursor: pointer;
 
     @media (min-width: 600px) {
-      @include typography.Manifold__Typography__Body;
+      @include typography.Typography__Body;
     }
 
     &::before {

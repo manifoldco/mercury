@@ -4,42 +4,42 @@
 // Block
 // ----------
 
-.Manifold__Tooltip__Container {
-  @include mercury.Manifold__Tooltip__Container;
+.Manifold-Tooltip__Container {
+  @include mercury.Tooltip__Container;
 
   &--Down {
-    @include mercury.Manifold__Tooltip__Container--Down;
+    @include mercury.Tooltip__Container--Down;
   }
 
   &--Left {
-    @include mercury.Manifold__Tooltip__Container--Left;
+    @include mercury.Tooltip__Container--Left;
   }
 
   &--Right {
-    @include mercury.Manifold__Tooltip__Container--Right;
+    @include mercury.Tooltip__Container--Right;
   }
 }
 
-.Manifold__Tooltip {
-  @include mercury.Manifold__Tooltip;
+.Manifold-Tooltip {
+  @include mercury.Tooltip;
 
   // ----------
   //  Modifiers
   // ----------
 
   &--Down {
-    @include mercury.Manifold__Tooltip--Down;
+    @include mercury.Tooltip--Down;
   }
 
   &--Left {
-    @include mercury.Manifold__Tooltip--Left;
+    @include mercury.Tooltip--Left;
   }
 
   &--Right {
-    @include mercury.Manifold__Tooltip--Right;
+    @include mercury.Tooltip--Right;
   }
 
   &--Large {
-    @include mercury.Manifold__Tooltip--Large;
+    @include mercury.Tooltip--Large;
   }
 }

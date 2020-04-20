@@ -30,23 +30,23 @@ blockquote {
 }
 
 h1 {
-  @include mercury.Manifold__Typography__HeadingExtraLarge;
+  @include mercury.Typography__HeadingExtraLarge;
 }
 
 h2 {
-  @include mercury.Manifold__Typography__HeadingLarge;
+  @include mercury.Typography__HeadingLarge;
 }
 
 h3 {
-  @include mercury.Manifold__Typography__Heading;
+  @include mercury.Typography__Heading;
 }
 
 h4 {
-  @include mercury.Manifold__Typography__Subheading;
+  @include mercury.Typography__Subheading;
 }
 
 code {
-  @include mercury.Manifold__Typography__MonoBody;
+  @include mercury.Typography__MonoBody;
 
   display: inline-block;
   padding: 0.5em;
@@ -177,7 +177,7 @@ li {
   }
 
   &__Code {
-    @include mercury.Manifold__Typography__MonoBody;
+    @include mercury.Typography__MonoBody;
 
     flex-grow: 1;
     flex-shrink: 0;
@@ -193,7 +193,7 @@ li {
     }
 
     &__Copy {
-      @include mercury.Manifold__Typography__SubheadingSmall;
+      @include mercury.Typography__SubheadingSmall;
 
       position: absolute;
       top: 0.5rem;
@@ -232,7 +232,7 @@ li {
       border-top: 1px solid mercury.$color-grayLight;
 
       &::before {
-        @include mercury.Manifold__Typography__SubheadingSmall;
+        @include mercury.Typography__SubheadingSmall;
 
         position: absolute;
         top: 1rem;

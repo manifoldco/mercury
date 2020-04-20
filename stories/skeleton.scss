@@ -5,12 +5,12 @@
 // ----------
 
 .Skeleton {
-  @include mercury.Manifold__Skeleton;
+  @include mercury.Skeleton;
 
   margin: 1rem 0;
 
   &--White {
-    @include mercury.Manifold__Skeleton--White;
+    @include mercury.Skeleton--White;
   }
 
   // ----------

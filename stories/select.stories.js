@@ -7,7 +7,7 @@ export default { title: 'Select' };
 export const select = () => (
   <Story>
     <Demo>
-      <div className="Manifold__Select">
+      <div className="Manifold-Select">
         <label for="cheese">Cheese</label>
         <select name="cheese" id="cheese">
           <option>Alpkäse</option>
@@ -39,14 +39,14 @@ export const select = () => (
     </Description>
     <Code
       tabs={{
-        html: `<div class="Manifold__Select">
+        html: `<div class="Manifold-Select">
   <label for="select">Cheese</label>
   <select id="select">…</select>
 </div>`,
         scss: `${comment.block('Select')}
 
-.Manifold__Select {
-  @include mercury.Manifold__Select;
+.Manifold-Select {
+  @include mercury.Select;
 }`,
       }}
     />
@@ -57,7 +57,7 @@ export const selectState = () => (
   <Story>
     <Demo>
       <div>
-        <div className="Manifold__Select">
+        <div className="Manifold-Select">
           <label for="normal-select">Normal</label>
           <select name="normal-select" id="normal-select">
             <option>Alpkäse</option>
@@ -72,7 +72,7 @@ export const selectState = () => (
         </div>
       </div>
       <div>
-        <div className="Manifold__Select">
+        <div className="Manifold-Select">
           <label for="disabled-select">Disabled</label>
           <select disabled name="disabled-select" id="disabled-select">
             <option>Alpkäse</option>
@@ -87,7 +87,7 @@ export const selectState = () => (
         </div>
       </div>
       <div>
-        <div className="Manifold__Select">
+        <div className="Manifold-Select">
           <label for="invalid-select">Invalid</label>
           <select aria-invalid name="invalid-select" id="invalid-select">
             <option>Alpkäse</option>
@@ -138,26 +138,26 @@ export const selectState = () => (
     <Code
       tabs={{
         html: `<!-- normal -->
-<div class="Manifold__Select">
+<div class="Manifold-Select">
   <label for="normal">Normal</label>
   <select name="normal" id="normal">…</select>
 </div>
 
 <!-- disabled -->
-<div class="Manifold__Select">
+<div class="Manifold-Select">
   <label for="disabled">Disabled</label>
   <select disabled name="disabled" id="disabled">…</select>
 </div>
 
 <!-- invalid -->
-<div class="Manifold__Select">
+<div class="Manifold-Select">
   <label for="invalid">Invalid</label>
   <select aria-invalid name="invalid" id="invalid">…</select>
 </div>`,
-        scss: `${comment.block('Input')}
+        scss: `${comment.block('Select')}
 
-.Manifold__Input {
-  @include mercury.Manifold__Input;
+.Manifold-Select {
+  @include mercury.Select;
 }`,
       }}
     />
@@ -167,7 +167,7 @@ export const selectState = () => (
 export const selectInline = () => (
   <Story>
     <Demo>
-      <div className="Manifold__Select Manifold__Select--Inline">
+      <div className="Manifold-Select Manifold-Select--Inline">
         <label for="inline-select">Cheese</label>
         <select name="inline-select" id="inline-select">
           <option>Alpkäse</option>
@@ -193,19 +193,19 @@ export const selectInline = () => (
     </Description>
     <Code
       tabs={{
-        html: `<div class="Manifold__Select Manifold__Select--Inline">
+        html: `<div class="Manifold-Select Manifold-Select--Inline">
   <label for="inline">Inline</label>
   <select aria-invalid name="inline" id="inline">…</select>
 </div>`,
-        scss: `${comment.block('Input')}
+        scss: `${comment.block('Select')}
 
-.Manifold__Input {
-  @include mercury.Manifold__Input;
+.Manifold-Select {
+  @include mercury.Select;
 
   ${comment.modifier}
 
   &--Inline {
-    @include mercury.Manifold__Input--Inline;
+    @include mercury.Select--Inline;
   }
 }`,
       }}

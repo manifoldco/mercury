@@ -4,14 +4,14 @@
 //  Input
 // ----------
 
-.Manifold__Input {
-  @include mercury.Manifold__Input;
+.Manifold-Input {
+  @include mercury.Input;
 
   // ----------
   //  Modifiers
   // ----------
 
   &--Inline {
-    @include mercury.Manifold__Input--Inline;
+    @include mercury.Input--Inline;
   }
 }

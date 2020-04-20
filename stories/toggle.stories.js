@@ -7,7 +7,7 @@ export default { title: 'Toggle' };
 export const toggle = () => (
   <Story>
     <Demo>
-      <div className="Manifold__Toggle">
+      <div className="Manifold-Toggle">
         <input type="checkbox" name="toggle" id="toggle" value="on" />
         <label for="toggle">Toggle</label>
       </div>
@@ -44,14 +44,14 @@ export const toggle = () => (
     </Description>
     <Code
       tabs={{
-        html: `<div class="Manifold__Toggle">
+        html: `<div class="Manifold-Toggle">
   <input type="checkbox" name="toggle" id="toggle" value="on" />
   <label for="toggle">Toggle</label>
 </div>`,
         scss: `${comment.block('Toggle')}
 
-.Manifold__Toggle {
-  @include mercury.Manifold__Toggle;
+.Manifold-Toggle {
+  @include mercury.Toggle;
 }`,
       }}
     />
@@ -62,13 +62,13 @@ export const toggleState = () => (
   <Story>
     <Demo>
       <div>
-        <div className="Manifold__Toggle">
+        <div className="Manifold-Toggle">
           <input disabled type="checkbox" name="toggle" id="toggle" value="on" />
           <label for="toggle">Disabled Off</label>
         </div>
       </div>
       <div>
-        <div className="Manifold__Toggle">
+        <div className="Manifold-Toggle">
           <input disabled checked type="checkbox" name="toggle" id="toggle" value="on" />
           <label for="toggle">Disabled On</label>
         </div>
@@ -83,14 +83,14 @@ export const toggleState = () => (
     </Description>
     <Code
       tabs={{
-        html: `<div class="Manifold__Toggle">
+        html: `<div class="Manifold-Toggle">
   <input disabled type="checkbox" name="toggle" id="toggle" value="on" />
   <label for="toggle">Toggle</label>
 </div>`,
         scss: `${comment.block('Toggle')}
 
-.Manifold__Toggle {
-  @include mercury.Manifold__Toggle;
+.Manifold-Toggle {
+  @include mercury.Toggle;
 }`,
       }}
     />

@@ -1,5 +1,5 @@
-@mixin Manifold__Skeleton {
-  @keyframes Manifold__Skeleton__Animation {
+@mixin Skeleton {
+  @keyframes Skeleton__Animation {
     to {
       transform: translateX(125%);
     }
@@ -45,7 +45,7 @@
     );
     background-repeat: no-repeat;
     opacity: 0.4;
-    animation-name: Manifold__Skeleton__Animation;
+    animation-name: Skeleton__Animation;
     animation-duration: 1.4s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -54,7 +54,7 @@
   }
 }
 
-@mixin Manifold__Skeleton--White {
+@mixin Skeleton--White {
   &::before {
     background-image: linear-gradient(
       rgba(255, 255, 255, 0.25),

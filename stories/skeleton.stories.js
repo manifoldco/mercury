@@ -45,23 +45,23 @@ export const skeleton = () => (
     <Code
       tabs={{
         html: `<!-- light background -->
-<p class="Manifold__Skeleton">
+<p class="Manifold-Skeleton">
   💀 This is some text waiting to load
 </p>
 
 <!-- dark background -->
-<p class="Manifold__Skeleton Manifold__Skeleton--White">
+<p class="Manifold-Skeleton Manifold-Skeleton--White">
   💀 This is some text waiting to load
 </p>`,
         scss: `${comment.block('Skeleton Loader')}
 
-.Manifold__Skeleton {
-  @include mercury.Manifold__Skeleton;
+.Manifold-Skeleton {
+  @include mercury.Skeleton;
 
   ${comment.modifier}
 
   &--White {
-    @include mercury.Manifold__Skeleton--White;
+    @include mercury.Skeleton--White;
   }
 }`,
       }}
