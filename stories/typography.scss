@@ -9,81 +9,81 @@
   //  Elements
   // ----------
 
-  &__Body {
-    @include mercury.Typography__Body;
+  &--Body {
+    @include mercury.Typography--Body;
   }
 
-  &__Caption {
-    @include mercury.Typography__Caption;
+  &--Caption {
+    @include mercury.Typography--Caption;
   }
 
-  &__Heading {
-    @include mercury.Typography__Heading;
+  &--Heading {
+    @include mercury.Typography--Heading;
   }
 
-  &__HeadingLarge {
-    @include mercury.Typography__HeadingLarge;
+  &--HeadingLarge {
+    @include mercury.Typography--HeadingLarge;
   }
 
-  &__HeadingExtraLarge {
-    @include mercury.Typography__HeadingExtraLarge;
+  &--HeadingExtraLarge {
+    @include mercury.Typography--HeadingExtraLarge;
   }
 
-  &__MonoBody {
-    @include mercury.Typography__MonoBody;
+  &--MonoBody {
+    @include mercury.Typography--MonoBody;
   }
 
-  &__MonoCaption {
-    @include mercury.Typography__MonoCaption;
+  &--MonoCaption {
+    @include mercury.Typography--MonoCaption;
   }
 
-  &__MonoLabel {
-    @include mercury.Typography__MonoLabel;
+  &--MonoLabel {
+    @include mercury.Typography--MonoLabel;
   }
 
-  &__Label {
-    @include mercury.Typography__Label;
+  &--Label {
+    @include mercury.Typography--Label;
   }
 
-  &__Subheading {
-    @include mercury.Typography__Subheading;
+  &--Subheading {
+    @include mercury.Typography--Subheading;
   }
 
-  &__SubheadingSmall {
-    @include mercury.Typography__SubheadingSmall;
+  &--SubheadingSmall {
+    @include mercury.Typography--SubheadingSmall;
   }
 
-  &__SidebarBigTitle {
-    @include mercury.Typography__SidebarBigTitle;
+  &--SidebarBigTitle {
+    @include mercury.Typography--SidebarBigTitle;
   }
 
-  &__SidebarSmallTitle {
-    @include mercury.Typography__SidebarSmallTitle;
+  &--SidebarSmallTitle {
+    @include mercury.Typography--SidebarSmallTitle;
   }
 
   // Small Screens
 
-  &__SmallScreenBody {
-    @include mercury.Typography__SmallScreenBody;
+  &--SmallScreenBody {
+    @include mercury.Typography--SmallScreenBody;
   }
 
-  &__SmallScreenCaption {
-    @include mercury.Typography__SmallScreenCaption;
+  &--SmallScreenCaption {
+    @include mercury.Typography--SmallScreenCaption;
   }
 
-  &__SmallScreenHeading {
-    @include mercury.Typography__SmallScreenHeading;
+  &--SmallScreenHeading {
+    @include mercury.Typography--SmallScreenHeading;
   }
 
-  &__SmallScreenHeadingLarge {
-    @include mercury.Typography__SmallScreenHeadingLarge;
+  &--SmallScreenHeadingLarge {
+    @include mercury.Typography--SmallScreenHeadingLarge;
   }
 
-  &__SmallScreenHeadingExtraLarge {
-    @include mercury.Typography__SmallScreenHeadingExtraLarge;
+  &--SmallScreenHeadingExtraLarge {
+    @include mercury.Typography--SmallScreenHeadingExtraLarge;
   }
 
-  &__SmallScreenLabel {
-    @include mercury.Typography__SmallScreenLabel;
+  &--SmallScreenLabel {
+    @include mercury.Typography--SmallScreenLabel;
   }
 }
