@@ -11,7 +11,7 @@ const LOREM_IPSUM = 'Everything you need to build an add-ons marketplace';
 const TypographyDisplay = ({ component, name, element, children, smallScreen = false }) => (
   <Story>
     <Demo>
-      <div className={`Manifold-${title}__${component}`}>{LOREM_IPSUM}</div>
+      <div className={`Manifold-${title}--${component}`}>{LOREM_IPSUM}</div>
     </Demo>
     <Description>
       <h1>{name}</h1>
@@ -19,7 +19,7 @@ const TypographyDisplay = ({ component, name, element, children, smallScreen = f
     </Description>
     <Code
       tabs={{
-        html: `<${element} class="Manifold-${title}__${component}">
+        html: `<${element} class="Manifold-${title}--${component}">
   ${LOREM_IPSUM}
 </${element}>`,
         scss: `${comment.block(title)}
@@ -27,13 +27,13 @@ const TypographyDisplay = ({ component, name, element, children, smallScreen = f
 .Manifold-${title} {
   ${comment.element}
 
-  &__${component} {
-    @include mercury.${title}__${smallScreen ? 'SmallScreen' : ''}${component};${
+  &--${component} {
+    @include mercury.${title}--${smallScreen ? 'SmallScreen' : ''}${component};${
           smallScreen
             ? `
 
     @media (min-width: 600px) {
-      @include mercury.${title}__${component};
+      @include mercury.${title}--${component};
     }`
             : ''
         }
