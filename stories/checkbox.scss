@@ -5,8 +5,5 @@
 // ----------
 
 .Manifold-Checkbox {
-  @include mercury.Manifold-Checkbox;
-
-  > label {
-  }
+  @include mercury.Checkbox;
 }
