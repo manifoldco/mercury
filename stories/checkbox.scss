@@ -1,0 +1,12 @@
+@use "../src/index.scss" as mercury;
+
+// ----------
+// Block
+// ----------
+
+.Manifold-Checkbox {
+  @include mercury.Manifold-Checkbox;
+
+  > label {
+  }
+}
