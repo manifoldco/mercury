@@ -90,23 +90,24 @@ $toggle-ease-out-sine: cubic-bezier(0, 0.5, 0.5, 1);
       cursor: default;
 
       &::before {
-        background: none;
+        background: color.$color-grayLighter;
         border: 1px solid color.$color-grayLight;
       }
 
       &::after {
-        background: color.$color-utilitiesGray;
+        background: color.$color-grayLight;
+        border: 1px solid color.$color-utilitiesGray;
       }
     }
 
     &:checked ~ label {
       &::before {
-        background: color.$color-grayLight;
-        border: none;
+        background: color.$color-grayLighter;
       }
 
       &::after {
-        background: color.$color-grayDark;
+        background: color.$color-gray;
+        border: 1px solid color.$color-gray;
       }
     }
   }

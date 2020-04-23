@@ -45,6 +45,9 @@ export const input = () => (
         <li>
           <a href="/?path=/story/toggle--toggle">Toggle</a>
         </li>
+        <li>
+          <a href="/?path=/story/checkbox--checkbox">Checkbox</a>
+        </li>
       </ul>
     </Description>
     <Code
