@@ -35,6 +35,12 @@ export const select = () => (
         <li>
           <a href="/?path=/story/toggle--toggle">Toggle</a>
         </li>
+        <li>
+          <a href="/?path=/story/checkbox--checkbox">Checkbox</a>
+        </li>
+        <li>
+          <a href="/?path=/story/radio--radio">Radio</a>
+        </li>
       </ul>
     </Description>
     <Code
