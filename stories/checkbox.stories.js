@@ -10,8 +10,24 @@ export const Checkbox = () => (
   <Story>
     <Demo>
       <div className="Manifold-Checkbox">
-        <input role="checkbox" type="checkbox" id="checkbox" />
-        <label for="checkbox">Default checkbox</label>
+        <input role="checkbox" type="checkbox" id="checkbox-1" />
+        <label for="checkbox-1">You'll have to make some choices</label>
+      </div>
+      <div className="Manifold-Checkbox">
+        <input role="checkbox" type="checkbox" id="checkbox-2" />
+        <label for="checkbox-2">You have other options</label>
+      </div>
+      <div className="Manifold-Checkbox">
+        <input role="checkbox" type="checkbox" id="checkbox-3" />
+        <label for="checkbox-3">Another option is presented here</label>
+      </div>
+      <div className="Manifold-Checkbox">
+        <input disabled role="checkbox" type="checkbox" id="checkbox-4" />
+        <label for="checkbox-4">This option is off the table</label>
+      </div>
+      <div className="Manifold-Checkbox">
+        <input checked disabled role="checkbox" type="checkbox" id="checkbox-5" />
+        <label for="checkbox-5">This option is also off the table, but positive</label>
       </div>
     </Demo>
     <Description>

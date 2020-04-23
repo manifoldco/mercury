@@ -1,5 +1,11 @@
 @use "../src/index.scss" as mercury;
 
+.Story__Demo {
+  margin: auto;
+  flex-direction: column;
+  align-items: start;
+}
+
 // ----------
 // Block
 // ----------

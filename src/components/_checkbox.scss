@@ -20,7 +20,7 @@ $check-ease-out-exponential: cubic-bezier(0.04, 0.08, 0.5, 0.95);
   // ----------
 
   label {
-    @include typography.Typography__SmallScreenBody;
+    @include typography.Typography--SmallScreenBody;
 
     position: relative;
     display: flex;
@@ -31,7 +31,7 @@ $check-ease-out-exponential: cubic-bezier(0.04, 0.08, 0.5, 0.95);
     cursor: pointer;
 
     @media (min-width: 600px) {
-      @include typography.Typography__Body;
+      @include typography.Typography--Body;
     }
 
     &#{$check-background} {
@@ -55,7 +55,7 @@ $check-ease-out-exponential: cubic-bezier(0.04, 0.08, 0.5, 0.95);
       display: block;
       width: 14px;
       height: 14px;
-      background-image: url("data:image/svg+xml,%3Csvg aria-label='check' role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFF' fill-rule='evenodd' clip-rule='evenodd' d='M20.707 5.293a1 1 0 010 1.414l-11 11a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L9 15.586 19.293 5.293a1 1 0 011.414 0z'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFF' fill-rule='evenodd' clip-rule='evenodd' d='M20.707 5.293a1 1 0 010 1.414l-11 11a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L9 15.586 19.293 5.293a1 1 0 011.414 0z'/%3E%3C/svg%3E");
       transform: scale(0.3);
       opacity: 0;
       transition: background-color 150ms linear, transform 180ms $check-ease-out-exponential;
@@ -96,7 +96,7 @@ $check-ease-out-exponential: cubic-bezier(0.04, 0.08, 0.5, 0.95);
       }
 
       &#{$check-icon} {
-        background-image: url("data:image/svg+xml,%3Csvg aria-label='check' role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%238F8F95' fill-rule='evenodd' clip-rule='evenodd' d='M20.707 5.293a1 1 0 010 1.414l-11 11a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L9 15.586 19.293 5.293a1 1 0 011.414 0z'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%238F8F95' fill-rule='evenodd' clip-rule='evenodd' d='M20.707 5.293a1 1 0 010 1.414l-11 11a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L9 15.586 19.293 5.293a1 1 0 011.414 0z'/%3E%3C/svg%3E");
       }
     }
   }
