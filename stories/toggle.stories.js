@@ -40,6 +40,12 @@ export const toggle = () => (
         <li>
           <a href="/?path=/story/select--select">Select</a>
         </li>
+        <li>
+          <a href="/?path=/story/checkbox--checkbox">Checkbox</a>
+        </li>
+        <li>
+          <a href="/?path=/story/radio--radio">Radio</a>
+        </li>
       </ul>
     </Description>
     <Code
@@ -61,17 +67,13 @@ export const toggle = () => (
 export const toggleState = () => (
   <Story>
     <Demo>
-      <div>
-        <div className="Manifold-Toggle">
-          <input disabled type="checkbox" name="toggle" id="toggle" value="on" />
-          <label for="toggle">Disabled Off</label>
-        </div>
+      <div className="Manifold-Toggle">
+        <input disabled type="checkbox" name="toggle" id="toggle" value="on" />
+        <label for="toggle">Disabled Off</label>
       </div>
-      <div>
-        <div className="Manifold-Toggle">
-          <input disabled checked type="checkbox" name="toggle" id="toggle" value="on" />
-          <label for="toggle">Disabled On</label>
-        </div>
+      <div className="Manifold-Toggle">
+        <input disabled checked type="checkbox" name="toggle" id="toggle" value="on" />
+        <label for="toggle">Disabled On</label>
       </div>
     </Demo>
     <Description>

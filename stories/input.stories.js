@@ -48,6 +48,9 @@ export const input = () => (
         <li>
           <a href="/?path=/story/checkbox--checkbox">Checkbox</a>
         </li>
+        <li>
+          <a href="/?path=/story/radio--radio">Radio</a>
+        </li>
       </ul>
     </Description>
     <Code

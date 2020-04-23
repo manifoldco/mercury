@@ -1,0 +1,124 @@
+@use "../design-tokens/color";
+@use "../design-tokens/typography";
+
+$radio-box-size: 1rem;
+$radio-background: '::before';
+$radio-icon: '::after';
+$radio-ease-out-exponential: cubic-bezier(0.04, 0.08, 0.5, 0.95);
+
+/* stylelint-disable selector-max-specificity */
+
+@mixin Radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  // ----------
+  //  Elements
+  // ----------
+
+  label {
+    @include typography.Typography--SmallScreenBody;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    color: currentColor;
+    cursor: pointer;
+
+    @media (min-width: 600px) {
+      @include typography.Typography--Body;
+    }
+
+    &#{$radio-background} {
+      order: 0;
+      box-sizing: border-box;
+      width: $radio-box-size;
+      height: $radio-box-size;
+      margin-right: 0.75rem;
+      background-color: color.$color-white;
+      border: 1px solid color.$color-utilitiesGray;
+      border-radius: 50%;
+      transition-duration: 150ms;
+      transition-property: background-color, border-color;
+      content: '';
+      pointer-events: none;
+    }
+
+    &#{$radio-icon} {
+      position: absolute;
+      left: 5px;
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: color.$color-white;
+      border-radius: 50%;
+      transform: scale(0.3);
+      opacity: 0;
+      transition: background-color 150ms linear, transform 180ms $radio-ease-out-exponential;
+      content: '';
+    }
+
+    &:hover {
+      &#{$radio-background} {
+        border-color: darken(color.$color-utilitiesGray, 10%);
+      }
+    }
+  }
+
+  input {
+    position: absolute;
+    right: 100vw;
+    opacity: 0;
+  }
+
+  // ----------
+  //  State
+  // ----------
+
+  input:disabled {
+    ~ label {
+      cursor: default;
+
+      &#{$radio-background} {
+        background: color.$color-grayLighter;
+        border-color: color.$color-grayLight;
+      }
+    }
+
+    &:checked ~ label {
+      &#{$radio-background} {
+        background: color.$color-grayLighter;
+        border-color: color.$color-grayLight;
+      }
+
+      &#{$radio-icon} {
+        background-color: color.$color-gray;
+      }
+    }
+  }
+
+  &:focus-within {
+    label {
+      &#{$radio-background} {
+        box-shadow: 0 0 0 3px color.$color-mutedBlue;
+      }
+    }
+  }
+
+  input:checked ~ label {
+    &#{$radio-background} {
+      background: color.$color-blue;
+      border-color: color.$color-blue;
+    }
+
+    &#{$radio-icon} {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
