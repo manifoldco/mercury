@@ -42,6 +42,7 @@
     transition-duration: 150ms;
     transition-property: border-color;
     appearance: none;
+    -moz-appearance: textfield; // stylelint-disable-line
 
     @media (min-width: 600px) {
       @include typography.Typography__Body;
@@ -59,6 +60,11 @@
       @include typography.Typography__MonoBody;
 
       text-align: right;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      display: none;
     }
   }
 
