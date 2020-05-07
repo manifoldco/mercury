@@ -13,13 +13,33 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
       - run: npm install
+      - name: Ignore lockfile noise
+        run: git checkout HEAD -- package-lock.json
       - name: Extract latest from Figma
         run: npm run extract
         env:
           FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
-      - name: Commit changes (if any)
+      - name: Test for changes
+        id: status
+        run: echo ::set-output name=dirty::$(git status --porcelain)
+      - if: steps.status.outputs.dirty != ''
+        name: Commit changes (if any)
         uses: EndBug/add-and-commit@v4
         with:
           author_name: 'manifold-dangerzone'
           author_email: 'admin+github-bot-dangerzone@manifold.co'
           message: '🤖 Figma Update'
+      - if: steps.status.outputs.dirty != ''
+        run: npm version patch
+      - if: steps.status.outputs.dirty != ''
+        name: Commit changes (if any)
+        uses: EndBug/add-and-commit@v4
+        with:
+          author_name: 'manifold-dangerzone'
+          author_email: 'admin+github-bot-dangerzone@manifold.co'
+      - if: steps.status.outputs.dirty != ''
+        run: make package
+      - if: steps.status.outputs.dirty != ''
+        run: 'echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc'
+      - if: steps.status.outputs.dirty != ''
+        run: 'npm publish ./pkg --tag latest'
