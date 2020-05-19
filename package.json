@@ -59,7 +59,7 @@
     "jest-cli": "^26.0.1",
     "prettier": "^2.0.4",
     "react": "^16.13.1",
-    "rgb2hex": "^0.1.10",
+    "rgb2hex": "^0.2.0",
     "sass": "^1.26.3",
     "sass-loader": "^8.0.2",
     "stylelint": "^13.3.3",
