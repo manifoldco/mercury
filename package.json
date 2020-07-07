@@ -10,7 +10,7 @@
   "bugs": {
     "url": "https://github.com/manifoldco/mercury/issues"
   },
-  "version": "0.2.3",
+  "version": "0.2.5",
   "main": "index.cjs.js",
   "module": "index.mjs",
   "sass": "index.scss",
