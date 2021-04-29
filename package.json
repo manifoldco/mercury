@@ -44,7 +44,7 @@
     "@figma-export/transform-svg-with-svgo": "^3.0.0",
     "@storybook/react": "^6.0.1",
     "@types/jest": "^26.0.0",
-    "@types/node": "^14.0.1",
+    "@types/node": "^15.0.1",
     "@types/prettier": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^4.20.0",
     "@typescript-eslint/parser": "^4.19.0",
